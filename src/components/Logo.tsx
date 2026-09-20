@@ -8,7 +8,7 @@ export function Logo({ className = "" }: { className?: string }) {
       aria-label="Pacific Floors and Coatings home"
     >
       <img
-        src="/pacific-fooring.webp"
+        src="/pacific-fooring.png"
         alt="Pacific Floors and Coatings"
         className="h-12 w-auto max-w-[180px] object-contain sm:h-14"
       />
