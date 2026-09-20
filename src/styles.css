@@ -1,0 +1,160 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-topbar: var(--topbar);
+  --color-topbar-foreground: var(--topbar-foreground);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --font-sans: var(--font-sans);
+  --font-display: var(--font-display);
+}
+
+:root {
+  --radius: 0.35rem;
+  --background: oklch(0.17 0.003 90);
+  --foreground: oklch(0.96 0.003 90);
+  --card: oklch(0.205 0.004 90);
+  --card-foreground: oklch(0.96 0.003 90);
+  --popover: oklch(0.205 0.004 90);
+  --popover-foreground: oklch(0.96 0.003 90);
+  --primary: oklch(0.78 0.17 75);
+  --primary-foreground: oklch(0.21 0.02 60);
+  --secondary: oklch(0.24 0.004 90);
+  --secondary-foreground: oklch(0.96 0.003 90);
+  --muted: oklch(0.24 0.004 90);
+  --muted-foreground: oklch(0.71 0.005 90);
+  --accent: oklch(0.79 0.16 76);
+  --accent-foreground: oklch(0.21 0.02 60);
+  --destructive: oklch(0.58 0.22 27);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(0.29 0.006 90);
+  --input: oklch(0.29 0.006 90);
+  --ring: oklch(0.79 0.16 76);
+  --topbar: oklch(0.22 0.12 285);
+  --topbar-foreground: oklch(0.98 0 0);
+  --surface: oklch(0.195 0.004 90);
+  --surface-2: oklch(0.23 0.004 90);
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --gradient-surface: linear-gradient(
+    145deg,
+    oklch(0.24 0.004 90),
+    oklch(0.2 0.004 90)
+  );
+  --shadow-panel: 0 20px 45px -25px oklch(0 0 0 / 0.85);
+  --shadow-glow: 0 10px 30px -12px oklch(0.79 0.16 76 / 0.5);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  a,
+  button,
+  [role="button"],
+  summary,
+  select,
+  input[type="checkbox"],
+  input[type="radio"] {
+    cursor: pointer;
+  }
+
+  main p,
+  main li {
+    line-height: 1.7;
+  }
+
+  a,
+  button {
+    touch-action: manipulation;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-ring);
+    outline-offset: 3px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    letter-spacing: 0;
+  }
+}
+
+@utility eyebrow {
+  color: var(--color-primary);
+  font-size: 0.64rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+@utility panel {
+  background-image: var(--gradient-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-panel);
+  transition: border-color 200ms ease, box-shadow 200ms ease, transform 200ms ease;
+}
+
+@utility interactive-panel {
+  background-image: var(--gradient-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-panel);
+  transition: border-color 200ms ease, box-shadow 200ms ease, transform 200ms ease;
+  &:hover {
+    border-color: color-mix(in oklab, var(--color-primary) 65%, var(--color-border));
+    box-shadow: var(--shadow-glow), var(--shadow-panel);
+    transform: translateY(-3px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
