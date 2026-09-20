@@ -1,4 +1,4 @@
-export const SITE_URL = "https://epoxy-clone-pro.lovable.app";
+export const SITE_URL = "https://www.pacificfloorsandcoatings.ca";
 
 export const site = {
   name: "Pacific Floors and Coatings",

@@ -6,7 +6,7 @@ import { QuoteForm } from "@/components/QuoteForm";
 import { findServiceArea, services, site } from "@/lib/site";
 import hero from "@/assets/hero-garage.jpg";
 
-const BASE = "https://epoxy-clone-pro.lovable.app";
+const BASE = "https://www.pacificfloorsandcoatings.ca";
 
 export const Route = createFileRoute("/service-areas/$slug")({
   staticData: { sitemap: true },

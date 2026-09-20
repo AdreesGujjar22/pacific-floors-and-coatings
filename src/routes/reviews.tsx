@@ -22,7 +22,7 @@ export const Route = createFileRoute("/reviews")({
         content: "Read customer reviews from Surrey and Metro Vancouver homeowners and businesses who chose Pacific Floors & Coatings for durable epoxy flooring installations.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://epoxy-clone-pro.lovable.app/reviews" },
+      { property: "og:url", content: "https://www.pacificfloorsandcoatings.ca/reviews" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Epoxy Flooring Customer Reviews | Pacific Floors & Coatings" },
       {
@@ -30,7 +30,7 @@ export const Route = createFileRoute("/reviews")({
         content: "Read customer reviews from Surrey and Metro Vancouver homeowners and businesses who chose Pacific Floors & Coatings for durable epoxy flooring installations.",
       },
     ],
-    links: [{ rel: "canonical", href: "https://epoxy-clone-pro.lovable.app/reviews" }],
+    links: [{ rel: "canonical", href: "https://www.pacificfloorsandcoatings.ca/reviews" }],
   }),
   errorComponent: ({ error }) => (
     <main className="mx-auto max-w-3xl px-4 py-24 text-center" role="alert">

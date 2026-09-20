@@ -22,7 +22,7 @@ export const Route = createFileRoute("/about")({
         content: "Meet Pacific Floors & Coatings, a Surrey, BC epoxy flooring team focused on thorough surface prep, premium coatings, and clear communication on every project.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://epoxy-clone-pro.lovable.app/about" },
+      { property: "og:url", content: "https://www.pacificfloorsandcoatings.ca/about" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "About Pacific Floors & Coatings | Epoxy Flooring Surrey BC" },
       {
@@ -30,7 +30,7 @@ export const Route = createFileRoute("/about")({
         content: "Meet Pacific Floors & Coatings, a Surrey, BC epoxy flooring team focused on thorough surface prep, premium coatings, and clear communication on every project.",
       },
     ],
-    links: [{ rel: "canonical", href: "https://epoxy-clone-pro.lovable.app/about" }],
+    links: [{ rel: "canonical", href: "https://www.pacificfloorsandcoatings.ca/about" }],
   }),
   component: About,
 });

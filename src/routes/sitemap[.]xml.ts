@@ -9,7 +9,7 @@ import {
   type SitemapEntry,
 } from "@/lib/sitemap";
 
-const BASE_URL = "https://epoxy-clone-pro.lovable.app";
+const BASE_URL = "https://www.pacificfloorsandcoatings.ca";
 
 export const Route = createFileRoute("/sitemap.xml")({
   staticData: { sitemap: false },

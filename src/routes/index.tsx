@@ -82,7 +82,7 @@ export const Route = createFileRoute("/")({
           "Pacific Floors & Coatings installs metallic, flake, and solid epoxy flooring in Surrey, BC. Durable garage, commercial & industrial coatings. Free estimates.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://epoxy-clone-pro.lovable.app/" },
+      { property: "og:url", content: "https://www.pacificfloorsandcoatings.ca/" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Epoxy Flooring Company in Surrey | Pacific Floors & Coatings" },
       {
@@ -91,16 +91,16 @@ export const Route = createFileRoute("/")({
           "Pacific Floors & Coatings installs metallic, flake, and solid epoxy flooring in Surrey, BC. Durable garage, commercial & industrial coatings. Free estimates.",
       },
     ],
-    links: [{ rel: "canonical", href: "https://epoxy-clone-pro.lovable.app/" }],
+    links: [{ rel: "canonical", href: "https://www.pacificfloorsandcoatings.ca/" }],
     scripts: [
       {
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "HomeAndConstructionBusiness",
-          "@id": "https://epoxy-clone-pro.lovable.app/#business",
+          "@id": "https://www.pacificfloorsandcoatings.ca/#business",
           name: "Pacific Floors and Coatings",
-          url: "https://epoxy-clone-pro.lovable.app/",
+          url: "https://www.pacificfloorsandcoatings.ca/",
           description:
             "Epoxy flooring and concrete coating contractor serving Surrey, BC and Metro Vancouver. Metallic, flake, and solid epoxy floors for garages, commercial, and industrial spaces.",
           telephone: "+1-236-878-3386",
@@ -144,7 +144,7 @@ export const Route = createFileRoute("/")({
               itemOffered: {
                 "@type": "Service",
                 name: s.title,
-                url: `https://epoxy-clone-pro.lovable.app/services/${s.slug}`,
+                url: `https://www.pacificfloorsandcoatings.ca/services/${s.slug}`,
               },
             })),
           },
