@@ -3,13 +3,21 @@ import { Facebook, Instagram, Linkedin, Music2 } from "lucide-react";
 import { Logo } from "./Logo";
 import { services, site } from "@/lib/site";
 import { Button } from "@/components/ui/button";
+import metallic from "@/assets/metallic-epoxy.jpg";
 
 const popular = services.slice(0, 8);
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-surface">
-      <div className="mx-auto grid max-w-[1170px] gap-10 px-5 py-14 text-left md:grid-cols-[1.5fr_0.8fr_0.8fr]">
+    <footer className="relative isolate overflow-hidden border-t border-primary/35 bg-surface">
+      <img
+        src={metallic}
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 z-0 h-full w-full object-cover opacity-30 mix-blend-screen"
+      />
+      <div className="absolute inset-0 z-0 bg-gradient-to-r from-background/95 via-background/88 to-background/72" />
+      <div className="relative mx-auto grid max-w-[1170px] gap-10 px-5 py-14 text-left md:grid-cols-[1.5fr_0.8fr_0.8fr]">
         <div className="text-left">
           <div className="flex justify-start">
             <Logo />
@@ -61,7 +69,7 @@ export function Footer() {
           </ul>
         </div>
       </div>
-      <div className="border-t border-border py-5 text-center text-[10px] text-muted-foreground font-semibold uppercase tracking-widest">
+      <div className="relative z-10 border-t border-border py-5 text-center text-[10px] font-semibold uppercase tracking-widest text-muted-foreground">
         © {new Date().getFullYear()} {site.name}. Proudly serving Surrey, BC and Metro Vancouver.
       </div>
     </footer>
