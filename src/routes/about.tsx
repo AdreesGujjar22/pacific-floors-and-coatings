@@ -4,6 +4,7 @@ import { Footer } from "@/components/Footer";
 import { QuoteForm } from "@/components/QuoteForm";
 import installer from "@/assets/installer.jpg";
 import flake from "@/assets/flake-epoxy.jpg";
+import { PageHero } from "@/components/PageHero";
 
 export const Route = createFileRoute("/about")({
   staticData: { sitemap: true },
@@ -39,19 +40,15 @@ function About() {
     <>
       <Header />
       <main>
-        <section className="mx-auto max-w-4xl px-4 py-16 text-center text-pretty">
-          <p className="eyebrow">Get to know Pacific Floors and Coatings</p>
-          <h1 className="mt-3 text-4xl font-black sm:text-5xl">
-            Premium custom flooring across Surrey, BC
-          </h1>
-          <p className="mt-5 text-muted-foreground leading-7">
-            We provide epoxy flooring and concrete coating services for homeowners and businesses
-            across Surrey, BC and Metro Vancouver. Built on quality work and clear
-            communication, we make upgrading your floors a stress-free experience.
-          </p>
-        </section>
+        <PageHero
+          image={installer}
+          imageAlt="Pacific Floors and Coatings installer preparing a floor"
+          eyebrow="Get to know Pacific Floors and Coatings"
+          title="Premium custom flooring across Surrey, BC"
+          description={<>We provide epoxy flooring and concrete coating services for homeowners and businesses across Surrey, BC and Metro Vancouver. Built on quality work and clear communication, we make upgrading your floors a stress-free experience.</>}
+        />
 
-        <section className="mx-auto grid max-w-6xl gap-8 px-4 pb-16 md:grid-cols-2 text-pretty">
+        <section className="mx-auto grid max-w-6xl gap-8 px-4 pb-16 pt-14 md:grid-cols-2 text-pretty">
           <img
             src={installer}
             alt="Pacific Floors and Coatings installer preparing a floor"
