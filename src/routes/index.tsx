@@ -187,21 +187,21 @@ function Home() {
 
   return (
     <>
-      <Header />
+      <Header overlay />
       <main>
-        <section className="relative min-h-[680px] overflow-hidden">
+        <section className="relative min-h-[680px] overflow-hidden border-b border-primary/25">
           <img
             src={hero}
             alt="Metallic epoxy garage floor installed in Surrey, BC"
             width={1600}
             height={1008}
-            className="absolute inset-0 h-full w-full object-cover opacity-60"
+            className="absolute inset-0 h-full w-full object-cover opacity-75"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-background/25" />
-          <div className="relative mx-auto grid max-w-[1170px] items-center gap-12 px-5 py-20 lg:grid-cols-[1.05fr_0.8fr] lg:py-24">
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/78 to-background/10" />
+          <div className="relative mx-auto grid max-w-[1170px] items-center gap-12 px-5 pb-20 pt-36 lg:grid-cols-[1.05fr_0.8fr] lg:pb-24 lg:pt-44">
             <div className="max-w-[610px]">
-              <p className="eyebrow">5-star flooring transformations</p>
-              <h1 className="mt-4 text-4xl font-black leading-[1.08] sm:text-[55px]">
+              <p className="eyebrow">Premium epoxy flooring · Surrey & Metro Vancouver</p>
+              <h1 className="mt-4 max-w-[650px] text-4xl font-black leading-[1.02] sm:text-[58px]">
                 Epoxy Flooring Company in Surrey BC
               </h1>
               <p className="mt-5 max-w-xl text-sm leading-6 text-muted-foreground text-pretty">
@@ -215,10 +215,10 @@ function Home() {
                 <li>◉&nbsp; Competitive warranty on every job</li>
               </ul>
               <div className="mt-8 flex flex-wrap gap-3">
-                <Button asChild size="lg" className="h-auto px-6 py-3.5 text-xs font-bold uppercase tracking-wider">
+                <Button asChild size="lg" className="h-auto rounded-full px-7 py-3.5 text-xs font-bold uppercase tracking-wider shadow-[0_10px_26px_-14px_rgba(232,174,70,0.8)]">
                   <Link to="/services">View Our Services</Link>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="h-auto px-6 py-3.5 text-xs font-bold uppercase tracking-wider">
+                <Button asChild variant="outline" size="lg" className="h-auto rounded-full px-7 py-3.5 text-xs font-bold uppercase tracking-wider shadow-[0_10px_26px_-14px_rgba(232,174,70,0.8)]">
                   <a href={site.phoneHref}>Call {site.phone}</a>
                 </Button>
               </div>
@@ -244,7 +244,7 @@ function Home() {
                   key={s.slug}
                   to="/services/$slug"
                   params={{ slug: s.slug }}
-                  className="group relative overflow-hidden rounded-md border border-border"
+                  className="group relative overflow-hidden rounded-xl border border-primary/30 shadow-[0_14px_42px_-24px_rgba(0,0,0,0.9)] transition hover:-translate-y-1 hover:border-primary/75 hover:shadow-[0_18px_42px_-18px_rgba(232,174,70,0.38)]"
                 >
                   <img
                     src={serviceImage(s)}
@@ -254,7 +254,7 @@ function Home() {
                     height={800}
                     className="h-64 w-full object-cover transition duration-500 group-hover:scale-105 lg:h-[300px]"
                   />
-                  <div className="absolute inset-x-0 bottom-0 flex items-center justify-between bg-background/90 px-5 py-4">
+                  <div className="absolute inset-x-0 bottom-0 flex items-center justify-between border-t border-primary/45 bg-background/92 px-5 py-4 backdrop-blur-sm">
                     <h3 className="text-base font-bold">{s.title}</h3>
                     <span className="text-primary group-hover:translate-x-1 transition-transform">→</span>
                   </div>
@@ -262,7 +262,7 @@ function Home() {
               ))}
             </div>
             <div className="mt-9 text-center">
-              <Button asChild className="h-auto px-8 py-3.5 text-xs font-bold uppercase tracking-wider">
+              <Button asChild className="h-auto rounded-full px-8 py-3.5 text-xs font-bold uppercase tracking-wider shadow-[0_10px_26px_-14px_rgba(232,174,70,0.8)]">
                 <Link to="/services">View All Services</Link>
               </Button>
             </div>
@@ -374,10 +374,10 @@ function Home() {
             alt="Pacific Floors and Coatings crew serving Surrey, BC"
             width={1600}
             height={1008}
-            className="absolute inset-0 h-full w-full object-cover opacity-15"
+            className="absolute inset-0 h-full w-full object-cover opacity-25"
             loading="lazy"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/70" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/62" />
           <div className="relative mx-auto grid max-w-[1170px] gap-12 px-5 md:grid-cols-2">
             <div className="text-pretty">
               <p className="eyebrow">Local service areas</p>
@@ -477,4 +477,3 @@ function Home() {
     </>
   );
 }
-

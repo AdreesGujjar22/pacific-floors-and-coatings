@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Menu } from "lucide-react";
 import { Logo } from "./Logo";
 import { site } from "@/lib/site";
@@ -14,18 +14,32 @@ const nav = [
   { to: "/contact", label: "Contact" },
 ] as const;
 
-export function Header() {
+export function Header({ overlay = false }: { overlay?: boolean }) {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50">
-      <div className="bg-topbar py-1.5 text-center text-[10px] font-semibold text-topbar-foreground uppercase tracking-wider">
+    <header className={`${overlay ? "fixed inset-x-0 top-0" : "sticky top-0"} z-50`}>
+      <div className="bg-topbar py-2 text-center text-xs font-bold text-topbar-foreground uppercase tracking-[0.14em] sm:text-sm">
         GIVE US A CALL{" "}
-        <a href={site.phoneHref} className="underline-offset-2 hover:underline">
+        <a href={site.phoneHref} className="text-sm font-black tracking-wide text-primary underline-offset-2 hover:underline sm:text-base">
           {site.phone}
         </a>
       </div>
-      <div className="border-b border-border bg-surface/95 backdrop-blur">
+      <div
+        className={`border-b transition-all duration-300 ${
+          scrolled
+            ? "border-primary/35 bg-background/92 shadow-[0_10px_28px_-18px_rgba(0,0,0,0.95)] backdrop-blur-md"
+            : "border-primary/25 bg-transparent"
+        }`}
+      >
         <div className="mx-auto flex max-w-[1170px] items-center justify-between gap-4 px-5 py-4">
           <Logo />
           <nav className="hidden items-center gap-8 text-[12px] font-medium lg:flex">
