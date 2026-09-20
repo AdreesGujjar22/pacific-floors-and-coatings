@@ -123,7 +123,10 @@ function ServiceDetail() {
     <>
       <Header />
       <main>
-        <section className="mx-auto max-w-[1170px] px-5 py-12">
+        <section className="relative isolate overflow-hidden border-b border-border">
+          <img src={serviceImage(service)} alt="" aria-hidden="true" className="absolute inset-0 z-0 h-full w-full object-cover opacity-45" />
+          <div className="absolute inset-0 z-0 bg-gradient-to-r from-background/96 via-background/88 to-background/42" />
+          <div className="relative z-10 mx-auto max-w-[1170px] px-5 py-12">
           <Breadcrumbs
             crumbs={[
               { label: "Home", href: "/" },
@@ -140,7 +143,7 @@ function ServiceDetail() {
               <p className="mt-5 leading-7 text-muted-foreground">{service.intro}</p>
               <ul className="mt-7 space-y-2.5 text-sm text-muted-foreground">
                 {service.bullets.map((b) => (
-                  <li key={b} className="border-l-2 border-primary pl-3">
+                  <li key={b} className="border-l-2 border-border pl-3">
                     {b}
                   </li>
                 ))}
@@ -173,6 +176,7 @@ function ServiceDetail() {
               height={800}
               className="h-full max-h-[460px] w-full rounded-xl border border-border object-cover"
             />
+          </div>
           </div>
         </section>
 

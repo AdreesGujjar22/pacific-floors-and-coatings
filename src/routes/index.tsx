@@ -189,7 +189,7 @@ function Home() {
     <>
       <Header overlay />
       <main>
-        <section className="relative min-h-[680px] overflow-hidden border-b border-primary/25">
+        <section className="relative min-h-[680px] overflow-hidden border-b border-border">
           <img
             src={hero}
             alt="Metallic epoxy garage floor installed in Surrey, BC"
@@ -244,7 +244,7 @@ function Home() {
                   key={s.slug}
                   to="/services/$slug"
                   params={{ slug: s.slug }}
-                  className="group relative overflow-hidden rounded-xl border border-primary/30 shadow-[0_14px_42px_-24px_rgba(0,0,0,0.9)] transition hover:-translate-y-1 hover:border-primary/75 hover:shadow-[0_18px_42px_-18px_rgba(232,174,70,0.38)]"
+                  className="group relative overflow-hidden rounded-xl border border-border shadow-[0_14px_42px_-24px_rgba(0,0,0,0.9)] transition hover:-translate-y-1 hover:border-white/30 hover:shadow-[0_18px_42px_-18px_rgba(232,174,70,0.38)]"
                 >
                   <img
                     src={serviceImage(s)}
@@ -254,7 +254,7 @@ function Home() {
                     height={800}
                     className="h-64 w-full object-cover transition duration-500 group-hover:scale-105 lg:h-[300px]"
                   />
-                  <div className="absolute inset-x-0 bottom-0 flex items-center justify-between border-t border-primary/45 bg-background/92 px-5 py-4 backdrop-blur-sm">
+                  <div className="absolute inset-x-0 bottom-0 flex items-center justify-between border-t border-border bg-background/92 px-5 py-4 backdrop-blur-sm">
                     <h3 className="text-base font-bold">{s.title}</h3>
                     <span className="text-primary group-hover:translate-x-1 transition-transform">→</span>
                   </div>
@@ -269,9 +269,9 @@ function Home() {
           </div>
         </section>
 
-        <section className="border-y border-primary/25 bg-background py-20">
+        <section className="border-y border-border bg-background py-20">
           <div className="mx-auto grid max-w-[1170px] items-center gap-12 px-5 md:grid-cols-2 text-pretty">
-            <figure className="order-2 border-l border-primary/40 pl-8 md:order-1">
+            <figure className="order-2 border-l border-border pl-8 md:order-1">
               <blockquote className="text-lg leading-8 text-muted-foreground italic">“{firstReview.text}”</blockquote>
               <figcaption className="mt-6 text-sm font-bold text-foreground">
                 {firstReview.name} <span className="font-normal text-muted-foreground">— {firstReview.location}</span>
@@ -289,7 +289,7 @@ function Home() {
           </div>
         </section>
 
-        <section className="border-b border-primary/25 bg-surface py-20 text-pretty">
+        <section className="border-b border-border bg-surface py-20 text-pretty">
           <div className="mx-auto grid max-w-[1170px] items-center gap-12 px-5 md:grid-cols-2">
             <img
               src={sealed}
@@ -335,7 +335,7 @@ function Home() {
               className="h-[330px] w-full rounded-md object-cover shadow-2xl"
               loading="lazy"
             />
-            <figure className="border-l border-primary/40 pl-8">
+            <figure className="border-l border-border pl-8">
               <blockquote className="text-base leading-7 text-muted-foreground italic">“{secondReview.text}”</blockquote>
               <figcaption className="mt-5 text-sm font-bold">
                 {secondReview.name}

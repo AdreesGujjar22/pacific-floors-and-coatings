@@ -3,6 +3,8 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CtaBand } from "@/components/CtaBand";
 import { serviceAreas } from "@/lib/site";
+import hero from "@/assets/hero-garage.jpg";
+import { PageHero } from "@/components/PageHero";
 
 export const Route = createFileRoute("/service-areas/")({
   staticData: { sitemap: true },
@@ -38,29 +40,26 @@ function ServiceAreasPage() {
     <>
       <Header />
       <main>
-        <section className="mx-auto max-w-4xl px-4 py-16 text-pretty">
-          <p className="eyebrow">Local service areas</p>
-          <h1 className="mt-3 text-4xl font-black sm:text-5xl">
-            Epoxy flooring across Surrey BC and Metro Vancouver
-          </h1>
+        <PageHero
+          image={hero}
+          imageAlt="Epoxy garage flooring in Surrey, BC"
+          eyebrow="Local service areas"
+          title="Epoxy flooring across Surrey BC and Metro Vancouver"
+        >
           <ul className="mt-8 space-y-4 text-sm text-muted-foreground font-medium">
             <li>
-              <strong className="text-foreground">On-site consultations:</strong> we visit
-              commercial, industrial, and residential floor preparation questions directly at your
-              property.
+              <strong className="text-foreground">On-site consultations:</strong> we visit commercial, industrial, and residential floor preparation questions directly at your property.
             </li>
             <li>
-              <strong className="text-foreground">Fully equipped crews:</strong> our team arrives
-              with professional diamond grinders and dust-free vacuums.
+              <strong className="text-foreground">Fully equipped crews:</strong> our team arrives with professional diamond grinders and dust-free vacuums.
             </li>
             <li>
-              <strong className="text-foreground">Regional coverage:</strong> we install across
-              Surrey, BC and throughout Metro Vancouver.
+              <strong className="text-foreground">Regional coverage:</strong> we install across Surrey, BC and throughout Metro Vancouver.
             </li>
           </ul>
-        </section>
+        </PageHero>
 
-        <section className="mx-auto max-w-6xl px-4 pb-20">
+        <section className="mx-auto max-w-6xl px-4 pb-20 pt-14">
           <h2 className="text-2xl font-black">Choose your city</h2>
           <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {serviceAreas.map((a) => (

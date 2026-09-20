@@ -4,6 +4,7 @@ import { Footer } from "@/components/Footer";
 import { CtaBand } from "@/components/CtaBand";
 import { QuoteForm } from "@/components/QuoteForm";
 import { findServiceArea, services, site } from "@/lib/site";
+import hero from "@/assets/hero-garage.jpg";
 
 const BASE = "https://epoxy-clone-pro.lovable.app";
 
@@ -95,7 +96,10 @@ function AreaPage() {
     <>
       <Header />
       <main>
-        <section className="mx-auto max-w-4xl px-4 py-16">
+        <section className="relative isolate overflow-hidden border-b border-border">
+          <img src={hero} alt="Epoxy garage flooring in Metro Vancouver" className="absolute inset-0 z-0 h-full w-full object-cover opacity-45" />
+          <div className="absolute inset-0 z-0 bg-gradient-to-r from-background/96 via-background/88 to-background/42" />
+          <div className="relative z-10 mx-auto max-w-4xl px-4 py-16">
           <p className="eyebrow">Serving {area.region}</p>
           <h1 className="mt-3 text-4xl font-extrabold sm:text-5xl">
             Epoxy Flooring in {area.name}, BC
@@ -114,6 +118,7 @@ function AreaPage() {
             >
               Get a free quote
             </Link>
+          </div>
           </div>
         </section>
 

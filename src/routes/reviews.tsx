@@ -3,6 +3,8 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { QuoteForm } from "@/components/QuoteForm";
 import { reviews } from "@/lib/reviews";
+import metallic from "@/assets/metallic-epoxy.jpg";
+import { PageHero } from "@/components/PageHero";
 
 export const Route = createFileRoute("/reviews")({
   staticData: { sitemap: true },
@@ -44,16 +46,15 @@ function Reviews() {
     <>
       <Header />
       <main>
-        <section className="mx-auto max-w-3xl px-4 py-16 text-center text-pretty">
-          <p className="eyebrow">Real results, real feedback</p>
-          <h1 className="mt-3 text-4xl font-black sm:text-5xl">Customer reviews</h1>
-          <p className="mt-5 text-muted-foreground leading-7">
-            Feedback from homeowners and businesses across Surrey and Metro Vancouver who chose
-            Pacific Floors and Coatings.
-          </p>
-        </section>
+        <PageHero
+          image={metallic}
+          imageAlt="Metallic epoxy flooring project"
+          eyebrow="Real results, real feedback"
+          title="Customer reviews"
+          description={<>Feedback from homeowners and businesses across Surrey and Metro Vancouver who chose Pacific Floors and Coatings.</>}
+        />
 
-        <section className="mx-auto grid max-w-6xl gap-5 px-4 pb-16 md:grid-cols-2 text-pretty">
+        <section className="mx-auto grid max-w-6xl gap-5 px-4 pb-16 pt-14 md:grid-cols-2 text-pretty">
           {reviews.map((r) => (
             <figure key={`${r.name}-${r.relativeTime}`} className="panel border-l-2 border-l-primary p-6 shadow-sm">
               <div className="text-primary text-xs tracking-tighter">{"★".repeat(Math.round(r.rating))}</div>

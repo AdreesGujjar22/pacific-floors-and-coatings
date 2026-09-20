@@ -1,6 +1,7 @@
 import { useState, type FormEvent } from "react";
 import { services } from "@/lib/site";
 import { Button } from "@/components/ui/button";
+import { ChevronDown } from "lucide-react";
 
 export function QuoteForm({ heading = "Reach out for a Free Quote!" }: { heading?: string }) {
   const [sent, setSent] = useState(false);
@@ -11,13 +12,13 @@ export function QuoteForm({ heading = "Reach out for a Free Quote!" }: { heading
   }
 
   const field =
-    "w-full rounded-full border border-primary/25 bg-white px-4 py-3 text-xs text-slate-900 placeholder:text-slate-500 shadow-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/25 transition-colors";
+    "w-full rounded-full border border-slate-300 bg-white px-4 py-3 text-xs text-slate-900 placeholder:text-slate-500 shadow-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/25 transition-colors";
 
   return (
-    <div className="panel border-primary/45 bg-gradient-to-br from-[#fffdf8] to-[#f0eadc] p-5 text-slate-900 shadow-[0_22px_60px_-20px_rgba(0,0,0,0.85)] sm:p-7">
+    <div className="panel border-border bg-gradient-to-br from-[#fffdf8] to-[#f0eadc] p-5 text-slate-900 shadow-[0_22px_60px_-20px_rgba(0,0,0,0.85)] sm:p-7">
       <h2 className="text-xl font-black tracking-tight text-[#302355]">{heading}</h2>
       {sent ? (
-        <div className="mt-4 rounded-xl border border-primary/30 bg-primary/10 p-4">
+        <div className="mt-4 rounded-xl border border-border bg-primary/10 p-4">
           <p className="text-sm font-medium text-slate-900">
             Thanks! Your request was received.
           </p>
@@ -41,13 +42,16 @@ export function QuoteForm({ heading = "Reach out for a Free Quote!" }: { heading
           </div>
           <div>
             <label className="eyebrow" htmlFor="qf-service">Service type</label>
-            <select id="qf-service" name="service" className={`mt-1 ${field}`} defaultValue="">
-              <option value="" disabled>Select service type</option>
-              {services.map((s) => (
-                <option key={s.slug} value={s.slug}>{s.title}</option>
-              ))}
-              <option value="other">Something else</option>
-            </select>
+            <div className="relative mt-1">
+              <select id="qf-service" name="service" className={`appearance-none pr-10 ${field}`} defaultValue="">
+                <option value="" disabled>Select service type</option>
+                {services.map((s) => (
+                  <option key={s.slug} value={s.slug}>{s.title}</option>
+                ))}
+                <option value="other">Something else</option>
+              </select>
+              <ChevronDown className="pointer-events-none absolute right-4 top-1/2 size-4 -translate-y-1/2 text-slate-500" aria-hidden="true" />
+            </div>
           </div>
           <p className="sm:col-span-2 text-[9px] leading-relaxed text-slate-600">
             By submitting this form you agree that Pacific Floors and Coatings may contact you by phone, text or email

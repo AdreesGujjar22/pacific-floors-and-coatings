@@ -5,7 +5,7 @@ import installer from "@/assets/installer.jpg";
 export function CtaBand() {
   return (
     <section className="mx-auto max-w-[1170px] px-5 py-20">
-      <div className="relative overflow-hidden rounded-2xl border border-primary/35 shadow-[0_24px_60px_-24px_rgba(0,0,0,0.9)]">
+      <div className="relative overflow-hidden rounded-2xl border border-border shadow-[0_24px_60px_-24px_rgba(0,0,0,0.9)]">
         <img
           src={installer}
           alt="Professional installer applying durable epoxy coating to a garage floor in Surrey, BC"

@@ -6,6 +6,8 @@ import { CtaBand } from "@/components/CtaBand";
 import { Breadcrumbs, breadcrumbSchema } from "@/components/Breadcrumbs";
 import { services, serviceGroups, SITE_URL } from "@/lib/site";
 import { serviceImage } from "@/lib/service-images";
+import metallic from "@/assets/metallic-epoxy.jpg";
+import { PageHero } from "@/components/PageHero";
 
 const TITLE = "Epoxy Flooring Services in Surrey, BC | Pacific Floors";
 const DESCRIPTION =
@@ -71,17 +73,15 @@ function ServicesPage() {
           />
         </section>
 
-        <section className="mx-auto max-w-3xl px-5 py-12 text-center text-pretty">
-          <p className="eyebrow">Our services</p>
-          <h1 className="mt-3 text-4xl font-black sm:text-5xl">Flooring built around how you use the room</h1>
-          <p className="mt-5 leading-7 text-muted-foreground">
-            We install epoxy, polyaspartic, polyurethane, and polished concrete systems across Surrey and
-            Metro Vancouver — garages and basements at home, kitchens and warehouses at work, and the
-            concrete repair that has to happen first.
-          </p>
-        </section>
+        <PageHero
+          image={metallic}
+          imageAlt="Metallic epoxy flooring finish"
+          eyebrow="Our services"
+          title="Flooring built around how you use the room"
+          description={<>We install epoxy, polyaspartic, polyurethane, and polished concrete systems across Surrey and Metro Vancouver — garages and basements at home, kitchens and warehouses at work, and the concrete repair that has to happen first.</>}
+        />
 
-        <section className="mx-auto grid max-w-[1170px] gap-6 px-5 pb-14 sm:grid-cols-2 lg:grid-cols-3">
+        <section className="mx-auto grid max-w-[1170px] gap-6 px-5 pb-14 pt-14 sm:grid-cols-2 lg:grid-cols-3">
           {featured.map((s) => (
             <Link
               key={s.slug}

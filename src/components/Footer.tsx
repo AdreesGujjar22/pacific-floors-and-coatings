@@ -9,7 +9,7 @@ const popular = services.slice(0, 8);
 
 export function Footer() {
   return (
-    <footer className="relative isolate overflow-hidden border-t border-primary/35 bg-surface">
+    <footer className="relative isolate overflow-hidden border-t border-border bg-surface">
       <img
         src={metallic}
         alt=""

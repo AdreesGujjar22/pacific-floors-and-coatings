@@ -5,6 +5,7 @@ import { Logo } from "./Logo";
 import { site } from "@/lib/site";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
+import metallic from "@/assets/metallic-epoxy.jpg";
 
 const nav = [
   { to: "/about", label: "About" },
@@ -36,8 +37,8 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
       <div
         className={`border-b transition-all duration-300 ${
           scrolled
-            ? "border-primary/35 bg-background/92 shadow-[0_10px_28px_-18px_rgba(0,0,0,0.95)] backdrop-blur-md"
-            : "border-primary/25 bg-transparent"
+            ? "border-white/10 bg-background/92 shadow-[0_10px_28px_-18px_rgba(0,0,0,0.95)] backdrop-blur-md"
+            : "border-white/10 bg-transparent"
         }`}
       >
         <div className="mx-auto flex max-w-[1170px] items-center justify-between gap-4 px-5 py-4">
@@ -71,9 +72,16 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
               </SheetTrigger>
               <SheetContent
                 side="right"
-                className="w-[300px] border-l border-border bg-surface p-0 sm:w-[340px]"
+                className="relative w-[300px] overflow-hidden border-l border-white/10 bg-surface p-0 sm:w-[340px]"
               >
-                <div className="flex h-full flex-col">
+                <img
+                  src={metallic}
+                  alt=""
+                  aria-hidden="true"
+                  className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-25"
+                />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-background/90 via-background/88 to-background/96" />
+                <div className="relative z-10 flex h-full flex-col">
                   <div className="border-b border-border px-6 py-5">
                     <Logo />
                   </div>

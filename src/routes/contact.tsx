@@ -3,6 +3,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { QuoteForm } from "@/components/QuoteForm";
 import { site } from "@/lib/site";
+import hero from "@/assets/installer.jpg";
 
 export const Route = createFileRoute("/contact")({
   staticData: { sitemap: true },
@@ -38,7 +39,10 @@ function Contact() {
     <>
       <Header />
       <main>
-        <section className="mx-auto grid max-w-6xl gap-10 px-4 py-16 md:grid-cols-2 text-pretty">
+        <section className="relative isolate overflow-hidden border-b border-border">
+          <img src={hero} alt="Pacific Floors and Coatings installer preparing a floor" className="absolute inset-0 z-0 h-full w-full object-cover opacity-45" />
+          <div className="absolute inset-0 z-0 bg-gradient-to-r from-background/96 via-background/88 to-background/45" />
+          <div className="relative z-10 mx-auto grid max-w-6xl gap-10 px-4 py-16 text-pretty md:grid-cols-2">
           <div>
             <p className="eyebrow">Contact us</p>
             <h1 className="mt-3 text-4xl font-black">Let's talk about your floor</h1>
@@ -66,6 +70,7 @@ function Contact() {
             </ul>
           </div>
           <QuoteForm heading="Request a free quote" />
+          </div>
         </section>
         <section className="border-y border-border bg-surface py-16">
           <div className="mx-auto max-w-6xl px-4">
