@@ -72,7 +72,7 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
               </SheetTrigger>
               <SheetContent
                 side="right"
-                className="relative w-[300px] overflow-hidden border-l border-white/10 bg-surface p-0 sm:w-[340px]"
+                className="z-[60] w-[300px] overflow-hidden border-l border-white/10 bg-surface p-0 sm:w-[340px]"
               >
                 <img
                   src={metallic}

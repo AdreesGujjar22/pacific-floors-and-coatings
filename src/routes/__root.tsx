@@ -81,6 +81,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "Pacific Floors and Coatings | Epoxy Flooring Surrey BC" },
       { name: "description", content: "Professional epoxy flooring and concrete coatings in Surrey, BC and Metro Vancouver." },
       { name: "author", content: "Pacific Floors and Coatings" },
+      { name: "google-site-verification", content: "qt78BMaU2SZcxM-wDu27orkUE6iVDUw4aEZxYMAbfcs" },
       { property: "og:title", content: "Pacific Floors and Coatings" },
       { property: "og:description", content: "Professional epoxy flooring and concrete coatings in Surrey, BC." },
       { property: "og:type", content: "website" },
