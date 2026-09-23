@@ -837,27 +837,12 @@ export const serviceGroups = [
   "Commercial & Industrial",
 ] as const;
 
-const TITLE_SUFFIXES = [
-  " in Surrey BC | Pacific Floors & Coatings",
-  " Surrey BC | Pacific Floors & Coatings",
-  " Surrey BC | Pacific Floors",
-  " Surrey BC | Pacific Coatings",
-  " | Pacific Floors & Coatings",
-  " Surrey BC",
-];
+const TITLE_SUFFIX = " | Pacific Floors & Coatings";
+const TITLE_BASE_LIMIT = 59 - TITLE_SUFFIX.length;
 
 /** Builds a meta title as close to 59 characters as possible without exceeding it. */
 export function metaTitle(base: string): string {
-  let best = base.slice(0, 59);
-  let bestLength = -1;
-  for (const suffix of TITLE_SUFFIXES) {
-    const candidate = base + suffix;
-    if (candidate.length <= 59 && candidate.length > bestLength) {
-      best = candidate;
-      bestLength = candidate.length;
-    }
-  }
-  return best;
+  return `${base.slice(0, TITLE_BASE_LIMIT).trimEnd()}${TITLE_SUFFIX}`;
 }
 
 const DESCRIPTION_TAILS = [

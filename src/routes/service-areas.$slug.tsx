@@ -3,7 +3,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CtaBand } from "@/components/CtaBand";
 import { QuoteForm } from "@/components/QuoteForm";
-import { findServiceArea, services, site } from "@/lib/site";
+import { findServiceArea, metaTitle, services, site } from "@/lib/site";
 import hero from "@/assets/hero-garage.jpg";
 
 const BASE = "https://www.pacificfloorsandcoatings.ca";
@@ -17,14 +17,10 @@ export const Route = createFileRoute("/service-areas/$slug")({
   },
   head: ({ loaderData }) => {
     if (!loaderData) {
-      return { meta: [{ title: "Service area not found" }, { name: "robots", content: "noindex" }] };
+      return { meta: [{ title: "Area Not Found | Pacific Floors & Coatings" }, { name: "robots", content: "noindex" }] };
     }
     const { area } = loaderData;
-    const base = `Epoxy Flooring in ${area.name} BC`;
-    const title =
-      [`${base} | Pacific Floors & Coatings`, `${base} | Pacific Floors`, `${base} | Pacific`].find(
-        (c) => c.length <= 59,
-      ) ?? base.slice(0, 59);
+    const title = metaTitle(`Epoxy Flooring in ${area.name} BC`);
     const description = `Garage, commercial, and industrial epoxy flooring in ${area.name}, BC. Metallic, flake, solid, and sealed concrete coatings with free on-site estimates.`;
     const url = `${BASE}/service-areas/${area.slug}`;
     return {
