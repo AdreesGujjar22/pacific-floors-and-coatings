@@ -64,7 +64,7 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
                 <Button
                   variant="outline"
                   size="icon"
-                  className="size-10 rounded-md border-border transition hover:border-primary"
+                  className="size-10 rounded-md border-border transition hover:border-primary lg:hidden"
                   aria-label="Open menu"
                 >
                   <Menu size={18} />
@@ -72,7 +72,7 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
               </SheetTrigger>
               <SheetContent
                 side="right"
-                className="z-[60] w-[300px] overflow-hidden border-l border-white/10 bg-surface p-0 sm:w-[340px]"
+                className="z-[60] w-[300px] overflow-hidden border-l border-white/10 bg-surface p-0 sm:w-[340px] lg:hidden"
               >
                 <img
                   src={metallic}

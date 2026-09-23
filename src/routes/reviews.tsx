@@ -10,13 +10,13 @@ export const Route = createFileRoute("/reviews")({
   staticData: { sitemap: true },
   head: () => ({
     meta: [
-      { title: "Epoxy Flooring Customer Reviews | Pacific Floors & Coatings" },
+      { title: "Epoxy Flooring Reviews | Pacific Floors & Coatings" },
       {
         name: "description",
         content:
           "Read customer reviews from Surrey and Metro Vancouver homeowners and businesses who chose Pacific Floors & Coatings for durable epoxy flooring installations.",
       },
-      { property: "og:title", content: "Epoxy Flooring Customer Reviews | Pacific Floors & Coatings" },
+      { property: "og:title", content: "Epoxy Flooring Reviews | Pacific Floors & Coatings" },
       {
         property: "og:description",
         content: "Read customer reviews from Surrey and Metro Vancouver homeowners and businesses who chose Pacific Floors & Coatings for durable epoxy flooring installations.",
@@ -24,7 +24,7 @@ export const Route = createFileRoute("/reviews")({
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://www.pacificfloorsandcoatings.ca/reviews" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Epoxy Flooring Customer Reviews | Pacific Floors & Coatings" },
+      { name: "twitter:title", content: "Epoxy Flooring Reviews | Pacific Floors & Coatings" },
       {
         name: "twitter:description",
         content: "Read customer reviews from Surrey and Metro Vancouver homeowners and businesses who chose Pacific Floors & Coatings for durable epoxy flooring installations.",

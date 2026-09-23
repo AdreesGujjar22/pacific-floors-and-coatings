@@ -69,13 +69,13 @@ export const Route = createFileRoute("/")({
   staticData: { sitemap: true },
   head: () => ({
     meta: [
-      { title: "Epoxy Flooring Company in Surrey | Pacific Floors & Coatings" },
+      { title: "Epoxy Flooring Surrey BC | Pacific Floors & Coatings" },
       {
         name: "description",
         content:
           "Pacific Floors & Coatings installs metallic, flake, and solid epoxy flooring in Surrey, BC. Durable garage, commercial & industrial coatings. Free estimates.",
       },
-      { property: "og:title", content: "Epoxy Flooring Company in Surrey | Pacific Floors & Coatings" },
+      { property: "og:title", content: "Epoxy Flooring Surrey BC | Pacific Floors & Coatings" },
       {
         property: "og:description",
         content:
@@ -84,7 +84,7 @@ export const Route = createFileRoute("/")({
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://www.pacificfloorsandcoatings.ca/" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Epoxy Flooring Company in Surrey | Pacific Floors & Coatings" },
+      { name: "twitter:title", content: "Epoxy Flooring Surrey BC | Pacific Floors & Coatings" },
       {
         name: "twitter:description",
         content:

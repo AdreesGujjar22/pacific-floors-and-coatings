@@ -16,7 +16,7 @@ export const Route = createFileRoute("/services/$slug")({
   },
   head: ({ params, loaderData }) => {
     if (!loaderData) {
-      return { meta: [{ title: "Service not found" }, { name: "robots", content: "noindex" }] };
+      return { meta: [{ title: "Service Not Found | Pacific Floors & Coatings" }, { name: "robots", content: "noindex" }] };
     }
     const { service } = loaderData;
     const title = metaTitle(service.title);

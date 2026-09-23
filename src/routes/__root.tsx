@@ -78,11 +78,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Pacific Floors and Coatings | Epoxy Flooring Surrey BC" },
+      { title: "Epoxy Flooring | Pacific Floors & Coatings" },
       { name: "description", content: "Professional epoxy flooring and concrete coatings in Surrey, BC and Metro Vancouver." },
       { name: "author", content: "Pacific Floors and Coatings" },
       { name: "google-site-verification", content: "qt78BMaU2SZcxM-wDu27orkUE6iVDUw4aEZxYMAbfcs" },
-      { property: "og:title", content: "Pacific Floors and Coatings" },
+      { property: "og:title", content: "Epoxy Flooring | Pacific Floors & Coatings" },
       { property: "og:description", content: "Professional epoxy flooring and concrete coatings in Surrey, BC." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
