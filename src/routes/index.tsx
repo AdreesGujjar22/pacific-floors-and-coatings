@@ -4,6 +4,7 @@ import { Footer } from "@/components/Footer";
 import { QuoteForm } from "@/components/QuoteForm";
 import { CtaBand } from "@/components/CtaBand";
 import { serviceAreas, services, site } from "@/lib/site";
+import { metaDescription } from "@/lib/seo";
 import { serviceImage } from "@/lib/service-images";
 import { reviews } from "@/lib/reviews";
 import { Button } from "@/components/ui/button";
@@ -65,6 +66,10 @@ const faqs = [
   },
 ];
 
+const PAGE_DESCRIPTION = metaDescription(
+  "Epoxy flooring in Surrey, BC for garages, basements, and businesses. Choose a metallic, flake, or solid finish installed for lasting durability.",
+);
+
 export const Route = createFileRoute("/")({
   staticData: { sitemap: true },
   head: () => ({
@@ -73,13 +78,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Epoxy flooring in Surrey, BC for garages, basements, and businesses. Choose a metallic, flake, or solid finish installed for lasting durability.",
+          PAGE_DESCRIPTION,
       },
       { property: "og:title", content: "Epoxy Flooring in Surrey, BC | Pacific Floors and Coatings" },
       {
         property: "og:description",
         content:
-          "Epoxy flooring in Surrey, BC for garages, basements, and businesses. Choose a metallic, flake, or solid finish installed for lasting durability.",
+          PAGE_DESCRIPTION,
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://www.pacificfloorsandcoatings.ca/" },
@@ -88,7 +93,7 @@ export const Route = createFileRoute("/")({
       {
         name: "twitter:description",
         content:
-          "Epoxy flooring in Surrey, BC for garages, basements, and businesses. Choose a metallic, flake, or solid finish installed for lasting durability.",
+          PAGE_DESCRIPTION,
       },
     ],
     links: [{ rel: "canonical", href: "https://www.pacificfloorsandcoatings.ca/" }],
@@ -192,6 +197,7 @@ function Home() {
         <section className="relative min-h-[680px] overflow-hidden border-b border-border">
           <img
             src={hero}
+            fetchPriority="high"
             alt="Metallic epoxy garage floor installed in Surrey, BC"
             width={1600}
             height={1008}

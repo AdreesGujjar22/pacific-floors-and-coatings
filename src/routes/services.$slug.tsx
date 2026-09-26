@@ -4,7 +4,8 @@ import { Footer } from "@/components/Footer";
 import { QuoteForm } from "@/components/QuoteForm";
 import { CtaBand } from "@/components/CtaBand";
 import { Breadcrumbs, breadcrumbSchema } from "@/components/Breadcrumbs";
-import { findService, services, metaTitle, metaDescription, sameAs, site, SITE_URL } from "@/lib/site";
+import { findService, services, metaTitle, sameAs, site, SITE_URL } from "@/lib/site";
+import { metaDescription } from "@/lib/seo";
 import { serviceImage } from "@/lib/service-images";
 
 export const Route = createFileRoute("/services/$slug")({

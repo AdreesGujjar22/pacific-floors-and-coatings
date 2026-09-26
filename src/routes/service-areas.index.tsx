@@ -3,8 +3,13 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CtaBand } from "@/components/CtaBand";
 import { serviceAreas } from "@/lib/site";
+import { metaDescription } from "@/lib/seo";
 import hero from "@/assets/hero-garage.jpg";
 import { PageHero } from "@/components/PageHero";
+
+const PAGE_DESCRIPTION = metaDescription(
+  "Epoxy flooring service areas: find nearby flooring and concrete coating teams in Surrey, Vancouver, Burnaby, Richmond, Langley, and Metro Vancouver.",
+);
 
 export const Route = createFileRoute("/service-areas/")({
   staticData: { sitemap: true },
@@ -14,12 +19,12 @@ export const Route = createFileRoute("/service-areas/")({
       {
         name: "description",
         content:
-          "Epoxy flooring service areas: find nearby flooring and concrete coating teams in Surrey, Vancouver, Burnaby, Richmond, Langley, and Metro Vancouver.",
+          PAGE_DESCRIPTION,
       },
       { property: "og:title", content: "Epoxy Flooring Service Areas | Pacific Floors and Coatings" },
       {
         property: "og:description",
-        content: "Epoxy flooring service areas: find nearby flooring and concrete coating teams in Surrey, Vancouver, Burnaby, Richmond, Langley, and Metro Vancouver.",
+        content: PAGE_DESCRIPTION,
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://www.pacificfloorsandcoatings.ca/service-areas" },
@@ -27,7 +32,7 @@ export const Route = createFileRoute("/service-areas/")({
       { name: "twitter:title", content: "Epoxy Flooring Service Areas | Pacific Floors and Coatings" },
       {
         name: "twitter:description",
-        content: "Epoxy flooring service areas: find nearby flooring and concrete coating teams in Surrey, Vancouver, Burnaby, Richmond, Langley, and Metro Vancouver.",
+        content: PAGE_DESCRIPTION,
       },
     ],
     links: [{ rel: "canonical", href: "https://www.pacificfloorsandcoatings.ca/service-areas" }],
@@ -42,6 +47,8 @@ function ServiceAreasPage() {
       <main>
         <PageHero
           image={hero}
+          imageWidth={1280}
+          imageHeight={838}
           imageAlt="Epoxy garage flooring in Surrey, BC"
           eyebrow="Local service areas"
           title="Epoxy flooring across Surrey BC and Metro Vancouver"

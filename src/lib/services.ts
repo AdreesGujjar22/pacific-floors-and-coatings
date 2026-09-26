@@ -842,24 +842,3 @@ const TITLE_SUFFIX = " | Pacific Floors and Coatings";
 export function metaTitle(base: string): string {
   return `${base}${TITLE_SUFFIX}`;
 }
-
-const DESCRIPTION_TAILS = [
-  " Get a free on-site estimate from our team.",
-  " Request a free estimate today.",
-  " Ask us for a free quote.",
-  " Contact our team to get started.",
-];
-
-/** Builds a meta description as close to 159 characters as possible without exceeding it. */
-export function metaDescription(base: string): string {
-  let best = base.length <= 159 ? base : `${base.slice(0, 156).trimEnd()}...`;
-  let bestLength = best.length;
-  for (const tail of DESCRIPTION_TAILS) {
-    const candidate = base + tail;
-    if (candidate.length <= 159 && candidate.length > bestLength) {
-      best = candidate;
-      bestLength = candidate.length;
-    }
-  }
-  return best;
-}

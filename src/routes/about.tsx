@@ -5,6 +5,11 @@ import { QuoteForm } from "@/components/QuoteForm";
 import installer from "@/assets/installer.jpg";
 import flake from "@/assets/flake-epoxy.jpg";
 import { PageHero } from "@/components/PageHero";
+import { metaDescription } from "@/lib/seo";
+
+const PAGE_DESCRIPTION = metaDescription(
+  "About Us at Pacific Floors and Coatings: meet our Surrey team and see how careful prep and durable coatings can transform your floor.",
+);
 
 export const Route = createFileRoute("/about")({
   staticData: { sitemap: true },
@@ -14,12 +19,12 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "About Us at Pacific Floors and Coatings: meet our Surrey team and see how careful prep and durable coatings can transform your floor.",
+          PAGE_DESCRIPTION,
       },
       { property: "og:title", content: "About Us | Pacific Floors and Coatings" },
       {
         property: "og:description",
-        content: "About Us at Pacific Floors and Coatings: meet our Surrey team and see how careful prep and durable coatings can transform your floor.",
+        content: PAGE_DESCRIPTION,
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://www.pacificfloorsandcoatings.ca/about" },
@@ -27,7 +32,7 @@ export const Route = createFileRoute("/about")({
       { name: "twitter:title", content: "About Us | Pacific Floors and Coatings" },
       {
         name: "twitter:description",
-        content: "About Us at Pacific Floors and Coatings: meet our Surrey team and see how careful prep and durable coatings can transform your floor.",
+        content: PAGE_DESCRIPTION,
       },
     ],
     links: [{ rel: "canonical", href: "https://www.pacificfloorsandcoatings.ca/about" }],
@@ -42,6 +47,8 @@ function About() {
       <main>
         <PageHero
           image={installer}
+          imageWidth={1181}
+          imageHeight={1920}
           imageAlt="Pacific Floors and Coatings installer preparing a floor"
           eyebrow="Get to know Pacific Floors and Coatings"
           title="Premium custom flooring across Surrey, BC"

@@ -11,6 +11,7 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { metaDescription } from "../lib/seo";
 
 function NotFoundComponent() {
   return (
@@ -72,6 +73,10 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   );
 }
 
+const ROOT_DESCRIPTION = metaDescription(
+  "Epoxy flooring in Surrey, BC for garages, basements, and businesses, installed with careful preparation for lasting durability.",
+);
+
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   staticData: { sitemap: false },
   head: () => ({
@@ -79,11 +84,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Epoxy Flooring in Surrey, BC | Pacific Floors and Coatings" },
-      { name: "description", content: "Epoxy flooring in Surrey, BC for garages, basements, and businesses, installed with careful preparation for lasting durability." },
+      { name: "description", content: ROOT_DESCRIPTION },
       { name: "author", content: "Pacific Floors and Coatings" },
       { name: "google-site-verification", content: "qt78BMaU2SZcxM-wDu27orkUE6iVDUw4aEZxYMAbfcs" },
       { property: "og:title", content: "Epoxy Flooring in Surrey, BC | Pacific Floors and Coatings" },
-      { property: "og:description", content: "Epoxy flooring in Surrey, BC for garages, basements, and businesses, installed with careful preparation for lasting durability." },
+      { property: "og:description", content: ROOT_DESCRIPTION },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

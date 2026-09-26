@@ -76,6 +76,10 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
               >
                 <img
                   src={metallic}
+                  loading="lazy"
+                  decoding="async"
+                  width={800}
+                  height={1200}
                   alt=""
                   aria-hidden="true"
                   className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-25"

@@ -4,6 +4,7 @@ import { Footer } from "@/components/Footer";
 import { CtaBand } from "@/components/CtaBand";
 import { QuoteForm } from "@/components/QuoteForm";
 import { findServiceArea, metaTitle, services, site } from "@/lib/site";
+import { metaDescription } from "@/lib/seo";
 import hero from "@/assets/hero-garage.jpg";
 
 const BASE = "https://www.pacificfloorsandcoatings.ca";
@@ -21,7 +22,9 @@ export const Route = createFileRoute("/service-areas/$slug")({
     }
     const { area } = loaderData;
     const title = metaTitle(`Epoxy Flooring in ${area.name} BC`);
-    const description = `Epoxy flooring in ${area.name}, BC: durable finishes for garages and businesses, installed with careful preparation.`;
+    const description = metaDescription(
+      `Epoxy flooring in ${area.name}, BC: durable finishes for garages and businesses, installed with careful preparation.`,
+    );
     const url = `${BASE}/service-areas/${area.slug}`;
     return {
       meta: [
@@ -93,7 +96,14 @@ function AreaPage() {
       <Header />
       <main>
         <section className="relative isolate overflow-hidden border-b border-border">
-          <img src={hero} alt="Epoxy garage flooring in Metro Vancouver" className="absolute inset-0 z-0 h-full w-full object-cover opacity-45" />
+          <img
+            src={hero}
+            alt="Epoxy garage flooring in Metro Vancouver"
+            fetchPriority="high"
+            width={1280}
+            height={838}
+            className="absolute inset-0 z-0 h-full w-full object-cover opacity-45"
+          />
           <div className="absolute inset-0 z-0 bg-gradient-to-r from-background/96 via-background/88 to-background/42" />
           <div className="relative z-10 mx-auto max-w-4xl px-4 py-16">
           <p className="eyebrow">Serving {area.region}</p>

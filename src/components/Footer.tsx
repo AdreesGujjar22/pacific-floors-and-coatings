@@ -12,6 +12,10 @@ export function Footer() {
     <footer className="relative isolate overflow-hidden border-t border-border bg-surface">
       <img
         src={metallic}
+        loading="lazy"
+        decoding="async"
+        width={800}
+        height={1200}
         alt=""
         aria-hidden="true"
         className="absolute inset-0 z-0 h-full w-full object-cover opacity-30 mix-blend-screen"

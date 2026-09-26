@@ -2,6 +2,8 @@ import type { ReactNode } from "react";
 
 type PageHeroProps = {
   image: string;
+  imageWidth: number;
+  imageHeight: number;
   imageAlt?: string;
   eyebrow: string;
   title: ReactNode;
@@ -9,11 +11,15 @@ type PageHeroProps = {
   children?: ReactNode;
 };
 
-export function PageHero({ image, imageAlt = "", eyebrow, title, description, children }: PageHeroProps) {
+export function PageHero({ image, imageWidth, imageHeight, imageAlt = "", eyebrow, title, description, children }: PageHeroProps) {
   return (
     <section className="relative isolate overflow-hidden border-b border-border">
       <img
         src={image}
+        fetchPriority="high"
+        decoding="async"
+        width={imageWidth}
+        height={imageHeight}
         alt={imageAlt}
         aria-hidden={!imageAlt}
         className="absolute inset-0 z-0 h-full w-full object-cover opacity-60"

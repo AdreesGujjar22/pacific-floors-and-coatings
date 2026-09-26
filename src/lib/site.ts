@@ -24,7 +24,8 @@ export const sameAs = [
   "https://www.linkedin.com/in/pacificfloorsandcoatingsca/",
 ];
 
-export { services, findService, serviceGroups, metaTitle, metaDescription } from "./services";
+export { services, findService, serviceGroups, metaTitle } from "./services";
+
 export type { Service } from "./services";
 
 
