@@ -4,15 +4,11 @@ import { Footer } from "@/components/Footer";
 import { QuoteForm } from "@/components/QuoteForm";
 import { CtaBand } from "@/components/CtaBand";
 import { serviceAreas, services, site } from "@/lib/site";
+import { metaDescription } from "@/lib/seo";
 import { serviceImage } from "@/lib/service-images";
 import { reviews } from "@/lib/reviews";
 import { Button } from "@/components/ui/button";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+
 import hero from "@/assets/hero-garage.jpg";
 import metallic from "@/assets/metallic-epoxy.jpg";
 import flake from "@/assets/flake-epoxy.jpg";
@@ -65,33 +61,41 @@ const faqs = [
   },
 ];
 
+const PAGE_DESCRIPTION = metaDescription(
+  "Epoxy flooring in Surrey, BC for garages, basements, and businesses. Choose a metallic, flake, or solid finish installed for lasting durability.",
+);
+
 export const Route = createFileRoute("/")({
   staticData: { sitemap: true },
   head: () => ({
     meta: [
-      { title: "Epoxy Flooring Surrey BC | Pacific Floors & Coatings" },
+      { title: "Epoxy Flooring in Surrey, BC | Pacific Floors and Coatings" },
       {
         name: "description",
         content:
-          "Pacific Floors & Coatings installs metallic, flake, and solid epoxy flooring in Surrey, BC. Durable garage, commercial & industrial coatings. Free estimates.",
+          PAGE_DESCRIPTION,
       },
-      { property: "og:title", content: "Epoxy Flooring Surrey BC | Pacific Floors & Coatings" },
+      { property: "og:title", content: "Epoxy Flooring in Surrey, BC | Pacific Floors and Coatings" },
       {
         property: "og:description",
         content:
-          "Pacific Floors & Coatings installs metallic, flake, and solid epoxy flooring in Surrey, BC. Durable garage, commercial & industrial coatings. Free estimates.",
+          PAGE_DESCRIPTION,
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://www.pacificfloorsandcoatings.ca/" },
+      { name: "robots", content: "index, follow" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Epoxy Flooring Surrey BC | Pacific Floors & Coatings" },
+      { name: "twitter:title", content: "Epoxy Flooring in Surrey, BC | Pacific Floors and Coatings" },
       {
         name: "twitter:description",
         content:
-          "Pacific Floors & Coatings installs metallic, flake, and solid epoxy flooring in Surrey, BC. Durable garage, commercial & industrial coatings. Free estimates.",
+          PAGE_DESCRIPTION,
       },
     ],
-    links: [{ rel: "canonical", href: "https://www.pacificfloorsandcoatings.ca/" }],
+    links: [
+      { rel: "canonical", href: "https://www.pacificfloorsandcoatings.ca/" },
+      { rel: "preload", as: "image", href: hero },
+    ],
     scripts: [
       {
         type: "application/ld+json",
@@ -192,7 +196,9 @@ function Home() {
         <section className="relative min-h-[680px] overflow-hidden border-b border-border">
           <img
             src={hero}
+            fetchPriority="high"
             alt="Metallic epoxy garage floor installed in Surrey, BC"
+            decoding="async"
             width={1600}
             height={1008}
             className="absolute inset-0 h-full w-full object-cover opacity-75"
@@ -202,12 +208,12 @@ function Home() {
             <div className="max-w-[610px]">
               <p className="eyebrow">Premium epoxy flooring · Surrey & Metro Vancouver</p>
               <h1 className="mt-4 max-w-[650px] text-4xl font-black leading-[1.02] sm:text-[58px]">
-                Epoxy Flooring Company in Surrey BC
+                Epoxy Flooring in Surrey, BC
               </h1>
               <p className="mt-5 max-w-xl text-sm leading-6 text-muted-foreground text-pretty">
-                Upgrade your space with a beautiful floor that's made to last. At Pacific Floors and Coatings we
-                deliver clean, durable coatings for garages, basements, showrooms, and industrial
-                spaces across Surrey, BC and Metro Vancouver.
+                Pacific Floors and Coatings installs epoxy flooring in Surrey, BC and across Metro Vancouver. Choose a
+                durable finish for garages, basements, showrooms, and industrial spaces, with the coating system matched
+                to your concrete and how you use the floor.
               </p>
               <ul className="mt-6 space-y-2 text-xs font-bold uppercase">
                 <li>◉&nbsp; 10+ years of experience</li>
@@ -313,6 +319,44 @@ function Home() {
           </div>
         </section>
 
+        <section className="border-y border-border bg-background py-20">
+          <div className="mx-auto max-w-[1170px] px-5 text-pretty">
+            <p className="eyebrow">A prep-first installation</p>
+            <h2 className="mt-3 max-w-3xl text-3xl font-black leading-tight sm:text-[36px]">
+              How We Install Epoxy Flooring in Surrey, BC
+            </h2>
+            <p className="mt-5 max-w-4xl text-sm leading-7 text-muted-foreground">
+              A coating is only as dependable as the concrete beneath it. We start with an on-site assessment of the
+              slab and the way the space is used, then diamond-grind the surface to create a strong bond. Where needed,
+              we repair cracks, pitting, and low spots before applying a system suited to the floor.
+            </p>
+            <div className="mt-8 grid gap-6 md:grid-cols-3">
+              <article className="panel p-6">
+                <h3 className="text-lg font-bold">Assess the concrete</h3>
+                <p className="mt-3 text-sm leading-7 text-muted-foreground">
+                  Slab condition, moisture risk, traffic, and exposure to water or spills all help determine the right
+                  preparation and coating for a garage, basement, or business.
+                </p>
+              </article>
+              <article className="panel p-6">
+                <h3 className="text-lg font-bold">Prepare and repair</h3>
+                <p className="mt-3 text-sm leading-7 text-muted-foreground">
+                  We use diamond grinding rather than relying on acid etching, and address cracks and surface damage
+                  before coating. Dust extraction helps keep the work area cleaner during preparation.
+                </p>
+              </article>
+              <article className="panel p-6">
+                <h3 className="text-lg font-bold">Apply and allow to cure</h3>
+                <p className="mt-3 text-sm leading-7 text-muted-foreground">
+                  Installation time and return-to-use depend on the system and conditions. Many residential garages take
+                  one to two days to complete; light foot traffic is typically suitable after 24 hours, with vehicles
+                  kept off for about 72 hours.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
         <section className="mx-auto max-w-[1170px] px-5 py-20">
           <p className="eyebrow">Our reviews speak for themselves</p>
           <div className="flex flex-wrap items-end justify-between gap-4">
@@ -351,19 +395,13 @@ function Home() {
             <h2 className="text-center text-3xl font-black sm:text-4xl">
               Frequently asked questions
             </h2>
-            <div className="mt-8">
-              <Accordion type="single" collapsible className="w-full space-y-3">
-                {faqs.map((f, i) => (
-                  <AccordionItem key={i} value={`faq-${i}`} className="border border-border bg-background/40 px-5 transition-colors data-[state=open]:bg-background/60">
-                    <AccordionTrigger className="text-sm font-semibold hover:no-underline py-4">
-                      {f.q}
-                    </AccordionTrigger>
-                    <AccordionContent className="text-sm leading-6 text-muted-foreground">
-                      {f.a}
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
+            <div className="mt-8 space-y-3">
+              {faqs.map((f) => (
+                <article key={f.q} className="border border-border bg-background/40 px-5 py-4">
+                  <h3 className="text-sm font-semibold">{f.q}</h3>
+                  <p className="mt-2 text-sm leading-6 text-muted-foreground">{f.a}</p>
+                </article>
+              ))}
             </div>
           </div>
         </section>

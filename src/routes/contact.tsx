@@ -3,30 +3,35 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { QuoteForm } from "@/components/QuoteForm";
 import { site } from "@/lib/site";
+import { metaDescription } from "@/lib/seo";
 import hero from "@/assets/installer.jpg";
+
+const PAGE_DESCRIPTION = metaDescription(
+  "Contact Us for a free flooring estimate in Surrey, BC. Tell Pacific Floors and Coatings about your project, and our team will help plan next steps.",
+);
 
 export const Route = createFileRoute("/contact")({
   staticData: { sitemap: true },
   head: () => ({
     meta: [
-      { title: "Contact Us | Pacific Floors & Coatings" },
+      { title: "Contact Us | Pacific Floors and Coatings" },
       {
         name: "description",
         content:
-          "Request a free on-site epoxy flooring estimate in Surrey, BC. Call (236) 878-3386 or send Pacific Floors & Coatings your project details for a fast quote.",
+          PAGE_DESCRIPTION,
       },
-      { property: "og:title", content: "Contact Us | Pacific Floors & Coatings" },
+      { property: "og:title", content: "Contact Us | Pacific Floors and Coatings" },
       {
         property: "og:description",
-        content: "Request a free on-site epoxy flooring estimate in Surrey, BC. Call (236) 878-3386 or send Pacific Floors & Coatings your project details for a fast quote.",
+        content: PAGE_DESCRIPTION,
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://www.pacificfloorsandcoatings.ca/contact" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Contact Us | Pacific Floors & Coatings" },
+      { name: "twitter:title", content: "Contact Us | Pacific Floors and Coatings" },
       {
         name: "twitter:description",
-        content: "Request a free on-site epoxy flooring estimate in Surrey, BC. Call (236) 878-3386 or send Pacific Floors & Coatings your project details for a fast quote.",
+        content: PAGE_DESCRIPTION,
       },
     ],
     links: [{ rel: "canonical", href: "https://www.pacificfloorsandcoatings.ca/contact" }],
@@ -40,9 +45,17 @@ function Contact() {
       <Header />
       <main>
         <section className="relative isolate overflow-hidden border-b border-border">
-          <img src={hero} alt="Pacific Floors and Coatings installer preparing a floor" className="absolute inset-0 z-0 h-full w-full object-cover opacity-45" />
+          <img
+            src={hero}
+            fetchPriority="high"
+            alt="Pacific Floors and Coatings installer preparing a floor"
+            width={1181}
+            height={1920}
+            className="absolute inset-0 z-0 h-full w-full object-cover opacity-45"
+          />
           <div className="absolute inset-0 z-0 bg-gradient-to-r from-background/96 via-background/88 to-background/45" />
-          <div className="relative z-10 mx-auto grid max-w-6xl gap-10 px-4 py-16 text-pretty md:grid-cols-2">
+          <div itemScope itemType="https://schema.org/LocalBusiness" className="relative z-10 mx-auto grid max-w-6xl gap-10 px-4 py-16 text-pretty md:grid-cols-2">
+          <meta itemProp="name" content={site.name} />
           <div>
             <p className="eyebrow">Contact us</p>
             <h1 className="mt-3 text-4xl font-black">Let's talk about your floor</h1>
@@ -53,19 +66,25 @@ function Contact() {
             <ul className="mt-8 space-y-6 text-sm">
               <li>
                 <span className="eyebrow block">Phone</span>
-                <a href={site.phoneHref} className="text-base font-bold text-muted-foreground hover:text-primary transition-colors">
+                <a itemProp="telephone" href={site.phoneHref} className="text-base font-bold text-muted-foreground hover:text-primary transition-colors">
                   {site.phone}
                 </a>
               </li>
               <li>
                 <span className="eyebrow block">Email</span>
-                <a href={`mailto:${site.email}`} className="text-base font-bold text-muted-foreground hover:text-primary transition-colors">
+                <a itemProp="email" href={`mailto:${site.email}`} className="text-base font-bold text-muted-foreground hover:text-primary transition-colors">
                   {site.email}
                 </a>
               </li>
               <li>
                 <span className="eyebrow block">Address</span>
-                <span className="text-base font-bold text-muted-foreground">{site.address}</span>
+                <address itemProp="address" itemScope itemType="https://schema.org/PostalAddress" className="text-base font-bold text-muted-foreground not-italic">
+                  <span itemProp="streetAddress">7304 138 Street</span>,{" "}
+                  <span itemProp="addressLocality">Surrey</span>,{" "}
+                  <span itemProp="addressRegion">BC</span>{" "}
+                  <span itemProp="postalCode">V3W 5H2</span>,{" "}
+                  <span itemProp="addressCountry">Canada</span>
+                </address>
               </li>
             </ul>
           </div>

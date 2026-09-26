@@ -4,7 +4,8 @@ import { Footer } from "@/components/Footer";
 import { QuoteForm } from "@/components/QuoteForm";
 import { CtaBand } from "@/components/CtaBand";
 import { Breadcrumbs, breadcrumbSchema } from "@/components/Breadcrumbs";
-import { findService, services, metaTitle, metaDescription, sameAs, site, SITE_URL } from "@/lib/site";
+import { findService, services, metaTitle, sameAs, site, SITE_URL } from "@/lib/site";
+import { metaDescription } from "@/lib/seo";
 import { serviceImage } from "@/lib/service-images";
 
 export const Route = createFileRoute("/services/$slug")({
@@ -16,11 +17,11 @@ export const Route = createFileRoute("/services/$slug")({
   },
   head: ({ params, loaderData }) => {
     if (!loaderData) {
-      return { meta: [{ title: "Service Not Found | Pacific Floors & Coatings" }, { name: "robots", content: "noindex" }] };
+      return { meta: [{ title: "Service Not Found | Pacific Floors and Coatings" }] };
     }
     const { service } = loaderData;
-    const title = metaTitle(service.title);
-    const description = metaDescription(service.short);
+    const title = metaTitle(`${service.title} Surrey BC`);
+    const description = metaDescription(`${service.title} in Surrey, BC: ${service.short}`);
     const url = `${SITE_URL}/services/${params.slug}`;
 
     return {

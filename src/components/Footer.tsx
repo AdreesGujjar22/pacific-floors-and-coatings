@@ -12,8 +12,11 @@ export function Footer() {
     <footer className="relative isolate overflow-hidden border-t border-border bg-surface">
       <img
         src={metallic}
-        alt=""
-        aria-hidden="true"
+        loading="lazy"
+        decoding="async"
+        width={800}
+        height={1200}
+        alt="Metallic epoxy floor finish"
         className="absolute inset-0 z-0 h-full w-full object-cover opacity-30 mix-blend-screen"
       />
       <div className="absolute inset-0 z-0 bg-gradient-to-r from-background/95 via-background/88 to-background/72" />

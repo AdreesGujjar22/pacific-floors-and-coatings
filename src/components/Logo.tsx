@@ -9,6 +9,8 @@ export function Logo({ className = "" }: { className?: string }) {
     >
       <img
         src="/pacific-fooring.png"
+        width={2170}
+        height={725}
         alt="Pacific Floors and Coatings"
         className="h-12 w-auto max-w-[180px] object-contain sm:h-14"
       />
