@@ -69,26 +69,26 @@ export const Route = createFileRoute("/")({
   staticData: { sitemap: true },
   head: () => ({
     meta: [
-      { title: "Epoxy Flooring Surrey BC | Pacific Floors & Coatings" },
+      { title: "Epoxy Flooring in Surrey, BC | Pacific Floors and Coatings" },
       {
         name: "description",
         content:
-          "Pacific Floors & Coatings installs metallic, flake, and solid epoxy flooring in Surrey, BC. Durable garage, commercial & industrial coatings. Free estimates.",
+          "Epoxy flooring in Surrey, BC for garages, basements, and businesses. Choose a metallic, flake, or solid finish installed for lasting durability.",
       },
-      { property: "og:title", content: "Epoxy Flooring Surrey BC | Pacific Floors & Coatings" },
+      { property: "og:title", content: "Epoxy Flooring in Surrey, BC | Pacific Floors and Coatings" },
       {
         property: "og:description",
         content:
-          "Pacific Floors & Coatings installs metallic, flake, and solid epoxy flooring in Surrey, BC. Durable garage, commercial & industrial coatings. Free estimates.",
+          "Epoxy flooring in Surrey, BC for garages, basements, and businesses. Choose a metallic, flake, or solid finish installed for lasting durability.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://www.pacificfloorsandcoatings.ca/" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Epoxy Flooring Surrey BC | Pacific Floors & Coatings" },
+      { name: "twitter:title", content: "Epoxy Flooring in Surrey, BC | Pacific Floors and Coatings" },
       {
         name: "twitter:description",
         content:
-          "Pacific Floors & Coatings installs metallic, flake, and solid epoxy flooring in Surrey, BC. Durable garage, commercial & industrial coatings. Free estimates.",
+          "Epoxy flooring in Surrey, BC for garages, basements, and businesses. Choose a metallic, flake, or solid finish installed for lasting durability.",
       },
     ],
     links: [{ rel: "canonical", href: "https://www.pacificfloorsandcoatings.ca/" }],

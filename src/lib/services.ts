@@ -18,7 +18,7 @@ export const services: Service[] = [
     slug: "epoxy-floor-coatings",
     title: "Epoxy Floor Coatings",
     short:
-      "Resin coatings that bond into a properly ground slab and shrug off traffic, oil, and hot tires.",
+      "Protect concrete from traffic, oil, and hot tires with a seamless, easy-to-clean finish.",
     intro:
       "An epoxy floor coating is two parts resin and hardener that cure into one solid, non-porous layer over your concrete. Done right, the bond starts with the prep: we diamond grind the slab open so the resin keys into the concrete instead of sitting on top of it, which is the single biggest reason coatings either last a decade or peel in a year.",
     bullets: [
@@ -45,7 +45,7 @@ export const services: Service[] = [
     slug: "epoxy-flooring",
     title: "Epoxy Flooring",
     short:
-      "Full epoxy floor installations for Surrey homes and businesses, from prep and repair through top coat.",
+      "From surface prep and repairs to the final coat, get a complete floor built for your space.",
     intro:
       "Epoxy flooring covers the whole job, not just the coating: assessing the slab, grinding it flat and open, repairing what is broken, then building the system up in layers. We walk your space first, tell you honestly what the concrete can support, and quote the system that actually fits how you use the room.",
     bullets: [
@@ -72,7 +72,7 @@ export const services: Service[] = [
     slug: "commercial-epoxy-flooring",
     title: "Commercial Epoxy Flooring",
     short:
-      "Hard-wearing epoxy for retail, showrooms, clinics, and shops that need to look sharp under daily traffic.",
+      "Give retail spaces, clinics, and showrooms a polished finish that stands up to daily traffic.",
     intro:
       "Commercial floors get judged twice: by customers who see them and by staff who work on them. We build systems that handle carts, heels, spills, and scrubbing without hazing or lifting, and we schedule the work around your hours so the doors stay open where possible.",
     bullets: [
@@ -99,7 +99,7 @@ export const services: Service[] = [
     slug: "residential-epoxy-flooring",
     title: "Residential Epoxy Flooring",
     short:
-      "Clean, warm, easy-to-mop floors for garages, basements, laundry rooms, and hobby spaces at home.",
+      "Make garages, basements, and laundry rooms brighter with a durable floor that's easy to clean.",
     intro:
       "At home the floor has to be practical and pleasant to look at. We keep the site tidy, run dust extraction on the grinders so your house is not coated in concrete powder, and finish with a surface you can mop in five minutes instead of sweeping forever.",
     bullets: [
@@ -126,7 +126,7 @@ export const services: Service[] = [
     slug: "garage-epoxy-flooring",
     title: "Garage Epoxy Flooring",
     short:
-      "Hot-tire-resistant garage floors that stop dusting, resist road salt, and wipe clean after a winter drive.",
+      "Keep dust, road salt, and hot-tire marks off your garage slab with a tough, low-maintenance finish.",
     intro:
       "A garage slab takes hot tires, road salt, dropped tools, and winter slush. A properly built garage floor handles all four. We grind, repair the control joints and spalls, then lay a flake or solid system with a top coat rated for hot-tire pickup so the coating does not lift where your wheels sit.",
     bullets: [
@@ -153,7 +153,7 @@ export const services: Service[] = [
     slug: "industrial-epoxy-flooring",
     title: "Industrial Epoxy Flooring",
     short:
-      "Heavy-build epoxy for plants and shops facing forklifts, pallet jacks, chemicals, and constant load.",
+      "Handle forklifts, chemicals, and heavy daily traffic with a floor built for demanding workspaces.",
     intro:
       "Industrial slabs live a hard life. We specify build thickness by load and traffic type, not by square footage, and we can add chemical-resistant or thermal-shock-tolerant layers where the process demands it. Line striping and safety markings go down as part of the same install.",
     bullets: [
@@ -180,7 +180,7 @@ export const services: Service[] = [
     slug: "metallic-epoxy-flooring",
     title: "Metallic Epoxy Flooring",
     short:
-      "High-gloss floors with marbled pigment movement, so no two installs ever come out the same.",
+      "Bring depth and movement to your floor with a custom, high-gloss finish; no two are alike.",
     intro:
       "Metallic pigments drift through the resin while it cures, which is why a metallic floor has depth you cannot print or tile. We blend the colours on site, control the movement with heat and technique, and seal it under a clear coat that keeps the shine without yellowing.",
     bullets: [
@@ -207,7 +207,7 @@ export const services: Service[] = [
     slug: "flake-epoxy-flooring",
     title: "Flake Epoxy Flooring",
     short:
-      "Vinyl chip floors with a light texture that hides dust, grit, and the small flaws in an older slab.",
+      "Add subtle texture that helps hide dust, grit, and small imperfections in older concrete.",
     intro:
       "Flake systems broadcast vinyl chips into a wet base coat, then lock them under a clear coat. The chips add texture underfoot, disguise dirt between cleans, and camouflage the minor imperfections every older slab has. It is the most forgiving finish we install, which is why most garages end up here.",
     bullets: [
@@ -234,7 +234,7 @@ export const services: Service[] = [
     slug: "quartz-epoxy-flooring",
     title: "Quartz Epoxy Flooring",
     short:
-      "Coloured quartz aggregate broadcast into resin for a dense, grippy, sanitary floor that takes abuse.",
+      "Create a durable, slip-resistant surface with coloured quartz and a clean, seamless finish.",
     intro:
       "Quartz systems use coloured, kiln-fired sand instead of vinyl chips. The result is heavier, denser, and far more slip-resistant than a standard coating, and it cleans down to a sanitary surface. It is the system health inspectors and facility managers ask for by name.",
     bullets: [
@@ -261,7 +261,7 @@ export const services: Service[] = [
     slug: "stone-epoxy-flooring",
     title: "Stone Epoxy Flooring",
     short:
-      "Natural river stone set in clear resin for a textured, permeable-looking finish with real character.",
+      "Bring natural stone character to patios and entries with a textured, resin-bound finish.",
     intro:
       "Stone epoxy sets washed natural pebble into a clear resin matrix, giving you the look of loose river rock with a solid, walkable surface. It handles outdoor temperature swings well and reads far warmer than a poured coating, which makes it popular for patios and entries.",
     bullets: [
@@ -288,7 +288,7 @@ export const services: Service[] = [
     slug: "polyaspartic-floor-coatings",
     title: "Polyaspartic Floor Coatings",
     short:
-      "Fast-cure, UV-stable coatings that go down in a day and stay clear instead of ambering in sunlight.",
+      "Choose a fast-curing, UV-stable finish that stays clear and gets your floor back in service sooner.",
     intro:
       "Polyaspartic cures in hours rather than days, tolerates cold better than epoxy, and does not yellow under UV. That combination makes it our default top coat over flake and our go-to when a space simply cannot be closed for three days.",
     bullets: [
@@ -315,7 +315,7 @@ export const services: Service[] = [
     slug: "polyurethane-floor-coatings",
     title: "Polyurethane Floor Coatings",
     short:
-      "Flexible, abrasion-resistant top coats that absorb impact and keep their finish under constant scuffing.",
+      "Add a flexible, abrasion-resistant top coat that stands up to impact and constant foot traffic.",
     intro:
       "Polyurethane stays slightly flexible after cure, so it absorbs impact and movement that would chip a rigid coating. Over an epoxy base it adds abrasion and chemical resistance, and it holds a consistent sheen in spaces that get scrubbed hard and often.",
     bullets: [
@@ -342,7 +342,7 @@ export const services: Service[] = [
     slug: "concrete-floor-coatings",
     title: "Concrete Floor Coatings",
     short:
-      "Protective coating systems chosen around your slab's condition, moisture level, and daily workload.",
+      "Protect your concrete with a coating selected for its condition, moisture, and daily use.",
     intro:
       "Not every concrete floor wants the same coating. A damp slab needs a moisture-tolerant primer, a cracked one needs structural repair first, and a lightly used storage floor does not need a heavy build. We test, then specify, rather than selling one system to every customer.",
     bullets: [
@@ -369,7 +369,7 @@ export const services: Service[] = [
     slug: "concrete-floor-sealing",
     title: "Concrete Floor Sealing",
     short:
-      "Clear penetrating and film sealers that stop dusting and staining while keeping the raw concrete look.",
+      "Reduce dust and staining while keeping the natural look of your concrete.",
     intro:
       "Sealing is the economical way to protect a sound slab you actually like the look of. A penetrating sealer soaks in and blocks water and stains from below the surface; a film sealer adds sheen and easier cleaning on top. We will tell you which one your floor needs.",
     bullets: [
@@ -396,7 +396,7 @@ export const services: Service[] = [
     slug: "concrete-resurfacing",
     title: "Concrete Resurfacing",
     short:
-      "A new wear surface over tired concrete, so you get a flat, sound floor without demolition costs.",
+      "Renew worn, uneven concrete with a fresh surface without the cost of full demolition.",
     intro:
       "If your slab is structurally fine but the surface is worn, pitted, or patched badly, resurfacing rebuilds the top rather than replacing everything underneath. We grind, repair, then trowel down a cementitious overlay that gives you a fresh, flat surface ready to coat or leave exposed.",
     bullets: [
@@ -423,7 +423,7 @@ export const services: Service[] = [
     slug: "concrete-repairs",
     title: "Concrete Repairs",
     short:
-      "Crack, spall, and joint repair done properly, because no coating outlives the concrete beneath it.",
+      "Repair cracks, spalling, and joints before they affect the finish above.",
     intro:
       "Repairs are where coating jobs are won or lost. We chase cracks out and fill them with semi-rigid resin rather than smearing patch over the top, rebuild broken edges and spalls, and re-cut control joints so movement has somewhere to go instead of tearing your new floor.",
     bullets: [
@@ -450,7 +450,7 @@ export const services: Service[] = [
     slug: "commercial-floor-coatings",
     title: "Commercial Floor Coatings",
     short:
-      "Durable, presentable coatings for business floors, installed on a schedule that respects your operations.",
+      "Refresh busy workspaces with a durable finish and an installation schedule that works for you.",
     intro:
       "Commercial coating work is as much about logistics as chemistry. We stage the floor in sections, keep exits and paths clear, and pick products with cure windows that fit your closure. You get a floor that looks professional and a job that did not cost you a week of trading.",
     bullets: [
@@ -477,7 +477,7 @@ export const services: Service[] = [
     slug: "restaurant-floor-coatings",
     title: "Restaurant Floor Coatings",
     short:
-      "Seamless, grease-resistant floors for dining rooms, prep lines, and dish pits that pass inspection.",
+      "Create a seamless, easy-to-clean surface for dining rooms, prep areas, and dish pits.",
     intro:
       "Restaurant floors deal with grease, hot water, dropped glass, and a health inspector. We install seamless systems with coved bases and real slip resistance, and we do the work overnight so service is not interrupted. No grout lines means nowhere for grease to build up.",
     bullets: [
@@ -504,7 +504,7 @@ export const services: Service[] = [
     slug: "commercial-kitchen-floor-coatings",
     title: "Commercial Kitchen Floor Coatings",
     short:
-      "Thermal-shock tolerant kitchen floors built for boiling spills, heavy grease, and daily deep cleaning.",
+      "Protect commercial kitchens from heat, grease, spills, and frequent deep cleaning.",
     intro:
       "A commercial kitchen floor gets boiling water in the morning and a caustic degreaser at night. We use urethane cement and quartz systems built for thermal shock, sloped correctly to drains, with coved bases so the mop line has nowhere to hide.",
     bullets: [
@@ -531,7 +531,7 @@ export const services: Service[] = [
     slug: "food-safe-floor-coatings",
     title: "Food-Safe Floor Coatings",
     short:
-      "Non-porous, HACCP-friendly floors for food processing spaces that get washed down every single shift.",
+      "Keep food-processing floors seamless, non-porous, and ready for daily washdowns.",
     intro:
       "Food-safe means more than easy to clean. We install non-porous, chemically resistant systems with sealed coving and no seams for bacteria to colonise, using products suited to wash-down environments and documented for your food safety plan.",
     bullets: [
@@ -558,7 +558,7 @@ export const services: Service[] = [
     slug: "warehouse-floor-coatings",
     title: "Warehouse Floor Coatings",
     short:
-      "Large-area coatings with line marking, built for forklifts, racking loads, and constant pallet traffic.",
+      "Protect high-traffic warehouse floors and add clear aisle and safety markings.",
     intro:
       "Warehouse floors need to survive point loads, turn wear from forklifts, and pallets dragged where they should not be. We coat large areas efficiently, mark aisles and pedestrian walkways as part of the same visit, and phase the work so racking never has to come fully offline.",
     bullets: [
@@ -585,7 +585,7 @@ export const services: Service[] = [
     slug: "parkade-floor-coatings",
     title: "Parkade Floor Coatings",
     short:
-      "Waterproof traffic coatings that protect structural decks from road salt, water, and freeze-thaw damage.",
+      "Shield parkade decks from water, road salt, and freeze-thaw damage with traffic-rated protection.",
     intro:
       "A parkade deck is structure, not just floor. Water and chloride getting through to the rebar is what eventually costs a strata six figures. We install waterproof traffic-deck systems with the right membrane build, detail the joints and drains, and mark stalls and directions afterwards.",
     bullets: [
@@ -612,7 +612,7 @@ export const services: Service[] = [
     slug: "garage-floor-coatings",
     title: "Garage Floor Coatings",
     short:
-      "Coating options for every garage budget, from a clean sealed slab to a full flake and polyaspartic build.",
+      "Choose a practical finish for your garage, from a clear sealer to a full flake system.",
     intro:
       "Not every garage needs the top system. We will walk yours, ask how you actually use it, and lay out the honest options: a sealer to stop the dusting, a solid colour for a workshop, or a full flake build for a space you want to show off. Same prep standard on all three.",
     bullets: [
@@ -639,7 +639,7 @@ export const services: Service[] = [
     slug: "concrete-patio-flooring",
     title: "Concrete Patio Flooring",
     short:
-      "Outdoor patio finishes with real grip and UV stability, built for Lower Mainland rain and freeze-thaw.",
+      "Make outdoor concrete safer and easier to maintain with a textured, UV-stable finish.",
     intro:
       "Outdoor concrete needs UV-stable products and a surface that is still safe in the rain, which rules out most indoor coatings. We use textured, UV-stable systems and detail the edges and drainage so water leaves the patio instead of sitting on it through a wet Surrey winter.",
     bullets: [
@@ -666,7 +666,7 @@ export const services: Service[] = [
     slug: "floor-polishing",
     title: "Floor Polishing",
     short:
-      "Mechanically polished concrete that gets its shine from grinding and densifying, not from a coating.",
+      "Get the natural look of concrete polished for lasting shine, without a coating layer.",
     intro:
       "Polished concrete is a finish, not a layer. We grind through progressive diamond grits, densify the slab chemically so the surface hardens, then burnish to the sheen you choose. There is nothing on top to peel, which is why polished floors last so long in busy buildings.",
     bullets: [
@@ -693,7 +693,7 @@ export const services: Service[] = [
     slug: "marble-floor-installation",
     title: "Marble Floor Installation",
     short:
-      "Marble laid flat, level, and sealed, with the substrate prepared properly before a single slab goes down.",
+      "Set marble over a properly prepared, level base for a smooth, durable finish.",
     intro:
       "Marble is unforgiving: a substrate out by a few millimetres shows up as lippage you will feel underfoot for years. We level and prime the base first, set the stone with the right adhesive for the format, then grout and seal so the surface resists staining from day one.",
     bullets: [
@@ -720,7 +720,7 @@ export const services: Service[] = [
     slug: "floor-installation",
     title: "Floor Installation",
     short:
-      "Full floor installation with the prep, moisture control, and levelling handled before the finish goes down.",
+      "Get a complete floor installation, with moisture control, levelling, and prep handled first.",
     intro:
       "Whatever finish you have chosen, the result depends on what is under it. We handle the unglamorous half properly: moisture testing, levelling, priming, and transitions, then install the finish to the manufacturer's spec so any warranty on it actually stands.",
     bullets: [
@@ -747,7 +747,7 @@ export const services: Service[] = [
     slug: "epoxy-floor-installation",
     title: "Epoxy Floor Installation",
     short:
-      "The full install process, from slab assessment and grinding through broadcast, top coat, and walkthrough.",
+      "From slab preparation to the final top coat, get a clear, professional epoxy installation.",
     intro:
       "Here is how our epoxy installs actually run: we assess and moisture test, diamond grind the slab, repair cracks and spalls, prime, lay the base coat, broadcast flake or quartz if you have chosen it, scrape and vacuum, then apply the clear top coat and walk the finished floor with you before we leave.",
     bullets: [
@@ -774,7 +774,7 @@ export const services: Service[] = [
     slug: "epoxy-coating-contractor",
     title: "Epoxy Coating Contractor",
     short:
-      "A local, insured Surrey epoxy contractor who quotes in writing and shows up when the calendar says so.",
+      "Work with a local, insured Surrey contractor who provides clear quotes and dependable scheduling.",
     intro:
       "Choosing a contractor matters more than choosing a product, because the same resin can last fifteen years or fail in one depending on who applies it. We are local to Surrey, insured and WCB covered, quote in writing with the system named, and we do not take deposits for work we cannot schedule.",
     bullets: [
@@ -801,7 +801,7 @@ export const services: Service[] = [
     slug: "concrete-coating-contractor",
     title: "Concrete Coating Contractor",
     short:
-      "Specification, preparation, and installation from one accountable contractor, so nobody gets to pass blame.",
+      "Get one accountable team to specify, prepare, and install your concrete coating.",
     intro:
       "When prep and coating are split between trades, failures turn into finger-pointing. We handle the whole chain: testing the slab, specifying the system, preparing the surface, and installing it. If something is wrong with the floor, there is exactly one company to call.",
     bullets: [
@@ -837,20 +837,17 @@ export const serviceGroups = [
   "Commercial & Industrial",
 ] as const;
 
-const TITLE_SUFFIX = " | Pacific Floors & Coatings";
-const TITLE_BASE_LIMIT = 59 - TITLE_SUFFIX.length;
+const TITLE_SUFFIX = " | Pacific Floors and Coatings";
 
-/** Builds a meta title as close to 59 characters as possible without exceeding it. */
 export function metaTitle(base: string): string {
-  return `${base.slice(0, TITLE_BASE_LIMIT).trimEnd()}${TITLE_SUFFIX}`;
+  return `${base}${TITLE_SUFFIX}`;
 }
 
 const DESCRIPTION_TAILS = [
-  " Free on-site estimates across Surrey, BC and Metro Vancouver.",
-  " Free estimates across Surrey, BC and Metro Vancouver.",
-  " Free quotes across Surrey and Metro Vancouver.",
-  " Serving Surrey, BC and Metro Vancouver.",
-  " Surrey, BC.",
+  " Get a free on-site estimate from our team.",
+  " Request a free estimate today.",
+  " Ask us for a free quote.",
+  " Contact our team to get started.",
 ];
 
 /** Builds a meta description as close to 159 characters as possible without exceeding it. */

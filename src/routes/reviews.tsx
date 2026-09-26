@@ -10,24 +10,24 @@ export const Route = createFileRoute("/reviews")({
   staticData: { sitemap: true },
   head: () => ({
     meta: [
-      { title: "Epoxy Flooring Reviews | Pacific Floors & Coatings" },
+      { title: "Epoxy Flooring Reviews | Pacific Floors and Coatings" },
       {
         name: "description",
         content:
-          "Read customer reviews from Surrey and Metro Vancouver homeowners and businesses who chose Pacific Floors & Coatings for durable epoxy flooring installations.",
+          "Epoxy flooring reviews from Surrey homeowners and businesses. See what customers say about Pacific Floors and Coatings and their floor projects.",
       },
-      { property: "og:title", content: "Epoxy Flooring Reviews | Pacific Floors & Coatings" },
+      { property: "og:title", content: "Epoxy Flooring Reviews | Pacific Floors and Coatings" },
       {
         property: "og:description",
-        content: "Read customer reviews from Surrey and Metro Vancouver homeowners and businesses who chose Pacific Floors & Coatings for durable epoxy flooring installations.",
+        content: "Epoxy flooring reviews from Surrey homeowners and businesses. See what customers say about Pacific Floors and Coatings and their floor projects.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://www.pacificfloorsandcoatings.ca/reviews" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Epoxy Flooring Reviews | Pacific Floors & Coatings" },
+      { name: "twitter:title", content: "Epoxy Flooring Reviews | Pacific Floors and Coatings" },
       {
         name: "twitter:description",
-        content: "Read customer reviews from Surrey and Metro Vancouver homeowners and businesses who chose Pacific Floors & Coatings for durable epoxy flooring installations.",
+        content: "Epoxy flooring reviews from Surrey homeowners and businesses. See what customers say about Pacific Floors and Coatings and their floor projects.",
       },
     ],
     links: [{ rel: "canonical", href: "https://www.pacificfloorsandcoatings.ca/reviews" }],

@@ -10,24 +10,24 @@ export const Route = createFileRoute("/about")({
   staticData: { sitemap: true },
   head: () => ({
     meta: [
-      { title: "About Us | Pacific Floors & Coatings" },
+      { title: "About Us | Pacific Floors and Coatings" },
       {
         name: "description",
         content:
-          "Meet Pacific Floors & Coatings, a Surrey, BC epoxy flooring team focused on thorough surface prep, premium coatings, and clear communication on every project.",
+          "About Us at Pacific Floors and Coatings: meet our Surrey team and see how careful prep and durable coatings can transform your floor.",
       },
-      { property: "og:title", content: "About Us | Pacific Floors & Coatings" },
+      { property: "og:title", content: "About Us | Pacific Floors and Coatings" },
       {
         property: "og:description",
-        content: "Meet Pacific Floors & Coatings, a Surrey, BC epoxy flooring team focused on thorough surface prep, premium coatings, and clear communication on every project.",
+        content: "About Us at Pacific Floors and Coatings: meet our Surrey team and see how careful prep and durable coatings can transform your floor.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://www.pacificfloorsandcoatings.ca/about" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "About Us | Pacific Floors & Coatings" },
+      { name: "twitter:title", content: "About Us | Pacific Floors and Coatings" },
       {
         name: "twitter:description",
-        content: "Meet Pacific Floors & Coatings, a Surrey, BC epoxy flooring team focused on thorough surface prep, premium coatings, and clear communication on every project.",
+        content: "About Us at Pacific Floors and Coatings: meet our Surrey team and see how careful prep and durable coatings can transform your floor.",
       },
     ],
     links: [{ rel: "canonical", href: "https://www.pacificfloorsandcoatings.ca/about" }],

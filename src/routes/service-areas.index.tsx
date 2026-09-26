@@ -10,24 +10,24 @@ export const Route = createFileRoute("/service-areas/")({
   staticData: { sitemap: true },
   head: () => ({
     meta: [
-      { title: "Service Areas | Pacific Floors & Coatings" },
+      { title: "Epoxy Flooring Service Areas | Pacific Floors and Coatings" },
       {
         name: "description",
         content:
-          "Pacific Floors & Coatings installs epoxy and concrete coatings in Surrey, Vancouver, Burnaby, Richmond, Delta, Coquitlam, Langley, and communities across Metro Vancouver.",
+          "Epoxy flooring service areas: find nearby flooring and concrete coating teams in Surrey, Vancouver, Burnaby, Richmond, Langley, and Metro Vancouver.",
       },
-      { property: "og:title", content: "Service Areas | Pacific Floors & Coatings" },
+      { property: "og:title", content: "Epoxy Flooring Service Areas | Pacific Floors and Coatings" },
       {
         property: "og:description",
-        content: "Pacific Floors & Coatings installs epoxy and concrete coatings in Surrey, Vancouver, Burnaby, Richmond, Delta, Coquitlam, Langley, and communities across Metro Vancouver.",
+        content: "Epoxy flooring service areas: find nearby flooring and concrete coating teams in Surrey, Vancouver, Burnaby, Richmond, Langley, and Metro Vancouver.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://www.pacificfloorsandcoatings.ca/service-areas" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Service Areas | Pacific Floors & Coatings" },
+      { name: "twitter:title", content: "Epoxy Flooring Service Areas | Pacific Floors and Coatings" },
       {
         name: "twitter:description",
-        content: "Pacific Floors & Coatings installs epoxy and concrete coatings in Surrey, Vancouver, Burnaby, Richmond, Delta, Coquitlam, Langley, and communities across Metro Vancouver.",
+        content: "Epoxy flooring service areas: find nearby flooring and concrete coating teams in Surrey, Vancouver, Burnaby, Richmond, Langley, and Metro Vancouver.",
       },
     ],
     links: [{ rel: "canonical", href: "https://www.pacificfloorsandcoatings.ca/service-areas" }],

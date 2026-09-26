@@ -17,11 +17,11 @@ export const Route = createFileRoute("/service-areas/$slug")({
   },
   head: ({ loaderData }) => {
     if (!loaderData) {
-      return { meta: [{ title: "Area Not Found | Pacific Floors & Coatings" }, { name: "robots", content: "noindex" }] };
+      return { meta: [{ title: "Area Not Found | Pacific Floors and Coatings" }, { name: "robots", content: "noindex" }] };
     }
     const { area } = loaderData;
     const title = metaTitle(`Epoxy Flooring in ${area.name} BC`);
-    const description = `Garage, commercial, and industrial epoxy flooring in ${area.name}, BC. Metallic, flake, solid, and sealed concrete coatings with free on-site estimates.`;
+    const description = `Epoxy flooring in ${area.name}, BC: durable finishes for garages and businesses, installed with careful preparation.`;
     const url = `${BASE}/service-areas/${area.slug}`;
     return {
       meta: [

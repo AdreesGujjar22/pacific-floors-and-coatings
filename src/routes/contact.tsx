@@ -9,24 +9,24 @@ export const Route = createFileRoute("/contact")({
   staticData: { sitemap: true },
   head: () => ({
     meta: [
-      { title: "Contact Us | Pacific Floors & Coatings" },
+      { title: "Contact Us | Pacific Floors and Coatings" },
       {
         name: "description",
         content:
-          "Request a free on-site epoxy flooring estimate in Surrey, BC. Call (236) 878-3386 or send Pacific Floors & Coatings your project details for a fast quote.",
+          "Contact Us for a free flooring estimate in Surrey, BC. Tell Pacific Floors and Coatings about your project, and our team will help plan next steps.",
       },
-      { property: "og:title", content: "Contact Us | Pacific Floors & Coatings" },
+      { property: "og:title", content: "Contact Us | Pacific Floors and Coatings" },
       {
         property: "og:description",
-        content: "Request a free on-site epoxy flooring estimate in Surrey, BC. Call (236) 878-3386 or send Pacific Floors & Coatings your project details for a fast quote.",
+        content: "Contact Us for a free flooring estimate in Surrey, BC. Tell Pacific Floors and Coatings about your project, and our team will help plan next steps.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://www.pacificfloorsandcoatings.ca/contact" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Contact Us | Pacific Floors & Coatings" },
+      { name: "twitter:title", content: "Contact Us | Pacific Floors and Coatings" },
       {
         name: "twitter:description",
-        content: "Request a free on-site epoxy flooring estimate in Surrey, BC. Call (236) 878-3386 or send Pacific Floors & Coatings your project details for a fast quote.",
+        content: "Contact Us for a free flooring estimate in Surrey, BC. Tell Pacific Floors and Coatings about your project, and our team will help plan next steps.",
       },
     ],
     links: [{ rel: "canonical", href: "https://www.pacificfloorsandcoatings.ca/contact" }],

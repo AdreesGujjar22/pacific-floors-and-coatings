@@ -78,12 +78,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Epoxy Flooring | Pacific Floors & Coatings" },
-      { name: "description", content: "Professional epoxy flooring and concrete coatings in Surrey, BC and Metro Vancouver." },
+      { title: "Epoxy Flooring in Surrey, BC | Pacific Floors and Coatings" },
+      { name: "description", content: "Epoxy flooring in Surrey, BC for garages, basements, and businesses, installed with careful preparation for lasting durability." },
       { name: "author", content: "Pacific Floors and Coatings" },
       { name: "google-site-verification", content: "qt78BMaU2SZcxM-wDu27orkUE6iVDUw4aEZxYMAbfcs" },
-      { property: "og:title", content: "Epoxy Flooring | Pacific Floors & Coatings" },
-      { property: "og:description", content: "Professional epoxy flooring and concrete coatings in Surrey, BC." },
+      { property: "og:title", content: "Epoxy Flooring in Surrey, BC | Pacific Floors and Coatings" },
+      { property: "og:description", content: "Epoxy flooring in Surrey, BC for garages, basements, and businesses, installed with careful preparation for lasting durability." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -96,6 +96,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" },
+    ],
+    scripts: [
+      { src: "https://www.googletagmanager.com/gtag/js?id=G-ZJXND82ZE4", async: true },
+      {
+        children:
+          "window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-ZJXND82ZE4');",
+      },
     ],
   }),
   shellComponent: RootShell,

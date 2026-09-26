@@ -9,9 +9,9 @@ import { serviceImage } from "@/lib/service-images";
 import metallic from "@/assets/metallic-epoxy.jpg";
 import { PageHero } from "@/components/PageHero";
 
-const TITLE = "Epoxy Flooring Services | Pacific Floors & Coatings";
+const TITLE = "Epoxy Flooring Services Surrey BC | Pacific Floors and Coatings";
 const DESCRIPTION =
-  "Explore epoxy, polyaspartic, and concrete coating services for garages, kitchens, warehouses, and parkades. Free on-site estimates in Surrey & Metro Vancouver.";
+  "Epoxy flooring services in Surrey, BC, including polyaspartic and concrete coatings for garages, kitchens, warehouses, and commercial spaces.";
 
 export const Route = createFileRoute("/services/")({
   staticData: { sitemap: true },
