@@ -17,7 +17,7 @@ export const Route = createFileRoute("/services/$slug")({
   },
   head: ({ params, loaderData }) => {
     if (!loaderData) {
-      return { meta: [{ title: "Service Not Found | Pacific Floors and Coatings" }, { name: "robots", content: "noindex" }] };
+      return { meta: [{ title: "Service Not Found | Pacific Floors and Coatings" }] };
     }
     const { service } = loaderData;
     const title = metaTitle(`${service.title} Surrey BC`);

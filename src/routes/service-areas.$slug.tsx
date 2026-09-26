@@ -18,7 +18,7 @@ export const Route = createFileRoute("/service-areas/$slug")({
   },
   head: ({ loaderData }) => {
     if (!loaderData) {
-      return { meta: [{ title: "Area Not Found | Pacific Floors and Coatings" }, { name: "robots", content: "noindex" }] };
+      return { meta: [{ title: "Area Not Found | Pacific Floors and Coatings" }] };
     }
     const { area } = loaderData;
     const title = metaTitle(`Epoxy Flooring in ${area.name} BC`);

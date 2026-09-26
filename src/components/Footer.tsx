@@ -16,8 +16,7 @@ export function Footer() {
         decoding="async"
         width={800}
         height={1200}
-        alt=""
-        aria-hidden="true"
+        alt="Metallic epoxy floor finish"
         className="absolute inset-0 z-0 h-full w-full object-cover opacity-30 mix-blend-screen"
       />
       <div className="absolute inset-0 z-0 bg-gradient-to-r from-background/95 via-background/88 to-background/72" />
