@@ -3,7 +3,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { QuoteForm } from "@/components/QuoteForm";
 import { CtaBand } from "@/components/CtaBand";
-import { serviceAreas, services, site } from "@/lib/site";
+import { sameAs, serviceAreas, services, site } from "@/lib/site";
 import { metaDescription } from "@/lib/seo";
 import { serviceImage } from "@/lib/service-images";
 import { reviews } from "@/lib/reviews";
@@ -152,12 +152,7 @@ export const Route = createFileRoute("/")({
               },
             })),
           },
-          sameAs: [
-            "https://www.tiktok.com/@pacificfloorsandcoatings",
-            "https://www.instagram.com/pacificfloorsandcoatings",
-            "https://www.facebook.com/profile.php?id=61575485291064",
-            "https://www.linkedin.com/in/pacificfloorsandcoatingsca/",
-          ],
+          sameAs,
         }),
       },
       {

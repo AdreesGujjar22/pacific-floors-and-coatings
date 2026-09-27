@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Facebook, Instagram, Linkedin, Music2 } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Music2, Youtube } from "lucide-react";
 import { Logo } from "./Logo";
 import { services, site } from "@/lib/site";
 import { Button } from "@/components/ui/button";
@@ -43,6 +43,7 @@ export function Footer() {
             <a href={site.socials.facebook} target="_blank" rel="noreferrer" aria-label="Facebook" className="text-muted-foreground transition hover:text-primary"><Facebook size={18} /></a>
             <a href={site.socials.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn" className="text-muted-foreground transition hover:text-primary"><Linkedin size={18} /></a>
             <a href={site.socials.tiktok} target="_blank" rel="noreferrer" aria-label="TikTok" className="text-muted-foreground transition hover:text-primary"><Music2 size={18} /></a>
+            <a href={site.socials.youtube} target="_blank" rel="noreferrer" aria-label="YouTube" className="text-muted-foreground transition hover:text-primary"><Youtube size={18} /></a>
           </div>
         </div>
         <div>
@@ -74,6 +75,18 @@ export function Footer() {
       </div>
       <div className="relative z-10 border-t border-border py-5 text-center text-[10px] font-semibold uppercase tracking-widest text-muted-foreground">
         © {new Date().getFullYear()} {site.name}. Proudly serving Surrey, BC and Metro Vancouver.
+      </div>
+      <div className="relative z-10 flex items-center justify-center gap-2 border-t border-border px-5 py-3 text-xs text-muted-foreground">
+        <span>Powered by</span>
+        <a
+          href="https://www.metrovalleydigital.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 transition-colors hover:text-foreground"
+        >
+          <img src="/developer_site_logo.png" alt="" width={24} height={24} className="h-6 w-6 object-contain" />
+          <span>Metro Valley Digital</span>
+        </a>
       </div>
     </footer>
   );
