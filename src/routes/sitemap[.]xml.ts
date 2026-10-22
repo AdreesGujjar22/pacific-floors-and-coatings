@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { getRouterInstance } from "@tanstack/react-start";
-import { services, serviceAreas } from "@/lib/site";
+import { services, serviceAreas, serviceNeighbourhoods } from "@/lib/site";
 import {
   isSitemapRouteIncluded,
   sitemapPathForLocation,
@@ -33,12 +33,22 @@ export const Route = createFileRoute("/sitemap.xml")({
           }
         }
 
-        const areaRouteId = "/service-areas/$slug";
+        const areaRouteId = "/epoxy-flooring-{$slug}";
         if (isSitemapRouteIncluded(router.routesById[areaRouteId])) {
           for (const area of serviceAreas) {
             const location = router.buildLocation({
-              to: "/service-areas/$slug",
+              to: "/epoxy-flooring-{$slug}",
               params: { slug: area.slug },
+              search: () => ({}),
+              hash: "",
+            });
+            const path = sitemapPathForLocation(router, location, areaRouteId);
+            if (path) entries.push({ path });
+          }
+          for (const neighbourhood of serviceNeighbourhoods) {
+            const location = router.buildLocation({
+              to: "/epoxy-flooring-{$slug}",
+              params: { slug: neighbourhood.slug },
               search: () => ({}),
               hash: "",
             });

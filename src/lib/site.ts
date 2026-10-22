@@ -187,3 +187,20 @@ export const serviceAreas: ServiceArea[] = [
 export function findServiceArea(slug: string): ServiceArea | undefined {
   return serviceAreas.find((a) => a.slug === slug);
 }
+
+export const serviceNeighbourhoods = serviceAreas.flatMap((area) =>
+  area.neighbourhoods.map((name) => ({
+    name,
+    slug: `${name
+      .normalize("NFKD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-|-$/g, "")}-${area.slug}`,
+    area,
+  })),
+);
+
+export function findServiceNeighbourhood(slug: string) {
+  return serviceNeighbourhoods.find((neighbourhood) => neighbourhood.slug === slug);
+}

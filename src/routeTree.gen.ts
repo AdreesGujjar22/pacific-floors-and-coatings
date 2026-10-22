@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as EpoxyFlooringChar123slugChar125RouteImport } from './routes/epoxy-flooring-{$slug}'
 import { Route as ReviewsRouteImport } from './routes/reviews'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ServiceAreasIndexRouteImport } from './routes/service-areas.index'
@@ -34,6 +35,12 @@ const ContactRoute = ContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
+const EpoxyFlooringChar123slugChar125Route =
+  EpoxyFlooringChar123slugChar125RouteImport.update({
+    id: '/epoxy-flooring-{$slug}',
+    path: '/epoxy-flooring-{$slug}',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ReviewsRoute = ReviewsRouteImport.update({
   id: '/reviews',
   path: '/reviews',
@@ -69,6 +76,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
+  '/epoxy-flooring-{$slug}': typeof EpoxyFlooringChar123slugChar125Route
   '/reviews': typeof ReviewsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/service-areas/$slug': typeof ServiceAreasSlugRoute
@@ -80,6 +88,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
+  '/epoxy-flooring-{$slug}': typeof EpoxyFlooringChar123slugChar125Route
   '/reviews': typeof ReviewsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/service-areas/$slug': typeof ServiceAreasSlugRoute
@@ -92,6 +101,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
+  '/epoxy-flooring-{$slug}': typeof EpoxyFlooringChar123slugChar125Route
   '/reviews': typeof ReviewsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/service-areas/$slug': typeof ServiceAreasSlugRoute
@@ -105,6 +115,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/contact'
+    | '/epoxy-flooring-{$slug}'
     | '/reviews'
     | '/sitemap.xml'
     | '/service-areas/$slug'
@@ -116,6 +127,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/contact'
+    | '/epoxy-flooring-{$slug}'
     | '/reviews'
     | '/sitemap.xml'
     | '/service-areas/$slug'
@@ -127,6 +139,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/contact'
+    | '/epoxy-flooring-{$slug}'
     | '/reviews'
     | '/sitemap.xml'
     | '/service-areas/$slug'
@@ -139,6 +152,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
+  EpoxyFlooringChar123slugChar125Route: typeof EpoxyFlooringChar123slugChar125Route
   ReviewsRoute: typeof ReviewsRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   ServiceAreasSlugRoute: typeof ServiceAreasSlugRoute
@@ -168,6 +182,13 @@ declare module '@tanstack/react-router' {
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/epoxy-flooring-{$slug}': {
+      id: '/epoxy-flooring-{$slug}'
+      path: '/epoxy-flooring-{$slug}'
+      fullPath: '/epoxy-flooring-{$slug}'
+      preLoaderRoute: typeof EpoxyFlooringChar123slugChar125RouteImport
       parentRoute: typeof rootRouteImport
     }
     '/reviews': {
@@ -219,6 +240,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
+  EpoxyFlooringChar123slugChar125Route: EpoxyFlooringChar123slugChar125Route,
   ReviewsRoute: ReviewsRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   ServiceAreasSlugRoute: ServiceAreasSlugRoute,

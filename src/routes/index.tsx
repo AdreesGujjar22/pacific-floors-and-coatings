@@ -433,7 +433,7 @@ function Home() {
                 {serviceAreas.map((area) => (
                   <Link
                     key={area.slug}
-                    to="/service-areas/$slug"
+                    to="/epoxy-flooring-{$slug}"
                     params={{ slug: area.slug }}
                     className="transition-colors hover:text-foreground"
                   >

@@ -72,7 +72,7 @@ function ServiceAreasPage() {
             {serviceAreas.map((a) => (
               <Link
                 key={a.slug}
-                to="/service-areas/$slug"
+                to="/epoxy-flooring-{$slug}"
                 params={{ slug: a.slug }}
                 className="panel group block p-5 transition hover:border-primary shadow-sm hover:shadow-md"
               >
