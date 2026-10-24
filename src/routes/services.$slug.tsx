@@ -4,9 +4,10 @@ import { Footer } from "@/components/Footer";
 import { QuoteForm } from "@/components/QuoteForm";
 import { CtaBand } from "@/components/CtaBand";
 import { Breadcrumbs, breadcrumbSchema } from "@/components/Breadcrumbs";
-import { findService, services, serviceAreas, metaTitle, sameAs, site, SITE_URL } from "@/lib/site";
-import { metaDescription } from "@/lib/seo";
+import { findService, findServiceArea, serviceAreas, sameAs, site, SITE_URL } from "@/lib/site";
+import { brandDescription, pageTitle } from "@/lib/seo";
 import { serviceImage } from "@/lib/service-images";
+import { servicePageCopy } from "@/lib/content";
 
 export const Route = createFileRoute("/services/$slug")({
   staticData: { sitemap: true },
@@ -20,8 +21,10 @@ export const Route = createFileRoute("/services/$slug")({
       return { meta: [{ title: "Service Not Found | Pacific Floors and Coatings" }] };
     }
     const { service } = loaderData;
-    const title = metaTitle(`${service.title} Surrey BC`);
-    const description = metaDescription(`${service.title} in Surrey, BC: ${service.short}`);
+    const title = pageTitle(`${service.title} in Surrey, BC`);
+    const surrey = findServiceArea("surrey")!;
+    const copy = servicePageCopy(service.slug, surrey);
+    const description = brandDescription(copy ? copy.meta : `${service.title} in Surrey, BC: ${service.short}`);
     const url = `${SITE_URL}/services/${params.slug}`;
 
     return {
@@ -46,7 +49,7 @@ export const Route = createFileRoute("/services/$slug")({
             "@type": "Service",
             name: service.title,
             serviceType: service.title,
-            description: service.short,
+            description,
             url,
             areaServed: [
               { "@type": "City", name: "Surrey, British Columbia" },
@@ -87,7 +90,7 @@ export const Route = createFileRoute("/services/$slug")({
           children: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            mainEntity: service.faqs.map((f) => ({
+            mainEntity: (servicePageCopy(service.slug, findServiceArea("surrey")!)?.faqs ?? service.faqs).map((f) => ({
               "@type": "Question",
               name: f.q,
               acceptedAnswer: { "@type": "Answer", text: f.a },
@@ -119,7 +122,9 @@ export const Route = createFileRoute("/services/$slug")({
 
 function ServiceDetail() {
   const { service } = Route.useLoaderData();
-  const related = services.filter((s) => s.group === service.group && s.slug !== service.slug).slice(0, 4);
+  const surrey = findServiceArea("surrey")!;
+  const copy = servicePageCopy(service.slug, surrey);
+  const faqs = copy?.faqs ?? service.faqs;
 
   return (
     <>
@@ -129,79 +134,46 @@ function ServiceDetail() {
           <img src={serviceImage(service)} alt="" aria-hidden="true" className="absolute inset-0 z-0 h-full w-full object-cover opacity-45" />
           <div className="absolute inset-0 z-0 bg-gradient-to-r from-background/96 via-background/88 to-background/42" />
           <div className="relative z-10 mx-auto max-w-[1170px] px-5 py-12">
-          <Breadcrumbs
-            crumbs={[
-              { label: "Home", href: "/" },
-              { label: "Services", href: "/services" },
-              { label: service.title, href: `/services/${service.slug}` },
-            ]}
-          />
-          <div className="mt-7 grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
-            <div>
-              <p className="eyebrow">{service.group}</p>
-              <h1 className="mt-3 text-4xl font-black leading-tight sm:text-[44px]">
-                {service.title} in Surrey BC
-              </h1>
-              <p className="mt-5 leading-7 text-muted-foreground">{service.intro}</p>
-              <ul className="mt-7 space-y-2.5 text-sm text-muted-foreground">
-                {service.bullets.map((b) => (
-                  <li key={b} className="border-l-2 border-border pl-3">
-                    {b}
-                  </li>
-                ))}
-              </ul>
-              <p className="mt-7 text-sm">
-                <span className="eyebrow">Best for</span>
-                <span className="mt-1 block text-muted-foreground">{service.best}</span>
-              </p>
-              <div className="mt-8 flex flex-wrap gap-3">
-                <a
-                  href={site.phoneHref}
-                  className="rounded-md bg-primary px-6 py-3 text-xs font-bold text-primary-foreground transition hover:brightness-110"
-                >
-                  Call {site.phone}
-                </a>
-                <Link
-                  to="/contact"
-                  className="rounded-md border border-border px-6 py-3 text-xs font-bold transition hover:border-primary"
-                >
-                  Book a free estimate
-                </Link>
-              </div>
-            </div>
-            <img
-              src={serviceImage(service)}
-              alt={`${service.title} installed by Pacific Floors and Coatings in Surrey, BC`}
-              loading="lazy"
-              decoding="async"
-              width={1200}
-              height={800}
-              className="h-full max-h-[460px] w-full rounded-xl border border-border object-cover"
+            <Breadcrumbs
+              crumbs={[
+                { label: "Home", href: "/" },
+                { label: "Services", href: "/services" },
+                { label: service.title, href: `/services/${service.slug}` },
+              ]}
             />
-          </div>
-          </div>
-        </section>
-
-        <section className="border-y border-border bg-surface py-14">
-          <div className="mx-auto grid max-w-[1170px] gap-8 px-5 md:grid-cols-2">
-            <div className="panel p-7">
-              <h2 className="text-xl font-bold">How we install it</h2>
-              <ol className="mt-4 space-y-3 text-sm text-muted-foreground">
-                <li>1. Free on-site assessment of the slab, moisture, and how you use the space.</li>
-                <li>2. Dust-extracted diamond grinding to open the concrete profile.</li>
-                <li>3. Crack, spall, and low-spot repair, plus joint detailing.</li>
-                <li>4. Primer and base build, with broadcast where the system calls for it.</li>
-                <li>5. Clear top coat, cure, and a walkthrough before we hand it back.</li>
-              </ol>
+            <div className="mt-7 grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+              <div>
+                <p className="eyebrow">{service.title} · Surrey, BC</p>
+                <h1 className="mt-3 text-4xl font-black leading-tight sm:text-[44px]">
+                  {service.title} in Surrey, BC
+                </h1>
+                <p className="mt-5 leading-7 text-muted-foreground">{copy?.lead ?? service.intro}</p>
+                <p className="mt-4 leading-7 text-muted-foreground">{copy?.detail}</p>
+                <p className="mt-4 text-sm leading-6 text-muted-foreground">{copy?.secondary}</p>
+                <div className="mt-8 flex flex-wrap gap-3">
+                  <a
+                    href={site.phoneHref}
+                    className="rounded-md bg-primary px-6 py-3 text-xs font-bold text-primary-foreground transition hover:brightness-110"
+                  >
+                    Call {site.phone}
+                  </a>
+                  <Link
+                    to="/contact"
+                    className="rounded-md border border-border px-6 py-3 text-xs font-bold transition hover:border-primary"
+                  >
+                    Book a free estimate
+                  </Link>
+                </div>
+              </div>
+              <QuoteForm heading={`Get a ${service.title.toLowerCase()} quote in Surrey`} />
             </div>
-            <QuoteForm heading={`Quote for ${service.title.toLowerCase()}`} />
           </div>
         </section>
 
         <section className="mx-auto max-w-[1170px] px-5 py-14">
-          <h2 className="text-2xl font-extrabold">{service.title} questions we get asked</h2>
+          <h2 className="text-2xl font-extrabold">{service.title} in Surrey, BC: FAQs</h2>
           <div className="mt-6 space-y-3">
-            {service.faqs.map((f) => (
+            {faqs.map((f) => (
               <details key={f.q} className="border border-border bg-background/40 px-5 py-4">
                 <summary className="cursor-pointer list-none text-sm font-semibold">{f.q}</summary>
                 <p className="mt-3 text-sm leading-6 text-muted-foreground">{f.a}</p>
@@ -210,9 +182,8 @@ function ServiceDetail() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-[1170px] px-5 py-14">
-          <h2 className="text-2xl font-extrabold">{service.title} in Metro Vancouver</h2>
-          <p className="mt-2 text-muted-foreground">Choose a city to see local service details and request an estimate.</p>
+        <section className="mx-auto max-w-[1170px] px-5 pb-16">
+          <h2 className="text-2xl font-extrabold">{service.title} Near Surrey</h2>
           <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {serviceAreas.filter((area) => area.slug !== "surrey").map((area) => (
               <Link
@@ -221,31 +192,11 @@ function ServiceDetail() {
                 params={{ citySlug: area.slug, serviceSlug: service.slug }}
                 className="interactive-panel block p-4"
               >
-                <span className="font-semibold">{service.title} in {area.name}</span>
-                <span className="mt-1 block text-sm text-muted-foreground">{area.region}</span>
+                <span className="font-semibold">{service.title} in {area.name}, BC</span>
               </Link>
             ))}
           </div>
         </section>
-
-        {related.length > 0 && (
-          <section className="mx-auto max-w-[1170px] px-5 pb-16">
-            <h2 className="text-2xl font-extrabold">Related {service.group.toLowerCase()} services</h2>
-            <div className="mt-6 grid gap-4 sm:grid-cols-2">
-              {related.map((s) => (
-                <Link
-                  key={s.slug}
-                  to="/services/$slug"
-                  params={{ slug: s.slug }}
-                  className="interactive-panel block p-5"
-                >
-                  <h3 className="text-base font-bold">{s.title}</h3>
-                  <p className="mt-2 text-sm text-muted-foreground">{s.short}</p>
-                </Link>
-              ))}
-            </div>
-          </section>
-        )}
 
         <CtaBand />
       </main>

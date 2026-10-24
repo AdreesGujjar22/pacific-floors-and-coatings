@@ -5,14 +5,14 @@ import { QuoteForm } from "@/components/QuoteForm";
 import { CtaBand } from "@/components/CtaBand";
 import { Breadcrumbs, breadcrumbSchema } from "@/components/Breadcrumbs";
 import { services, serviceGroups, SITE_URL } from "@/lib/site";
-import { metaDescription } from "@/lib/seo";
+import { brandDescription, pageTitle } from "@/lib/seo";
 import { serviceImage } from "@/lib/service-images";
 import metallic from "@/assets/metallic-epoxy.jpg";
 import { PageHero } from "@/components/PageHero";
 
-const TITLE = "Flooring & Epoxy Flooring Services in Surrey BC | Pacific Floors and Coatings";
-const DESCRIPTION = metaDescription(
-  "Explore flooring repair, installation, maintenance, and replacement, plus epoxy flooring for homes, businesses, kitchens, and industrial spaces in Surrey and Metro Vancouver.",
+const TITLE = pageTitle("Epoxy Flooring Services in Surrey, BC");
+const DESCRIPTION = brandDescription(
+  "Epoxy flooring services in Surrey, BC: garage, commercial, industrial, metallic and flake epoxy, plus floor repair, installation and replacement.",
 );
 
 export const Route = createFileRoute("/services/")({
@@ -81,7 +81,7 @@ function ServicesPage() {
           imageHeight={1200}
           imageAlt="Metallic epoxy flooring finish"
           eyebrow="Our services"
-          title="Flooring Services for Homes and Businesses"
+          title="Epoxy Flooring Services in Surrey, BC"
           description={<>Explore flooring repair, installation, maintenance, and replacement, alongside epoxy flooring and commercial coating systems across Surrey and Metro Vancouver.</>}
         />
 

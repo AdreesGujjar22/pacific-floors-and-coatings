@@ -5,23 +5,23 @@ import { QuoteForm } from "@/components/QuoteForm";
 import installer from "@/assets/installer.jpg";
 import flake from "@/assets/flake-epoxy.jpg";
 import { PageHero } from "@/components/PageHero";
-import { metaDescription } from "@/lib/seo";
+import { brandDescription, pageTitle } from "@/lib/seo";
 
-const PAGE_DESCRIPTION = metaDescription(
-  "About Us at Pacific Floors and Coatings: meet our Surrey team and see how careful prep and durable coatings can transform your floor.",
+const PAGE_DESCRIPTION = brandDescription(
+  "About our epoxy flooring company in Surrey, BC. Meet the team behind careful slab prep and durable garage, commercial and industrial floor coatings.",
 );
 
 export const Route = createFileRoute("/about")({
   staticData: { sitemap: true },
   head: () => ({
     meta: [
-      { title: "About Us | Pacific Floors and Coatings" },
+      { title: pageTitle("Epoxy Flooring Company in Surrey, BC") },
       {
         name: "description",
         content:
           PAGE_DESCRIPTION,
       },
-      { property: "og:title", content: "About Us | Pacific Floors and Coatings" },
+      { property: "og:title", content: pageTitle("Epoxy Flooring Company in Surrey, BC") },
       {
         property: "og:description",
         content: PAGE_DESCRIPTION,
@@ -29,7 +29,7 @@ export const Route = createFileRoute("/about")({
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://www.pacificfloorsandcoatings.ca/about" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "About Us | Pacific Floors and Coatings" },
+      { name: "twitter:title", content: pageTitle("Epoxy Flooring Company in Surrey, BC") },
       {
         name: "twitter:description",
         content: PAGE_DESCRIPTION,
@@ -51,7 +51,7 @@ function About() {
           imageHeight={1920}
           imageAlt="Pacific Floors and Coatings installer preparing a floor"
           eyebrow="Get to know Pacific Floors and Coatings"
-          title="Premium custom flooring across Surrey, BC"
+          title="Epoxy Flooring Company in Surrey, BC"
           description={<>We provide epoxy flooring and concrete coating services for homeowners and businesses across Surrey, BC and Metro Vancouver. Built on quality work and clear communication, we make upgrading your floors a stress-free experience.</>}
         />
 

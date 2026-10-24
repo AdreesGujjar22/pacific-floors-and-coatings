@@ -4,21 +4,18 @@ import { Footer } from "@/components/Footer";
 import { QuoteForm } from "@/components/QuoteForm";
 import { CtaBand } from "@/components/CtaBand";
 import { sameAs, serviceAreas, services, site } from "@/lib/site";
-import { metaDescription } from "@/lib/seo";
+import { brandDescription } from "@/lib/seo";
 import { serviceImage } from "@/lib/service-images";
-import { reviews } from "@/lib/reviews";
 import { Button } from "@/components/ui/button";
 
 import hero from "@/assets/hero-garage.jpg";
-import metallic from "@/assets/metallic-epoxy.jpg";
-import flake from "@/assets/flake-epoxy.jpg";
-import sealed from "@/assets/sealed-concrete.jpg";
 import installer from "@/assets/installer.jpg";
 
 const featuredSlugs = [
   "metallic-epoxy-flooring",
   "garage-epoxy-flooring",
   "commercial-epoxy-flooring",
+  "industrial-epoxy-flooring",
 ] as const;
 
 const featuredServices = featuredSlugs
@@ -30,34 +27,34 @@ const serviceAlt: Record<string, string> = {
   "metallic-epoxy-flooring": "Glossy black and silver metallic epoxy floor installed in a Surrey, BC home",
   "garage-epoxy-flooring": "Grey flake epoxy garage floor coating in a two-car Surrey garage",
   "commercial-epoxy-flooring": "Commercial epoxy floor coating in a Metro Vancouver warehouse with safety line markings",
+  "industrial-epoxy-flooring": "Industrial epoxy floor coating in a manufacturing space",
 };
 
 const faqs = [
   {
-    q: "How durable are epoxy floors, and how long do they last?",
-    a: "A properly prepared and installed epoxy floor commonly lasts 10 to 20 years in a residential garage, and many years under heavy commercial traffic. Longevity comes down to surface prep, coating thickness, and how the floor is used.",
+    q: "How much does epoxy flooring cost in Surrey, BC?",
+    a: "Epoxy flooring cost in Surrey depends on square footage, slab condition, and whether you choose a solid, flake, or metallic system. We give free on-site estimates so your quote reflects the real floor.",
+  },
+  {
+    q: "How long does epoxy flooring last in a Surrey garage?",
+    a: "A properly ground and sealed epoxy garage floor in Surrey commonly lasts 10 to 20 years. Surface prep, coating thickness, and a hot-tire-rated top coat make the biggest difference.",
+  },
+  {
+    q: "How long does epoxy flooring installation take?",
+    a: "Most Surrey garages are finished in one to two days. Light foot traffic is usually fine after 24 hours, and vehicles can return after about 72 hours.",
   },
   {
     q: "Are epoxy floors slippery when wet?",
-    a: "A high-gloss coating can be slick when wet, so we can add an anti-slip aggregate to the top coat. We recommend it for entryways, wash bays, and any area that regularly sees water.",
+    a: "Gloss epoxy can be slick when wet, so we add an anti-slip aggregate to the top coat for entryways, wash bays, and any area that sees water.",
   },
   {
-    q: "How long does installation and curing take?",
-    a: "Most residential garages are completed in one to two days. Light foot traffic is usually fine after 24 hours, and vehicles after roughly 72 hours depending on the system and temperature.",
-  },
-
-  {
-    q: "How much does a new epoxy floor cost?",
-    a: "Pricing depends on square footage, slab condition, and the system you choose. We provide free on-site estimates so the quote reflects your actual floor.",
-  },
-  {
-    q: "Do you install epoxy flooring outside Surrey, BC?",
-    a: "We serve Surrey, BC and Metro Vancouver, including Vancouver, Burnaby, Richmond, Coquitlam, Langley, Delta, White Rock, and Abbotsford.",
+    q: "Do you offer epoxy flooring outside Surrey, BC?",
+    a: "Yes. We install epoxy flooring in Vancouver, Burnaby, Richmond, Coquitlam, Langley, Delta, White Rock, New Westminster, Maple Ridge, and Abbotsford.",
   },
 ];
 
-const PAGE_DESCRIPTION = metaDescription(
-  "Epoxy flooring in Surrey, BC for garages, basements, and businesses. Choose a metallic, flake, or solid finish installed for lasting durability.",
+const PAGE_DESCRIPTION = brandDescription(
+  "Epoxy flooring in Surrey, BC for garages, basements and shops. Metallic, flake and solid epoxy floors with free on-site estimates.",
 );
 
 export const Route = createFileRoute("/")({
@@ -167,11 +164,6 @@ export const Route = createFileRoute("/")({
 });
 
 function Home() {
-  const firstReview = reviews[0];
-  const secondReview = reviews[1];
-
-  if (!firstReview || !secondReview) return null;
-
   return (
     <>
       <Header overlay />
@@ -189,14 +181,14 @@ function Home() {
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/78 to-background/10" />
           <div className="relative mx-auto grid max-w-[1170px] items-center gap-12 px-5 pb-20 pt-36 lg:grid-cols-[1.05fr_0.8fr] lg:pb-24 lg:pt-44">
             <div className="max-w-[610px]">
-              <p className="eyebrow">Premium epoxy flooring · Surrey & Metro Vancouver</p>
+              <p className="eyebrow">Epoxy flooring contractor · Surrey, BC</p>
               <h1 className="mt-4 max-w-[650px] text-4xl font-black leading-[1.02] sm:text-[58px]">
-                Epoxy Flooring in Surrey, BC
+                Epoxy Flooring Experts in Surrey, BC
               </h1>
               <p className="mt-5 max-w-xl text-sm leading-6 text-muted-foreground text-pretty">
-                Pacific Floors and Coatings installs epoxy flooring in Surrey, BC and across Metro Vancouver. Choose a
-                durable finish for garages, basements, showrooms, and industrial spaces, with the coating system matched
-                to your concrete and how you use the floor.
+                Pacific Floors and Coatings is a Surrey epoxy flooring contractor for garages, basements, shops, and
+                warehouses. We grind, repair, and seal your concrete with metallic, flake, or solid epoxy floor coatings
+                built to resist oil, road salt, and hot tires.
               </p>
               <ul className="mt-6 space-y-2 text-xs font-bold uppercase">
                 <li>◉&nbsp; 10+ years of experience</li>
@@ -218,10 +210,10 @@ function Home() {
 
         <section className="relative border-t border-border bg-surface py-20">
           <div className="mx-auto max-w-[1170px] px-5">
-            <p className="eyebrow">Our services</p>
+            <p className="eyebrow">Epoxy flooring Surrey</p>
             <div className="flex flex-wrap items-end justify-between gap-4">
               <h2 className="mt-2 text-3xl font-black sm:text-[36px]">
-                Garage, Commercial & Industrial Epoxy Flooring
+                Epoxy Flooring Services in Surrey, BC
               </h2>
               <Link to="/services" className="text-sm font-semibold text-primary transition-colors hover:text-primary/80">
                 View all services →
@@ -259,124 +251,47 @@ function Home() {
         </section>
 
         <section className="border-y border-border bg-background py-20">
-          <div className="mx-auto grid max-w-[1170px] items-center gap-12 px-5 md:grid-cols-2 text-pretty">
-            <figure className="order-2 border-l border-border pl-8 md:order-1">
-              <blockquote className="text-lg leading-8 text-muted-foreground italic">“{firstReview.text}”</blockquote>
-              <figcaption className="mt-6 text-sm font-bold text-foreground">
-                {firstReview.name} <span className="font-normal text-muted-foreground">— {firstReview.location}</span>
-              </figcaption>
-              <div className="mt-2 text-primary">★★★★★</div>
-            </figure>
-            <img
-              src={metallic}
-              alt="Luxury black metallic epoxy garage floor"
-              width={1200}
-              height={800}
-              className="order-1 h-[330px] w-full rounded-md object-cover md:order-2 shadow-2xl"
-              loading="lazy"
-            />
-          </div>
-        </section>
-
-        <section className="border-b border-border bg-surface py-20 text-pretty">
-          <div className="mx-auto grid max-w-[1170px] items-center gap-12 px-5 md:grid-cols-2">
-            <img
-              src={sealed}
-              alt="Finished residential epoxy floor"
-              width={1200}
-              height={800}
-              className="h-[380px] w-full rounded-md object-cover shadow-2xl"
-              loading="lazy"
-            />
-            <div>
-              <p className="eyebrow">Residential, commercial, industrial</p>
-              <h2 className="mt-3 text-3xl font-black leading-tight sm:text-[36px]">
-                Flooring Solutions for Any Project, From Single-Car Garages to Commercial & Industrial Spaces
-              </h2>
-              <p className="mt-5 text-sm leading-6 text-muted-foreground">
-                Whether you're a homeowner, a business owner, or a general contractor, we deliver durable epoxy flooring
-                and floor coating solutions tailored to your project needs. Our consultants help guide you through the
-                ideal system for your space.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section className="border-y border-border bg-background py-20">
           <div className="mx-auto max-w-[1170px] px-5 text-pretty">
-            <p className="eyebrow">A prep-first installation</p>
+            <p className="eyebrow">Garage floor epoxy Surrey</p>
             <h2 className="mt-3 max-w-3xl text-3xl font-black leading-tight sm:text-[36px]">
-              How We Install Epoxy Flooring in Surrey, BC
+              Garage, Basement and Commercial Epoxy Floor Coatings in Surrey, BC
             </h2>
             <p className="mt-5 max-w-4xl text-sm leading-7 text-muted-foreground">
-              A coating is only as dependable as the concrete beneath it. We start with an on-site assessment of the
-              slab and the way the space is used, then diamond-grind the surface to create a strong bond. Where needed,
-              we repair cracks, pitting, and low spots before applying a system suited to the floor.
+              A Surrey garage floor takes hot tires, road salt, and winter slush, and bare concrete soaks all of it up.
+              Our epoxy floor coatings seal the slab so oil wipes off, dust stays down, and the floor stays bright. We
+              also coat basements, workshops, retail units, and warehouses across Surrey, from Newton and Fleetwood to
+              Campbell Heights.
             </p>
             <div className="mt-8 grid gap-6 md:grid-cols-3">
               <article className="panel p-6">
-                <h3 className="text-lg font-bold">Assess the concrete</h3>
+                <h3 className="text-lg font-bold">Metallic epoxy flooring Surrey</h3>
                 <p className="mt-3 text-sm leading-7 text-muted-foreground">
-                  Slab condition, moisture risk, traffic, and exposure to water or spills all help determine the right
-                  preparation and coating for a garage, basement, or business.
+                  Swirled, high-gloss finishes for living spaces, showrooms, and statement garages, hand-worked so no
+                  two floors match.
                 </p>
               </article>
               <article className="panel p-6">
-                <h3 className="text-lg font-bold">Prepare and repair</h3>
+                <h3 className="text-lg font-bold">Flake epoxy garage floors</h3>
                 <p className="mt-3 text-sm leading-7 text-muted-foreground">
-                  We use diamond grinding rather than relying on acid etching, and address cracks and surface damage
-                  before coating. Dust extraction helps keep the work area cleaner during preparation.
+                  A speckled, textured system that hides dirt and adds grip, the most requested choice for Surrey
+                  garages and basements.
                 </p>
               </article>
               <article className="panel p-6">
-                <h3 className="text-lg font-bold">Apply and allow to cure</h3>
+                <h3 className="text-lg font-bold">Industrial epoxy floor coatings</h3>
                 <p className="mt-3 text-sm leading-7 text-muted-foreground">
-                  Installation time and return-to-use depend on the system and conditions. Many residential garages take
-                  one to two days to complete; light foot traffic is typically suitable after 24 hours, with vehicles
-                  kept off for about 72 hours.
+                  Heavy-build, chemical-resistant systems with safety striping for Surrey shops, plants, and
+                  forklift traffic.
                 </p>
               </article>
             </div>
-          </div>
-        </section>
-
-        <section className="mx-auto max-w-[1170px] px-5 py-20">
-          <p className="eyebrow">Our reviews speak for themselves</p>
-          <div className="flex flex-wrap items-end justify-between gap-4">
-            <h2 className="mt-2 text-3xl font-black sm:text-4xl">
-              See what our customers have to say
-            </h2>
-            <Link to="/reviews" className="text-sm font-semibold text-primary transition-colors hover:text-primary/80">
-              View all reviews →
-            </Link>
-          </div>
-          <p className="mt-3 text-sm text-muted-foreground">
-            Customer feedback from projects across Surrey, BC and Metro Vancouver.
-          </p>
-          <div className="mt-8 grid items-center gap-10 md:grid-cols-[1fr_1fr] text-pretty">
-            <img
-              src={flake}
-              alt="Completed Pacific Floors and Coatings garage floor"
-              width={1200}
-              height={800}
-              className="h-[330px] w-full rounded-md object-cover shadow-2xl"
-              loading="lazy"
-            />
-            <figure className="border-l border-border pl-8">
-              <blockquote className="text-base leading-7 text-muted-foreground italic">“{secondReview.text}”</blockquote>
-              <figcaption className="mt-5 text-sm font-bold">
-                {secondReview.name}
-                <span className="block text-xs font-normal text-muted-foreground">{secondReview.location}</span>
-              </figcaption>
-              <div className="mt-2 text-primary">★★★★★</div>
-            </figure>
           </div>
         </section>
 
         <section className="border-y border-border bg-surface py-20">
           <div className="mx-auto max-w-4xl px-4">
             <h2 className="text-center text-3xl font-black sm:text-4xl">
-              Frequently asked questions
+              Epoxy Flooring in Surrey, BC: Common Questions
             </h2>
             <div className="mt-8 space-y-3">
               {faqs.map((f) => (
@@ -392,88 +307,33 @@ function Home() {
         <section className="relative overflow-hidden py-20">
           <img
             src={installer}
-            alt="Pacific Floors and Coatings crew serving Surrey, BC"
+            alt="Pacific Floors and Coatings crew installing epoxy flooring in Surrey, BC"
             width={1600}
             height={1008}
             className="absolute inset-0 h-full w-full object-cover opacity-25"
             loading="lazy"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/62" />
-          <div className="relative mx-auto grid max-w-[1170px] gap-12 px-5 md:grid-cols-2">
-            <div className="text-pretty">
-              <p className="eyebrow">Local service areas</p>
-              <h2 className="mt-3 text-3xl font-black sm:text-[36px]">Dedicated to Serving Surrey Businesses and Families</h2>
-              <ul className="mt-6 space-y-4 text-sm leading-6 text-muted-foreground">
-                <li>
-                  <strong className="text-foreground">On-Site Consultations:</strong> Delivered commercial, industrial,
-                  and residential floor preparation guidance directly to your property.
-                </li>
-                <li>
-                  <strong className="text-foreground">Fully Equipped Service Crews:</strong> Supported by professional
-                  diamond grinders and dustless vacuums.
-                </li>
-                <li>
-                  <strong className="text-foreground">Comprehensive Regional Coverage:</strong> Offering transparent
-                  pricing throughout Surrey, BC and Metro Vancouver.
-                </li>
-              </ul>
-              <div className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-xs font-bold uppercase tracking-wider text-primary">
-                {serviceAreas.map((area) => (
-                  <Link
-                    key={area.slug}
-                    to="/epoxy-flooring-{$slug}"
-                    params={{ slug: area.slug }}
-                    className="transition-colors hover:text-foreground"
-                  >
-                    {area.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="border-t border-border bg-surface py-20">
-          <div className="mx-auto max-w-[1170px] px-5">
-            <p className="eyebrow">Find us</p>
-            <div className="flex flex-wrap items-end justify-between gap-4">
-              <h2 className="mt-2 text-3xl font-black sm:text-[36px]">
-                Visit Our Surrey, BC Epoxy Flooring Shop
-              </h2>
-              <Button asChild variant="outline" size="sm">
-                <a href={site.mapLink} target="_blank" rel="noreferrer">
-                  Get Directions →
-                </a>
-              </Button>
-            </div>
-            <div className="mt-9 max-w-2xl">
-              <div className="panel p-7">
-                <h3 className="text-lg font-bold">Location & Contact</h3>
-                <ul className="mt-5 space-y-5 text-sm">
-                  <li>
-                    <span className="eyebrow block">Address</span>
-                    <a href={site.mapLink} target="_blank" rel="noreferrer" className="mt-1 block font-medium hover:text-primary transition-colors">
-                      {site.address}
-                    </a>
-                  </li>
-                  <li>
-                    <span className="eyebrow block">Phone</span>
-                    <a href={site.phoneHref} className="mt-1 block font-medium hover:text-primary transition-colors">
-                      {site.phone}
-                    </a>
-                  </li>
-                  <li>
-                    <span className="eyebrow block">Email</span>
-                    <a href={`mailto:${site.email}`} className="mt-1 block font-medium hover:text-primary transition-colors">
-                      {site.email}
-                    </a>
-                  </li>
-                  <li>
-                    <span className="eyebrow block">Service Hours</span>
-                    <span className="mt-1 block font-medium">{site.businessHours.text}</span>
-                  </li>
-                </ul>
-              </div>
+          <div className="relative mx-auto max-w-[1170px] px-5 text-pretty">
+            <p className="eyebrow">Epoxy flooring near you</p>
+            <h2 className="mt-3 max-w-3xl text-3xl font-black sm:text-[36px]">
+              Epoxy Flooring in Surrey and Across Metro Vancouver, BC
+            </h2>
+            <p className="mt-5 max-w-3xl text-sm leading-7 text-muted-foreground">
+              Based at {site.address}, our crew installs epoxy floors throughout Surrey and the surrounding cities.
+              Choose your city to see local details.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-xs font-bold uppercase tracking-wider text-primary">
+              {serviceAreas.map((area) => (
+                <Link
+                  key={area.slug}
+                  to="/epoxy-flooring-{$slug}"
+                  params={{ slug: area.slug }}
+                  className="transition-colors hover:text-foreground"
+                >
+                  Epoxy Flooring {area.name}, BC
+                </Link>
+              ))}
             </div>
           </div>
         </section>

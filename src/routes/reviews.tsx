@@ -2,26 +2,26 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { QuoteForm } from "@/components/QuoteForm";
-import { metaDescription } from "@/lib/seo";
+import { brandDescription, pageTitle } from "@/lib/seo";
 import { reviews } from "@/lib/reviews";
 import metallic from "@/assets/metallic-epoxy.jpg";
 import { PageHero } from "@/components/PageHero";
 
-const PAGE_DESCRIPTION = metaDescription(
-  "Epoxy flooring reviews from Surrey homeowners and businesses. See what customers say about Pacific Floors and Coatings and their floor projects.",
+const PAGE_DESCRIPTION = brandDescription(
+  "Epoxy flooring reviews in Surrey, BC from local homeowners and businesses. See what customers say about our garage and commercial floor coatings.",
 );
 
 export const Route = createFileRoute("/reviews")({
   staticData: { sitemap: true },
   head: () => ({
     meta: [
-      { title: "Epoxy Flooring Reviews | Pacific Floors and Coatings" },
+      { title: pageTitle("Epoxy Flooring Reviews in Surrey, BC") },
       {
         name: "description",
         content:
           PAGE_DESCRIPTION,
       },
-      { property: "og:title", content: "Epoxy Flooring Reviews | Pacific Floors and Coatings" },
+      { property: "og:title", content: pageTitle("Epoxy Flooring Reviews in Surrey, BC") },
       {
         property: "og:description",
         content: PAGE_DESCRIPTION,
@@ -29,7 +29,7 @@ export const Route = createFileRoute("/reviews")({
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://www.pacificfloorsandcoatings.ca/reviews" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Epoxy Flooring Reviews | Pacific Floors and Coatings" },
+      { name: "twitter:title", content: pageTitle("Epoxy Flooring Reviews in Surrey, BC") },
       {
         name: "twitter:description",
         content: PAGE_DESCRIPTION,
@@ -57,7 +57,7 @@ function Reviews() {
           imageHeight={1200}
           imageAlt="Metallic epoxy flooring project"
           eyebrow="Real results, real feedback"
-          title="Customer reviews"
+          title="Epoxy Flooring Reviews in Surrey, BC"
           description={<>Feedback from homeowners and businesses across Surrey and Metro Vancouver who chose Pacific Floors and Coatings.</>}
         />
 

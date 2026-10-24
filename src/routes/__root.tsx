@@ -11,7 +11,7 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
-import { metaDescription } from "../lib/seo";
+import { brandDescription } from "../lib/seo";
 import { FloatingContactMenu } from "../components/FloatingContactMenu";
 
 function NotFoundComponent() {
@@ -74,8 +74,8 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   );
 }
 
-const ROOT_DESCRIPTION = metaDescription(
-  "Epoxy flooring in Surrey, BC for garages, basements, and businesses, installed with careful preparation for lasting durability.",
+const ROOT_DESCRIPTION = brandDescription(
+  "Epoxy flooring in Surrey, BC for garages, basements and shops. Metallic, flake and solid epoxy floors with free on-site estimates.",
 );
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
@@ -91,7 +91,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:title", content: "Epoxy Flooring in Surrey, BC | Pacific Floors and Coatings" },
       { property: "og:description", content: ROOT_DESCRIPTION },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Pacific Floors and Coatings" },
+      { property: "og:locale", content: "en_CA" },
+      { property: "og:image", content: "https://www.pacificfloorsandcoatings.ca/pacific-fooring.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://www.pacificfloorsandcoatings.ca/pacific-fooring.png" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
+      { name: "geo.region", content: "CA-BC" },
+      { name: "geo.placename", content: "Surrey" },
     ],
     links: [
       {
@@ -119,7 +126,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en-CA">
       <head>
         <HeadContent />
       </head>

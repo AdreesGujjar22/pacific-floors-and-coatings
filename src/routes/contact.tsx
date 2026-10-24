@@ -3,24 +3,24 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { QuoteForm } from "@/components/QuoteForm";
 import { site } from "@/lib/site";
-import { metaDescription } from "@/lib/seo";
+import { brandDescription, pageTitle } from "@/lib/seo";
 import hero from "@/assets/installer.jpg";
 
-const PAGE_DESCRIPTION = metaDescription(
-  "Contact Us for a free flooring estimate in Surrey, BC. Tell Pacific Floors and Coatings about your project, and our team will help plan next steps.",
+const PAGE_DESCRIPTION = brandDescription(
+  "Contact our epoxy flooring contractor in Surrey, BC for a free on-site estimate on garage, basement, commercial and industrial epoxy floors.",
 );
 
 export const Route = createFileRoute("/contact")({
   staticData: { sitemap: true },
   head: () => ({
     meta: [
-      { title: "Contact Us | Pacific Floors and Coatings" },
+      { title: pageTitle("Epoxy Flooring Contractor in Surrey, BC") },
       {
         name: "description",
         content:
           PAGE_DESCRIPTION,
       },
-      { property: "og:title", content: "Contact Us | Pacific Floors and Coatings" },
+      { property: "og:title", content: pageTitle("Epoxy Flooring Contractor in Surrey, BC") },
       {
         property: "og:description",
         content: PAGE_DESCRIPTION,
@@ -28,7 +28,7 @@ export const Route = createFileRoute("/contact")({
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://www.pacificfloorsandcoatings.ca/contact" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Contact Us | Pacific Floors and Coatings" },
+      { name: "twitter:title", content: pageTitle("Epoxy Flooring Contractor in Surrey, BC") },
       {
         name: "twitter:description",
         content: PAGE_DESCRIPTION,
@@ -62,7 +62,7 @@ function Contact() {
           />
           <div>
             <p className="eyebrow">Contact us</p>
-            <h1 className="mt-3 text-4xl font-black">Let's talk about your floor</h1>
+            <h1 className="mt-3 text-4xl font-black">Contact Our Epoxy Flooring Contractor in Surrey, BC</h1>
             <p className="mt-5 text-muted-foreground leading-7">
               Tell us a bit about the space and we'll arrange a free on-site estimate anywhere in
               Surrey, BC or Metro Vancouver.

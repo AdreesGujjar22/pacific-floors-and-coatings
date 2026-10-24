@@ -46,7 +46,7 @@ const slugImages: Record<string, string> = {
 
   "commercial-epoxy-flooring": commercial,
   "commercial-floor-coatings": commercial,
-  "industrial-epoxy-flooring": commercial,
+  "industrial-epoxy-flooring": solid,
   "warehouse-floor-coatings": commercial,
   "parkade-floor-coatings": commercial,
   "commercial-kitchen-floor-coatings": commercial,

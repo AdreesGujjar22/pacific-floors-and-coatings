@@ -10,6 +10,8 @@ import {
 } from "@/lib/sitemap";
 
 const BASE_URL = "https://www.pacificfloorsandcoatings.ca";
+// Update this date whenever page content changes.
+const LASTMOD = "2026-10-24";
 
 export const Route = createFileRoute("/sitemap.xml")({
   staticData: { sitemap: false },
@@ -35,7 +37,7 @@ export const Route = createFileRoute("/sitemap.xml")({
 
         const serviceCityRouteId = "/services-in/$citySlug/$serviceSlug";
         if (isSitemapRouteIncluded(router.routesById[serviceCityRouteId])) {
-          for (const service of services) {
+          for (const service of services.filter((item) => item.slug !== "epoxy-flooring")) {
             for (const area of serviceAreas.filter((item) => item.slug !== "surrey")) {
               const location = router.buildLocation({
                 to: "/services-in/$citySlug/$serviceSlug",
@@ -80,7 +82,7 @@ export const Route = createFileRoute("/sitemap.xml")({
           });
         }
 
-        return new Response(sitemapXML(BASE_URL, entries), {
+        return new Response(sitemapXML(BASE_URL, entries.map((entry) => ({ ...entry, lastmod: LASTMOD }))), {
           headers: { "Content-Type": "application/xml", "Cache-Control": "public, max-age=3600" },
         });
       },
