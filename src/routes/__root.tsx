@@ -12,6 +12,7 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { metaDescription } from "../lib/seo";
+import { FloatingContactMenu } from "../components/FloatingContactMenu";
 
 function NotFoundComponent() {
   return (
@@ -128,19 +129,22 @@ function RootShell({ children }: { children: ReactNode }) {
           href="https://search.google.com/local/reviews?placeid=ChIJv0xWqnlg2KAR8iSja42tgRE"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Read reviews on Google"
-          className="fixed bottom-4 left-4 z-[100] inline-flex min-h-[52px] max-w-[calc(100vw-2rem)] items-center gap-2 rounded-xl bg-white px-3 shadow-[0_2px_12px_rgba(0,0,0,0.24)] transition-shadow hover:shadow-[0_4px_16px_rgba(0,0,0,0.28)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#4285F4] sm:h-[60px] sm:gap-3 sm:px-4"
+          aria-label="Read 100+ reviews on Google"
+          className="fixed bottom-4 left-4 z-[100] inline-flex min-h-[52px] max-w-[calc(100vw-2rem)] items-center rounded-xl bg-white px-3 shadow-[0_2px_12px_rgba(0,0,0,0.24)] transition-shadow hover:shadow-[0_4px_16px_rgba(0,0,0,0.28)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#4285F4] sm:h-[60px] sm:px-4"
         >
-          <span className="whitespace-nowrap text-xs font-semibold text-[#202124] sm:text-sm">Read reviews on</span>
-          <span aria-hidden="true" className="whitespace-nowrap text-lg font-semibold tracking-tight sm:text-xl">
-            <span className="text-[#4285F4]">G</span>
-            <span className="text-[#EA4335]">o</span>
-            <span className="text-[#FBBC05]">o</span>
-            <span className="text-[#4285F4]">g</span>
-            <span className="text-[#34A853]">l</span>
-            <span className="text-[#EA4335]">e</span>
+          <span className="whitespace-nowrap text-xs font-semibold text-[#202124] sm:text-sm">
+            100+ reviews on{" "}
+            <span className="text-lg font-semibold tracking-tight sm:text-xl">
+              <span className="text-[#4285F4]">G</span>
+              <span className="text-[#EA4335]">o</span>
+              <span className="text-[#FBBC05]">o</span>
+              <span className="text-[#4285F4]">g</span>
+              <span className="text-[#34A853]">l</span>
+              <span className="text-[#EA4335]">e</span>
+            </span>
           </span>
         </a>
+        <FloatingContactMenu />
         <Scripts />
       </body>
     </html>
