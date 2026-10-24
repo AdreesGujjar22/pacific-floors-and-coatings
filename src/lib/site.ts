@@ -1,7 +1,7 @@
 export const SITE_URL = "https://www.pacificfloorsandcoatings.ca";
 
 export const site = {
-  name: "Pacific Floors and Coatings",
+  name: "Pacific Floors And Coatings",
   phone: "(236) 878-3386",
   phoneHref: "tel:+12368783386",
   email: "pacificfloorsandcoatings@gmail.com",

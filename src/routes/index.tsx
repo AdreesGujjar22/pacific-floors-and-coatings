@@ -61,13 +61,13 @@ export const Route = createFileRoute("/")({
   staticData: { sitemap: true },
   head: () => ({
     meta: [
-      { title: "Epoxy Flooring in Surrey, BC | Pacific Floors and Coatings" },
+      { title: "Epoxy Flooring in Surrey, BC | Pacific Floors And Coatings" },
       {
         name: "description",
         content:
           PAGE_DESCRIPTION,
       },
-      { property: "og:title", content: "Epoxy Flooring in Surrey, BC | Pacific Floors and Coatings" },
+      { property: "og:title", content: "Epoxy Flooring in Surrey, BC | Pacific Floors And Coatings" },
       {
         property: "og:description",
         content:
@@ -77,7 +77,7 @@ export const Route = createFileRoute("/")({
       { property: "og:url", content: "https://www.pacificfloorsandcoatings.ca/" },
       { name: "robots", content: "index, follow" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Epoxy Flooring in Surrey, BC | Pacific Floors and Coatings" },
+      { name: "twitter:title", content: "Epoxy Flooring in Surrey, BC | Pacific Floors And Coatings" },
       {
         name: "twitter:description",
         content:
@@ -95,7 +95,7 @@ export const Route = createFileRoute("/")({
           "@context": "https://schema.org",
           "@type": "HomeAndConstructionBusiness",
           "@id": "https://www.pacificfloorsandcoatings.ca/#business",
-          name: "Pacific Floors and Coatings",
+          name: "Pacific Floors And Coatings",
           url: "https://www.pacificfloorsandcoatings.ca/",
           description:
             "Epoxy flooring contractor serving Surrey, BC and Metro Vancouver. Metallic, flake, and solid epoxy floors for garages, commercial, and industrial spaces.",

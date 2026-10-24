@@ -705,7 +705,7 @@ export const serviceGroups = [
   "Epoxy Flooring Services",
 ] as const;
 
-const TITLE_SUFFIX = " | Pacific Floors and Coatings";
+const TITLE_SUFFIX = " | Pacific Floors And Coatings";
 
 export function metaTitle(base: string): string {
   return `${base}${TITLE_SUFFIX}`;

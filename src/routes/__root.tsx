@@ -84,14 +84,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Epoxy Flooring in Surrey, BC | Pacific Floors and Coatings" },
+      { title: "Epoxy Flooring in Surrey, BC | Pacific Floors And Coatings" },
       { name: "description", content: ROOT_DESCRIPTION },
-      { name: "author", content: "Pacific Floors and Coatings" },
+      { name: "author", content: "Pacific Floors And Coatings" },
       { name: "google-site-verification", content: "qt78BMaU2SZcxM-wDu27orkUE6iVDUw4aEZxYMAbfcs" },
-      { property: "og:title", content: "Epoxy Flooring in Surrey, BC | Pacific Floors and Coatings" },
+      { property: "og:title", content: "Epoxy Flooring in Surrey, BC | Pacific Floors And Coatings" },
       { property: "og:description", content: ROOT_DESCRIPTION },
       { property: "og:type", content: "website" },
-      { property: "og:site_name", content: "Pacific Floors and Coatings" },
+      { property: "og:site_name", content: "Pacific Floors And Coatings" },
       { property: "og:locale", content: "en_CA" },
       { property: "og:image", content: "https://www.pacificfloorsandcoatings.ca/pacific-fooring.png" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -111,6 +111,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" },
     ],
     scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "@id": "https://www.pacificfloorsandcoatings.ca/#website",
+          name: "Pacific Floors And Coatings",
+          url: "https://www.pacificfloorsandcoatings.ca/",
+        }),
+      },
       { src: "https://www.googletagmanager.com/gtag/js?id=G-ZJXND82ZE4", async: true },
       {
         children:

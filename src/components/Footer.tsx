@@ -24,14 +24,14 @@ export function Footer() {
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
             <p className="eyebrow">Find us</p>
-            <h2 className="mt-2 text-2xl font-black">Pacific Floors and Coatings · Surrey, BC</h2>
+            <h2 className="mt-2 text-2xl font-black">Pacific Floors And Coatings · Surrey, BC</h2>
           </div>
           <a href={site.mapLink} target="_blank" rel="noreferrer" className="text-sm font-bold text-primary hover:underline">
             Get Directions →
           </a>
         </div>
         <iframe
-          title="Pacific Floors and Coatings Google Business Profile map"
+          title="Pacific Floors And Coatings Google Business Profile map"
           src={site.mapEmbed}
           className="mt-6 h-[320px] w-full rounded-md border-0 sm:h-[380px]"
           loading="lazy"

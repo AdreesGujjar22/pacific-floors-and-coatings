@@ -65,22 +65,32 @@ export function metaDescription(base: string): string {
   return `${prefix.trimEnd()}...`;
 }
 
-export const BUSINESS_NAME = "Pacific Floors and Coatings";
+export const BUSINESS_NAME = "Pacific Floors And Coatings";
 const TITLE_BRANDS = [BUSINESS_NAME, "Pacific Floors & Coatings", "Pacific Floors", "Pacific"];
 
-/** "Keyword | Business name", always 60 characters or fewer. */
+/** "Keyword | Business name" with a call-to-action for short titles. */
 export function pageTitle(keyword: string): string {
   const kw = keyword.replace(/\s+/g, " ").trim();
+  let title = "";
   for (const brand of TITLE_BRANDS) {
-    const t = `${kw} | ${brand}`;
-    if (t.length <= 60) return t;
+    const candidate = `${kw} | ${brand}`;
+    if (candidate.length <= 60) {
+      title = candidate;
+      break;
+    }
   }
   const short = kw.replace(/, BC$/, "");
-  for (const brand of TITLE_BRANDS) {
-    const t = `${short} | ${brand}`;
-    if (t.length <= 60) return t;
+  if (!title) {
+    for (const brand of TITLE_BRANDS) {
+      const candidate = `${short} | ${brand}`;
+      if (candidate.length <= 60) {
+        title = candidate;
+        break;
+      }
+    }
   }
-  return `${short} | Pacific`.slice(0, 60);
+  if (!title) title = `${short} | Pacific`.slice(0, 60);
+  return title.length < 55 ? `${title.slice(0, title.lastIndexOf(" | "))} | Call Now` : title;
 }
 
 /** Keyword-rich description that ends with the business name, 159 characters or fewer. */
