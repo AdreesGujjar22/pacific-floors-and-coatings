@@ -33,6 +33,22 @@ export const Route = createFileRoute("/sitemap.xml")({
           }
         }
 
+        const serviceCityRouteId = "/services-in/$citySlug/$serviceSlug";
+        if (isSitemapRouteIncluded(router.routesById[serviceCityRouteId])) {
+          for (const service of services) {
+            for (const area of serviceAreas.filter((item) => item.slug !== "surrey")) {
+              const location = router.buildLocation({
+                to: "/services-in/$citySlug/$serviceSlug",
+                params: { citySlug: area.slug, serviceSlug: service.slug },
+                search: () => ({}),
+                hash: "",
+              });
+              const path = sitemapPathForLocation(router, location, serviceCityRouteId);
+              if (path) entries.push({ path });
+            }
+          }
+        }
+
         const areaRouteId = "/epoxy-flooring-{$slug}";
         if (isSitemapRouteIncluded(router.routesById[areaRouteId])) {
           for (const area of serviceAreas) {

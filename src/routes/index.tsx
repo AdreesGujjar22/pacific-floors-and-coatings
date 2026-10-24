@@ -19,7 +19,6 @@ const featuredSlugs = [
   "metallic-epoxy-flooring",
   "garage-epoxy-flooring",
   "commercial-epoxy-flooring",
-  "concrete-floor-sealing",
 ] as const;
 
 const featuredServices = featuredSlugs
@@ -31,7 +30,6 @@ const serviceAlt: Record<string, string> = {
   "metallic-epoxy-flooring": "Glossy black and silver metallic epoxy floor installed in a Surrey, BC home",
   "garage-epoxy-flooring": "Grey flake epoxy garage floor coating in a two-car Surrey garage",
   "commercial-epoxy-flooring": "Commercial epoxy floor coating in a Metro Vancouver warehouse with safety line markings",
-  "concrete-floor-sealing": "Polished and sealed concrete floor finished by Pacific Floors and Coatings",
 };
 
 const faqs = [
@@ -47,10 +45,7 @@ const faqs = [
     q: "How long does installation and curing take?",
     a: "Most residential garages are completed in one to two days. Light foot traffic is usually fine after 24 hours, and vehicles after roughly 72 hours depending on the system and temperature.",
   },
-  {
-    q: "Can you fix a cracked or pitted concrete slab?",
-    a: "Yes. We diamond grind the slab, repair cracks, spalls, and pitting, and fill low spots before coating so the finished floor is smooth and well bonded.",
-  },
+
   {
     q: "How much does a new epoxy floor cost?",
     a: "Pricing depends on square footage, slab condition, and the system you choose. We provide free on-site estimates so the quote reflects your actual floor.",
@@ -106,7 +101,7 @@ export const Route = createFileRoute("/")({
           name: "Pacific Floors and Coatings",
           url: "https://www.pacificfloorsandcoatings.ca/",
           description:
-            "Epoxy flooring and concrete coating contractor serving Surrey, BC and Metro Vancouver. Metallic, flake, and solid epoxy floors for garages, commercial, and industrial spaces.",
+            "Epoxy flooring contractor serving Surrey, BC and Metro Vancouver. Metallic, flake, and solid epoxy floors for garages, commercial, and industrial spaces.",
           telephone: "+1-236-878-3386",
           email: "pacificfloorsandcoatings@gmail.com",
           priceRange: "$$",
@@ -120,14 +115,7 @@ export const Route = createFileRoute("/")({
           },
           geo: { "@type": "GeoCoordinates", latitude: 49.1339, longitude: -122.8639 },
           hasMap: site.mapLink,
-          openingHoursSpecification: [
-            {
-              "@type": "OpeningHoursSpecification",
-              dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-              opens: "08:00",
-              closes: "18:00",
-            },
-          ],
+          openingHoursSpecification: [site.businessHours.schema],
           areaServed: [
             "Surrey",
             "Burnaby",
@@ -458,47 +446,33 @@ function Home() {
                 </a>
               </Button>
             </div>
-            <div className="mt-9 grid gap-12 lg:grid-cols-[1.4fr_1fr]">
-              <div className="overflow-hidden rounded-md border border-border shadow-xl">
-                <iframe
-                  title="Pacific Floors and Coatings Google Business Profile map"
-                  src="https://www.google.com/maps?q=Pacific%20Floors%20and%20Coatings%2C%207304%20138%20Street%2C%20Surrey%2C%20BC%20V3W%205H2%2C%20Canada&output=embed"
-                  width="100%"
-                  height="450"
-                  style={{ border: 0 }}
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  allowFullScreen
-                />
-              </div>
-              <div>
-                <div className="panel p-7">
-                  <h3 className="text-lg font-bold">Location & Contact</h3>
-                  <ul className="mt-5 space-y-5 text-sm">
-                    <li>
-                      <span className="eyebrow block">Address</span>
-                      <a href={site.mapLink} target="_blank" rel="noreferrer" className="mt-1 block font-medium hover:text-primary transition-colors">
-                        {site.address}
-                      </a>
-                    </li>
-                    <li>
-                      <span className="eyebrow block">Phone</span>
-                      <a href={site.phoneHref} className="mt-1 block font-medium hover:text-primary transition-colors">
-                        {site.phone}
-                      </a>
-                    </li>
-                    <li>
-                      <span className="eyebrow block">Email</span>
-                      <a href={`mailto:${site.email}`} className="mt-1 block font-medium hover:text-primary transition-colors">
-                        {site.email}
-                      </a>
-                    </li>
-                    <li>
-                      <span className="eyebrow block">Service Hours</span>
-                      <span className="mt-1 block font-medium">Mon–Sat: 8:00 AM – 6:00 PM</span>
-                    </li>
-                  </ul>
-                </div>
+            <div className="mt-9 max-w-2xl">
+              <div className="panel p-7">
+                <h3 className="text-lg font-bold">Location & Contact</h3>
+                <ul className="mt-5 space-y-5 text-sm">
+                  <li>
+                    <span className="eyebrow block">Address</span>
+                    <a href={site.mapLink} target="_blank" rel="noreferrer" className="mt-1 block font-medium hover:text-primary transition-colors">
+                      {site.address}
+                    </a>
+                  </li>
+                  <li>
+                    <span className="eyebrow block">Phone</span>
+                    <a href={site.phoneHref} className="mt-1 block font-medium hover:text-primary transition-colors">
+                      {site.phone}
+                    </a>
+                  </li>
+                  <li>
+                    <span className="eyebrow block">Email</span>
+                    <a href={`mailto:${site.email}`} className="mt-1 block font-medium hover:text-primary transition-colors">
+                      {site.email}
+                    </a>
+                  </li>
+                  <li>
+                    <span className="eyebrow block">Service Hours</span>
+                    <span className="mt-1 block font-medium">{site.businessHours.text}</span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>

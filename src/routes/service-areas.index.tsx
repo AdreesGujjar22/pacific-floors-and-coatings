@@ -51,7 +51,7 @@ function ServiceAreasPage() {
           imageHeight={838}
           imageAlt="Epoxy garage flooring in Surrey, BC"
           eyebrow="Local service areas"
-          title="Epoxy flooring across Surrey BC and Metro Vancouver"
+          title="Flooring Services across Surrey BC and Metro Vancouver"
         >
           <ul className="mt-8 space-y-4 text-sm text-muted-foreground font-medium">
             <li>
@@ -76,10 +76,10 @@ function ServiceAreasPage() {
                 params={{ slug: a.slug }}
                 className="panel group block p-5 transition hover:border-primary shadow-sm hover:shadow-md"
               >
-                <h3 className="text-lg font-bold group-hover:text-primary transition-colors">Epoxy Flooring in {a.name}</h3>
+                <h3 className="text-lg font-bold group-hover:text-primary transition-colors">Flooring Services in {a.name}</h3>
                 <p className="mt-2 text-sm text-muted-foreground leading-6">{a.blurb}</p>
                 <span className="mt-4 inline-block text-sm font-bold text-primary">
-                  View {a.name} page →
+                  View both service categories in {a.name} →
                 </span>
               </Link>
             ))}

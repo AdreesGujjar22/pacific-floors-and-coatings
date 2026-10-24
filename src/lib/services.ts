@@ -9,7 +9,7 @@ export type Service = {
   bullets: string[];
   best: string;
   image: "metallic" | "flake" | "solid" | "sealed";
-  group: "Epoxy Systems" | "Concrete Work" | "Commercial & Industrial" | "Specialty Floors";
+  group: "Flooring Services" | "Epoxy Flooring Services";
   faqs: ServiceFaq[];
 };
 
@@ -29,7 +29,7 @@ export const services: Service[] = [
     ],
     best: "Garages, basements, shops, and any slab that needs a hard-wearing finish.",
     image: "solid",
-    group: "Epoxy Systems",
+    group: "Epoxy Flooring Services",
     faqs: [
       {
         q: "How long before I can park on a new epoxy coating?",
@@ -56,7 +56,7 @@ export const services: Service[] = [
     ],
     best: "Homeowners and businesses who want the floor handled start to finish.",
     image: "metallic",
-    group: "Epoxy Systems",
+    group: "Epoxy Flooring Services",
     faqs: [
       {
         q: "How long does a typical epoxy floor take?",
@@ -83,7 +83,7 @@ export const services: Service[] = [
     ],
     best: "Retail floors, showrooms, clinics, gyms, and service counters.",
     image: "metallic",
-    group: "Commercial & Industrial",
+    group: "Epoxy Flooring Services",
     faqs: [
       {
         q: "Can you install after hours?",
@@ -110,7 +110,7 @@ export const services: Service[] = [
     ],
     best: "Garages, basements, laundry rooms, gyms, and workshops at home.",
     image: "flake",
-    group: "Epoxy Systems",
+    group: "Epoxy Flooring Services",
     faqs: [
       {
         q: "Will the install make a mess inside my house?",
@@ -137,7 +137,7 @@ export const services: Service[] = [
     ],
     best: "Single, double, and triple garages, plus detached shops.",
     image: "flake",
-    group: "Epoxy Systems",
+    group: "Epoxy Flooring Services",
     faqs: [
       {
         q: "Why did my last garage floor peel under the tires?",
@@ -164,7 +164,7 @@ export const services: Service[] = [
     ],
     best: "Manufacturing floors, machine shops, plants, and equipment bays.",
     image: "solid",
-    group: "Commercial & Industrial",
+    group: "Epoxy Flooring Services",
     faqs: [
       {
         q: "Can you coat around live equipment?",
@@ -191,7 +191,7 @@ export const services: Service[] = [
     ],
     best: "Showrooms, feature garages, retail floors, and finished basements.",
     image: "metallic",
-    group: "Specialty Floors",
+    group: "Epoxy Flooring Services",
     faqs: [
       {
         q: "Can I see the pattern before you pour it?",
@@ -218,7 +218,7 @@ export const services: Service[] = [
     ],
     best: "Family garages, basements, utility rooms, and workshops.",
     image: "flake",
-    group: "Specialty Floors",
+    group: "Epoxy Flooring Services",
     faqs: [
       {
         q: "Is a flake floor hard to sweep?",
@@ -245,7 +245,7 @@ export const services: Service[] = [
     ],
     best: "Kitchens, wash bays, labs, locker rooms, and food handling areas.",
     image: "solid",
-    group: "Specialty Floors",
+    group: "Epoxy Flooring Services",
     faqs: [
       {
         q: "How is quartz different from flake?",
@@ -272,7 +272,7 @@ export const services: Service[] = [
     ],
     best: "Patios, entryways, pool surrounds, and covered walkways.",
     image: "sealed",
-    group: "Specialty Floors",
+    group: "Epoxy Flooring Services",
     faqs: [
       {
         q: "Does water drain through it?",
@@ -299,7 +299,7 @@ export const services: Service[] = [
     ],
     best: "Garages, shops, and any floor that needs to be back in use fast.",
     image: "flake",
-    group: "Epoxy Systems",
+    group: "Epoxy Flooring Services",
     faqs: [
       {
         q: "Is polyaspartic better than epoxy?",
@@ -326,7 +326,7 @@ export const services: Service[] = [
     ],
     best: "Corridors, production areas, loading zones, and busy back-of-house floors.",
     image: "solid",
-    group: "Epoxy Systems",
+    group: "Epoxy Flooring Services",
     faqs: [
       {
         q: "When would you recommend urethane over polyaspartic?",
@@ -338,114 +338,10 @@ export const services: Service[] = [
       },
     ],
   },
-  {
-    slug: "concrete-floor-coatings",
-    title: "Concrete Floor Coatings",
-    short:
-      "Protect your concrete with a coating selected for its condition, moisture, and daily use.",
-    intro:
-      "Not every concrete floor wants the same coating. A damp slab needs a moisture-tolerant primer, a cracked one needs structural repair first, and a lightly used storage floor does not need a heavy build. We test, then specify, rather than selling one system to every customer.",
-    bullets: [
-      "Moisture testing before the system is specified",
-      "Primer chosen to suit the slab, not the schedule",
-      "Options from light-duty seal to heavy-build coating",
-      "Honest advice when a cheaper system will do",
-    ],
-    best: "Any concrete slab that needs protecting, indoors or under cover.",
-    image: "sealed",
-    group: "Concrete Work",
-    faqs: [
-      {
-        q: "How do you know if my slab has a moisture problem?",
-        a: "We run a calcium chloride or relative humidity test. If vapour is moving up through the slab, we prime for it instead of hoping.",
-      },
-      {
-        q: "What if my floor is already coated?",
-        a: "We test adhesion in a few spots. Sound coatings get abraded and recoated; failing ones get ground off.",
-      },
-    ],
-  },
-  {
-    slug: "concrete-floor-sealing",
-    title: "Concrete Floor Sealing",
-    short:
-      "Reduce dust and staining while keeping the natural look of your concrete.",
-    intro:
-      "Sealing is the economical way to protect a sound slab you actually like the look of. A penetrating sealer soaks in and blocks water and stains from below the surface; a film sealer adds sheen and easier cleaning on top. We will tell you which one your floor needs.",
-    bullets: [
-      "Keeps the natural concrete appearance",
-      "Stops surface dusting and efflorescence",
-      "Matte, satin, or gloss film options",
-      "Cost-effective across large square footage",
-    ],
-    best: "Driveways, carports, storage areas, and large plain slabs.",
-    image: "sealed",
-    group: "Concrete Work",
-    faqs: [
-      {
-        q: "How often does a sealed floor need redoing?",
-        a: "Penetrating sealers often last five years or more. Film sealers in traffic lanes usually want a refresh every two to three years.",
-      },
-      {
-        q: "Will sealing darken my concrete?",
-        a: "Film sealers deepen the colour slightly, a bit like wetting the slab. Penetrating sealers leave the tone almost unchanged.",
-      },
-    ],
-  },
-  {
-    slug: "concrete-resurfacing",
-    title: "Concrete Resurfacing",
-    short:
-      "Renew worn, uneven concrete with a fresh surface without the cost of full demolition.",
-    intro:
-      "If your slab is structurally fine but the surface is worn, pitted, or patched badly, resurfacing rebuilds the top rather than replacing everything underneath. We grind, repair, then trowel down a cementitious overlay that gives you a fresh, flat surface ready to coat or leave exposed.",
-    bullets: [
-      "Avoids the cost and downtime of a full tear-out",
-      "Levels out pitting, patches, and shallow damage",
-      "Ready to accept a coating or a sealer afterwards",
-      "Feathered edges at doorways and transitions",
-    ],
-    best: "Worn garage slabs, patios, and commercial floors with surface damage only.",
-    image: "sealed",
-    group: "Concrete Work",
-    faqs: [
-      {
-        q: "Can resurfacing fix a cracked slab?",
-        a: "It fixes surface damage. Moving structural cracks need repair and sometimes a joint detail first, or they telegraph through.",
-      },
-      {
-        q: "How thick is an overlay?",
-        a: "Typically a few millimetres up to around a centimetre, depending on how much correction the floor needs.",
-      },
-    ],
-  },
-  {
-    slug: "concrete-repairs",
-    title: "Concrete Repairs",
-    short:
-      "Repair cracks, spalling, and joints before they affect the finish above.",
-    intro:
-      "Repairs are where coating jobs are won or lost. We chase cracks out and fill them with semi-rigid resin rather than smearing patch over the top, rebuild broken edges and spalls, and re-cut control joints so movement has somewhere to go instead of tearing your new floor.",
-    bullets: [
-      "Cracks chased, cleaned, and resin-filled",
-      "Spalled edges and pitting rebuilt flush",
-      "Control joints honoured, not coated over blindly",
-      "Low spots levelled before any coating goes down",
-    ],
-    best: "Any slab with cracking, pitting, spalling, or failed patches.",
-    image: "sealed",
-    group: "Concrete Work",
-    faqs: [
-      {
-        q: "Will the crack show through the finished floor?",
-        a: "On a static crack, no. On a moving joint we keep it as a joint, because forcing a coating across it guarantees a new crack.",
-      },
-      {
-        q: "Do you do repairs without coating afterwards?",
-        a: "Yes, we take standalone repair work on slabs you just want made safe and sound.",
-      },
-    ],
-  },
+
+
+
+
   {
     slug: "commercial-floor-coatings",
     title: "Commercial Floor Coatings",
@@ -461,7 +357,7 @@ export const services: Service[] = [
     ],
     best: "Offices, retail units, showrooms, clinics, and back-of-house areas.",
     image: "metallic",
-    group: "Commercial & Industrial",
+    group: "Epoxy Flooring Services",
     faqs: [
       {
         q: "How much disruption should we plan for?",
@@ -475,7 +371,7 @@ export const services: Service[] = [
   },
   {
     slug: "restaurant-floor-coatings",
-    title: "Restaurant Floor Coatings",
+    title: "Restaurant Epoxy Flooring",
     short:
       "Create a seamless, easy-to-clean surface for dining rooms, prep areas, and dish pits.",
     intro:
@@ -488,7 +384,7 @@ export const services: Service[] = [
     ],
     best: "Dining rooms, prep areas, dish pits, bars, and walk-in surrounds.",
     image: "solid",
-    group: "Commercial & Industrial",
+    group: "Epoxy Flooring Services",
     faqs: [
       {
         q: "Can you do the work between Sunday close and Tuesday open?",
@@ -515,7 +411,7 @@ export const services: Service[] = [
     ],
     best: "Commercial kitchens, bakeries, butcheries, and cook lines.",
     image: "solid",
-    group: "Commercial & Industrial",
+    group: "Epoxy Flooring Services",
     faqs: [
       {
         q: "Why not just tile a kitchen floor?",
@@ -542,7 +438,7 @@ export const services: Service[] = [
     ],
     best: "Food processing rooms, cold storage, breweries, and packing floors.",
     image: "solid",
-    group: "Commercial & Industrial",
+    group: "Epoxy Flooring Services",
     faqs: [
       {
         q: "Do you supply product data for our audit?",
@@ -569,7 +465,7 @@ export const services: Service[] = [
     ],
     best: "Distribution centres, storage warehouses, and logistics floors.",
     image: "solid",
-    group: "Commercial & Industrial",
+    group: "Epoxy Flooring Services",
     faqs: [
       {
         q: "Do we have to empty the warehouse?",
@@ -596,7 +492,7 @@ export const services: Service[] = [
     ],
     best: "Strata parkades, underground garages, and ramp decks.",
     image: "solid",
-    group: "Commercial & Industrial",
+    group: "Epoxy Flooring Services",
     faqs: [
       {
         q: "Can residents keep parking during the work?",
@@ -608,87 +504,9 @@ export const services: Service[] = [
       },
     ],
   },
-  {
-    slug: "garage-floor-coatings",
-    title: "Garage Floor Coatings",
-    short:
-      "Choose a practical finish for your garage, from a clear sealer to a full flake system.",
-    intro:
-      "Not every garage needs the top system. We will walk yours, ask how you actually use it, and lay out the honest options: a sealer to stop the dusting, a solid colour for a workshop, or a full flake build for a space you want to show off. Same prep standard on all three.",
-    bullets: [
-      "Clear options at three price points, no pressure",
-      "Same grinding and repair standard on every build",
-      "Anti-slip and hot-tire resistance where needed",
-      "Most jobs finished in one or two days",
-    ],
-    best: "Attached garages, detached shops, and multi-bay driveways.",
-    image: "flake",
-    group: "Epoxy Systems",
-    faqs: [
-      {
-        q: "What does a two-car garage usually cost?",
-        a: "It depends on slab condition and system, which is why we quote on site for free rather than guessing over the phone.",
-      },
-      {
-        q: "Do you move the contents out?",
-        a: "We ask that the floor is clear on the day. If shelving is fixed, we work around and mask it.",
-      },
-    ],
-  },
-  {
-    slug: "concrete-patio-flooring",
-    title: "Concrete Patio Flooring",
-    short:
-      "Make outdoor concrete safer and easier to maintain with a textured, UV-stable finish.",
-    intro:
-      "Outdoor concrete needs UV-stable products and a surface that is still safe in the rain, which rules out most indoor coatings. We use textured, UV-stable systems and detail the edges and drainage so water leaves the patio instead of sitting on it through a wet Surrey winter.",
-    bullets: [
-      "UV-stable finishes that will not amber outdoors",
-      "Textured surface that stays safe in the rain",
-      "Freeze-thaw tolerant build",
-      "Edge and drainage detailing included",
-    ],
-    best: "Patios, sundecks over concrete, walkways, and pool surrounds.",
-    image: "sealed",
-    group: "Concrete Work",
-    faqs: [
-      {
-        q: "Can you coat a patio in the rainy season?",
-        a: "We need a dry weather window and a dry slab. We book outdoor work around the forecast rather than risking the finish.",
-      },
-      {
-        q: "Will moss grow on it?",
-        a: "Far less than on bare concrete, since there is no open pore structure for moss to root into.",
-      },
-    ],
-  },
-  {
-    slug: "floor-polishing",
-    title: "Floor Polishing",
-    short:
-      "Get the natural look of concrete polished for lasting shine, without a coating layer.",
-    intro:
-      "Polished concrete is a finish, not a layer. We grind through progressive diamond grits, densify the slab chemically so the surface hardens, then burnish to the sheen you choose. There is nothing on top to peel, which is why polished floors last so long in busy buildings.",
-    bullets: [
-      "Progressive diamond grinding to your chosen sheen",
-      "Chemical densifier hardens the slab itself",
-      "Nothing on the surface to peel or delaminate",
-      "Low maintenance: dust mop and occasional burnish",
-    ],
-    best: "Showrooms, retail floors, offices, and open-plan commercial space.",
-    image: "sealed",
-    group: "Concrete Work",
-    faqs: [
-      {
-        q: "Is polished concrete the same as an epoxy floor?",
-        a: "No. Polishing refines the concrete itself; epoxy adds a resin layer on top. Polishing suits sound, good-looking slabs.",
-      },
-      {
-        q: "Can any slab be polished?",
-        a: "It needs to be hard, reasonably flat, and free of heavy patching. We assess before recommending it.",
-      },
-    ],
-  },
+
+
+
   {
     slug: "marble-floor-installation",
     title: "Marble Floor Installation",
@@ -704,7 +522,7 @@ export const services: Service[] = [
     ],
     best: "Entries, lobbies, bathrooms, and feature residential floors.",
     image: "metallic",
-    group: "Specialty Floors",
+    group: "Flooring Services",
     faqs: [
       {
         q: "Do you supply the marble or do we?",
@@ -718,7 +536,7 @@ export const services: Service[] = [
   },
   {
     slug: "floor-installation",
-    title: "Floor Installation",
+    title: "Flooring Installation",
     short:
       "Get a complete floor installation, with moisture control, levelling, and prep handled first.",
     intro:
@@ -731,7 +549,7 @@ export const services: Service[] = [
     ],
     best: "Renovations and new builds needing a complete floor package.",
     image: "flake",
-    group: "Specialty Floors",
+    group: "Flooring Services",
     faqs: [
       {
         q: "Do you remove the old floor?",
@@ -740,6 +558,84 @@ export const services: Service[] = [
       {
         q: "Can you work alongside other trades?",
         a: "We coordinate sequencing with your builder so the floor goes in at the right point, not too early.",
+      },
+    ],
+  },
+  {
+    slug: "flooring-repair",
+    title: "Flooring Repair",
+    short: "Repair cracks, chips, loose sections, and worn flooring before damage spreads.",
+    intro:
+      "We assess the floor and substrate first, then recommend repairs suited to the material and the cause of the damage. From concrete cracks and surface spalls to localized finish repairs, the goal is a stable, safe surface that blends cleanly with the surrounding floor where possible.",
+    bullets: [
+      "Assessment of the floor and underlying slab",
+      "Cracks, chips, and damaged areas repaired",
+      "Loose or failing sections addressed",
+      "Repair method selected for the existing floor",
+    ],
+    best: "Homes and businesses with localized floor damage or worn areas.",
+    image: "sealed",
+    group: "Flooring Services",
+    faqs: [
+      {
+        q: "Can you repair only the damaged section?",
+        a: "Often, yes. We assess the floor and explain whether a localized repair will hold or if a larger area needs attention.",
+      },
+      {
+        q: "Will the repair be invisible?",
+        a: "Some materials and finishes blend better than others. We review the expected appearance before work begins.",
+      },
+    ],
+  },
+  {
+    slug: "flooring-maintenance",
+    title: "Flooring Maintenance",
+    short: "Keep floors looking their best with practical cleaning, care, and maintenance services.",
+    intro:
+      "Regular care helps protect a floor from everyday wear and makes it easier to spot small issues early. We can review the floor's condition and recommend a maintenance approach suited to its finish, traffic, and cleaning routine.",
+    bullets: [
+      "Floor condition review and maintenance recommendations",
+      "Cleaning guidance matched to the installed finish",
+      "Surface refresh options for worn traffic areas",
+      "Early attention to small cracks or coating wear",
+    ],
+    best: "Property owners and facility teams maintaining finished concrete and coated floors.",
+    image: "solid",
+    group: "Flooring Services",
+    faqs: [
+      {
+        q: "How often should a floor be maintained?",
+        a: "It depends on the finish, traffic, and cleaning routine. We can recommend an interval after reviewing the floor.",
+      },
+      {
+        q: "Can maintenance restore a worn floor?",
+        a: "A refresh can improve some worn surfaces; we assess whether that is suitable or if repairs or replacement are needed.",
+      },
+    ],
+  },
+  {
+    slug: "flooring-replacement",
+    title: "Flooring Replacement",
+    short: "Replace worn or damaged flooring with a new finish selected for your space.",
+    intro:
+      "When a floor is beyond a practical repair, replacement starts with removing the failed finish and checking the substrate underneath. We prepare the base, discuss suitable material and finish options, and install a new floor for the room's use and conditions.",
+    bullets: [
+      "Removal and disposal of existing flooring",
+      "Subfloor condition checked before installation",
+      "Preparation, levelling, and moisture considerations",
+      "New finish selected for the room and its use",
+    ],
+    best: "Renovations, damaged floors, and spaces ready for a new finish.",
+    image: "flake",
+    group: "Flooring Services",
+    faqs: [
+      {
+        q: "Do you remove the old floor?",
+        a: "Yes, removal and disposal can be included in the project scope.",
+      },
+      {
+        q: "Can the new floor be installed right away?",
+        a: "It depends on the condition and moisture level of the substrate; we inspect and prepare it before installation.",
       },
     ],
   },
@@ -758,7 +654,7 @@ export const services: Service[] = [
     ],
     best: "Anyone who wants to know exactly what happens on install day.",
     image: "metallic",
-    group: "Epoxy Systems",
+    group: "Epoxy Flooring Services",
     faqs: [
       {
         q: "Do I need to be home during the install?",
@@ -785,7 +681,7 @@ export const services: Service[] = [
     ],
     best: "Homeowners, builders, and facility managers vetting a contractor.",
     image: "metallic",
-    group: "Commercial & Industrial",
+    group: "Epoxy Flooring Services",
     faqs: [
       {
         q: "Can I see previous jobs?",
@@ -797,33 +693,7 @@ export const services: Service[] = [
       },
     ],
   },
-  {
-    slug: "concrete-coating-contractor",
-    title: "Concrete Coating Contractor",
-    short:
-      "Get one accountable team to specify, prepare, and install your concrete coating.",
-    intro:
-      "When prep and coating are split between trades, failures turn into finger-pointing. We handle the whole chain: testing the slab, specifying the system, preparing the surface, and installing it. If something is wrong with the floor, there is exactly one company to call.",
-    bullets: [
-      "Single point of responsibility for the whole floor",
-      "Testing and specification, not guesswork",
-      "Full preparation and installation in-house",
-      "Documented system details for your records",
-    ],
-    best: "Property managers, strata councils, and general contractors.",
-    image: "solid",
-    group: "Commercial & Industrial",
-    faqs: [
-      {
-        q: "Can you work to our consultant's specification?",
-        a: "Yes, we regularly install to third-party specs and provide sign-off records at each stage.",
-      },
-      {
-        q: "Do you handle strata tender processes?",
-        a: "We do. We can attend council meetings and provide the documentation strata insurers usually ask for.",
-      },
-    ],
-  },
+
 ];
 
 export function findService(slug: string): Service | undefined {
@@ -831,10 +701,8 @@ export function findService(slug: string): Service | undefined {
 }
 
 export const serviceGroups = [
-  "Epoxy Systems",
-  "Specialty Floors",
-  "Concrete Work",
-  "Commercial & Industrial",
+  "Flooring Services",
+  "Epoxy Flooring Services",
 ] as const;
 
 const TITLE_SUFFIX = " | Pacific Floors and Coatings";

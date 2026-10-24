@@ -10,9 +10,9 @@ import { serviceImage } from "@/lib/service-images";
 import metallic from "@/assets/metallic-epoxy.jpg";
 import { PageHero } from "@/components/PageHero";
 
-const TITLE = "Epoxy Flooring Services Surrey BC | Pacific Floors and Coatings";
+const TITLE = "Flooring & Epoxy Flooring Services in Surrey BC | Pacific Floors and Coatings";
 const DESCRIPTION = metaDescription(
-  "Epoxy flooring services in Surrey, BC, including polyaspartic and concrete coatings for garages, kitchens, warehouses, and commercial spaces.",
+  "Explore flooring repair, installation, maintenance, and replacement, plus epoxy flooring for homes, businesses, kitchens, and industrial spaces in Surrey and Metro Vancouver.",
 );
 
 export const Route = createFileRoute("/services/")({
@@ -45,7 +45,7 @@ export const Route = createFileRoute("/services/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "ItemList",
-          name: "Epoxy flooring and concrete coating services",
+          name: "Flooring Services and Epoxy Flooring Services",
           itemListElement: services.map((s, i) => ({
             "@type": "ListItem",
             position: i + 1,
@@ -81,8 +81,8 @@ function ServicesPage() {
           imageHeight={1200}
           imageAlt="Metallic epoxy flooring finish"
           eyebrow="Our services"
-          title="Flooring built around how you use the room"
-          description={<>We install epoxy, polyaspartic, polyurethane, and polished concrete systems across Surrey and Metro Vancouver — garages and basements at home, kitchens and warehouses at work, and the concrete repair that has to happen first.</>}
+          title="Flooring Services for Homes and Businesses"
+          description={<>Explore flooring repair, installation, maintenance, and replacement, alongside epoxy flooring and commercial coating systems across Surrey and Metro Vancouver.</>}
         />
 
         <section className="mx-auto grid max-w-[1170px] gap-6 px-5 pb-14 pt-14 sm:grid-cols-2 lg:grid-cols-3">
@@ -112,7 +112,7 @@ function ServicesPage() {
 
         <section className="border-y border-border bg-surface py-16">
           <div className="mx-auto max-w-[1170px] px-5">
-            <h2 className="text-2xl font-black">Every service we offer</h2>
+            <h2 className="text-2xl font-black">Flooring Services and Epoxy Flooring Services</h2>
             <div className="mt-8 grid gap-10 md:grid-cols-2">
               {serviceGroups.map((group) => (
                 <div key={group}>

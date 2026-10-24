@@ -4,7 +4,7 @@ import { Footer } from "@/components/Footer";
 import { QuoteForm } from "@/components/QuoteForm";
 import { CtaBand } from "@/components/CtaBand";
 import { Breadcrumbs, breadcrumbSchema } from "@/components/Breadcrumbs";
-import { findService, services, metaTitle, sameAs, site, SITE_URL } from "@/lib/site";
+import { findService, services, serviceAreas, metaTitle, sameAs, site, SITE_URL } from "@/lib/site";
 import { metaDescription } from "@/lib/seo";
 import { serviceImage } from "@/lib/service-images";
 
@@ -66,6 +66,7 @@ export const Route = createFileRoute("/services/$slug")({
                 postalCode: "V3W 5H2",
                 addressCountry: "CA",
               },
+              openingHoursSpecification: [site.businessHours.schema],
               sameAs,
             },
             offers: { "@type": "Offer", availability: "https://schema.org/InStock", priceCurrency: "CAD" },
@@ -205,6 +206,24 @@ function ServiceDetail() {
                 <summary className="cursor-pointer list-none text-sm font-semibold">{f.q}</summary>
                 <p className="mt-3 text-sm leading-6 text-muted-foreground">{f.a}</p>
               </details>
+            ))}
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-[1170px] px-5 py-14">
+          <h2 className="text-2xl font-extrabold">{service.title} in Metro Vancouver</h2>
+          <p className="mt-2 text-muted-foreground">Choose a city to see local service details and request an estimate.</p>
+          <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {serviceAreas.filter((area) => area.slug !== "surrey").map((area) => (
+              <Link
+                key={area.slug}
+                to="/services-in/$citySlug/$serviceSlug"
+                params={{ citySlug: area.slug, serviceSlug: service.slug }}
+                className="interactive-panel block p-4"
+              >
+                <span className="font-semibold">{service.title} in {area.name}</span>
+                <span className="mt-1 block text-sm text-muted-foreground">{area.region}</span>
+              </Link>
             ))}
           </div>
         </section>

@@ -20,6 +20,25 @@ export function Footer() {
         className="absolute inset-0 z-0 h-full w-full object-cover opacity-30 mix-blend-screen"
       />
       <div className="absolute inset-0 z-0 bg-gradient-to-r from-background/95 via-background/88 to-background/72" />
+      <div className="relative z-10 mx-auto max-w-[1170px] px-5 pt-12">
+        <div className="flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <p className="eyebrow">Find us</p>
+            <h2 className="mt-2 text-2xl font-black">Pacific Floors and Coatings · Surrey, BC</h2>
+          </div>
+          <a href={site.mapLink} target="_blank" rel="noreferrer" className="text-sm font-bold text-primary hover:underline">
+            Get Directions →
+          </a>
+        </div>
+        <iframe
+          title="Pacific Floors and Coatings Google Business Profile map"
+          src={site.mapEmbed}
+          className="mt-6 h-[320px] w-full rounded-md border-0 sm:h-[380px]"
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          allowFullScreen
+        />
+      </div>
       <div className="relative mx-auto grid max-w-[1170px] gap-10 px-5 py-14 text-left md:grid-cols-[1.5fr_0.8fr_0.8fr]">
         <div className="text-left">
           <div className="flex justify-start">
@@ -31,6 +50,9 @@ export function Footer() {
             </li>
             <li>
               <a href={`mailto:${site.email}`} className="hover:text-foreground transition-colors">{site.email}</a>
+            </li>
+            <li>
+              <span className="font-semibold text-foreground">Hours:</span> {site.businessHours.text}
             </li>
             <li>
               <a href={site.mapLink} target="_blank" rel="noreferrer" className="hover:text-foreground transition-colors">

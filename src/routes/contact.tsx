@@ -56,6 +56,10 @@ function Contact() {
           <div className="absolute inset-0 z-0 bg-gradient-to-r from-background/96 via-background/88 to-background/45" />
           <div itemScope itemType="https://schema.org/LocalBusiness" className="relative z-10 mx-auto grid max-w-6xl gap-10 px-4 py-16 text-pretty md:grid-cols-2">
           <meta itemProp="name" content={site.name} />
+          <meta
+            itemProp="openingHours"
+            content={`Mo-Su ${site.businessHours.schema.opens}-${site.businessHours.schema.closes}`}
+          />
           <div>
             <p className="eyebrow">Contact us</p>
             <h1 className="mt-3 text-4xl font-black">Let's talk about your floor</h1>
@@ -91,24 +95,7 @@ function Contact() {
           <QuoteForm heading="Request a free quote" />
           </div>
         </section>
-        <section className="border-y border-border bg-surface py-16">
-          <div className="mx-auto max-w-6xl px-4">
-            <p className="eyebrow">Find us</p>
-            <h2 className="mt-3 text-3xl font-black">Pacific Floors and Coatings in Surrey</h2>
-            <div className="mt-7 overflow-hidden rounded-md border border-border shadow-xl">
-              <iframe
-                title="Pacific Floors and Coatings Google Business Profile map"
-                src="https://www.google.com/maps?q=Pacific%20Floors%20and%20Coatings%2C%207304%20138%20Street%2C%20Surrey%2C%20BC%20V3W%205H2%2C%20Canada&output=embed"
-                width="100%"
-                height="420"
-                style={{ border: 0 }}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                allowFullScreen
-              />
-            </div>
-          </div>
-        </section>
+
       </main>
       <Footer />
     </>

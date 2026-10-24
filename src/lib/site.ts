@@ -6,6 +6,15 @@ export const site = {
   phoneHref: "tel:+12368783386",
   email: "pacificfloorsandcoatings@gmail.com",
   address: "7304 138 Street, Surrey, BC V3W 5H2, Canada",
+  businessHours: {
+    text: "Daily: 6:00 AM – 10:00 PM",
+    schema: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      opens: "06:00",
+      closes: "22:00",
+    },
+  },
   mapEmbed:
     "https://www.google.com/maps?q=Pacific%20Floors%20and%20Coatings%2C%207304%20138%20Street%2C%20Surrey%2C%20BC%20V3W%205H2%2C%20Canada&output=embed",
   mapLink: "https://maps.google.com/?q=Pacific+Floors+and+Coatings,+7304+138+Street,+Surrey,+BC+V3W+5H2",

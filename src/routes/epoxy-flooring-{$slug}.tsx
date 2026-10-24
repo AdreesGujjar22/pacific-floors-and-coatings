@@ -9,6 +9,7 @@ import {
   metaTitle,
   serviceNeighbourhoods,
   services,
+  serviceGroups,
   site,
 } from "@/lib/site";
 import { metaDescription } from "@/lib/seo";
@@ -31,11 +32,11 @@ export const Route = createFileRoute("/epoxy-flooring-{$slug}")({
     }
     const { area, neighbourhood } = loaderData;
     const locationName = neighbourhood ? `${neighbourhood.name}, ${area.name}` : area.name;
-    const title = metaTitle(`Epoxy Flooring in ${locationName} BC`);
+    const title = metaTitle(`Flooring and Epoxy Services in ${locationName}, BC`);
     const description = metaDescription(
       neighbourhood
-        ? `Epoxy flooring in ${neighbourhood.name}, ${area.name}, BC. We install durable garage and concrete floor coatings with careful preparation and local service.`
-        : `Epoxy flooring in ${area.name}, BC: durable finishes for garages and businesses, installed with careful preparation.`,
+        ? `Flooring and epoxy services in ${neighbourhood.name}, ${area.name}, BC, including repairs, installation, maintenance, and commercial coatings.`
+        : `Flooring and epoxy services in ${area.name}, BC, including repairs, installation, maintenance, and commercial coatings.`,
     );
     const url = `${BASE}/epoxy-flooring-${neighbourhood?.slug ?? area.slug}`;
     return {
@@ -62,6 +63,7 @@ export const Route = createFileRoute("/epoxy-flooring-{$slug}")({
             telephone: "+1-236-878-3386",
             email: site.email,
             url,
+            openingHoursSpecification: [site.businessHours.schema],
             address: {
               "@type": "PostalAddress",
               streetAddress: "7304 138 Street",
@@ -104,7 +106,6 @@ export const Route = createFileRoute("/epoxy-flooring-{$slug}")({
 function AreaPage() {
   const { area, neighbourhood } = Route.useLoaderData();
   const locationName = neighbourhood ? `${neighbourhood.name}, ${area.name}` : area.name;
-  const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(`${locationName}, British Columbia, Canada`)}&output=embed`;
   const areaNeighbourhoods = serviceNeighbourhoods.filter((item) => item.area.slug === area.slug);
 
   return (
@@ -123,7 +124,7 @@ function AreaPage() {
           <div className="absolute inset-0 z-0 bg-gradient-to-r from-background/96 via-background/88 to-background/42" />
           <div className="relative z-10 mx-auto max-w-4xl px-4 py-16">
             <p className="eyebrow">Serving {locationName}, BC</p>
-            <h1 className="mt-3 text-4xl font-extrabold sm:text-5xl">Epoxy Flooring in {locationName}, BC</h1>
+            <h1 className="mt-3 text-4xl font-extrabold sm:text-5xl">Flooring Services in {locationName}, BC</h1>
             <p className="mt-5 text-muted-foreground">
               {neighbourhood
                 ? `Local epoxy flooring for homes and businesses in ${neighbourhood.name}, ${area.name}. ${area.blurb}`
@@ -157,18 +158,44 @@ function AreaPage() {
 
         <section className="border-y border-border bg-surface py-14">
           <div className="mx-auto max-w-6xl px-4">
-            <h2 className="text-2xl font-extrabold">Flooring systems in {locationName}</h2>
-            <div className="mt-6 grid gap-4 sm:grid-cols-2">
-              {services.map((service) => (
-                <Link
-                  key={service.slug}
-                  to="/services/$slug"
-                  params={{ slug: service.slug }}
-                  className="interactive-panel block p-5"
-                >
-                  <h3 className="text-base font-bold">{service.title}</h3>
-                  <p className="mt-2 text-sm text-muted-foreground">{service.short}</p>
-                </Link>
+            <h2 className="text-2xl font-extrabold">Flooring services in {locationName}</h2>
+            <div className="mt-8 space-y-10">
+              {serviceGroups.map((group) => (
+                <div key={group}>
+                  <h3 className="eyebrow">{group}</h3>
+                  <div className="mt-4 grid gap-4 sm:grid-cols-2">
+                    {services.filter((service) => service.group === group).map((service) => {
+                      const card = (
+                        <>
+                          <h4 className="text-base font-bold">
+                            {area.slug === "surrey" ? service.title : `${service.title} in ${area.name}`}
+                          </h4>
+                          <p className="mt-2 text-sm text-muted-foreground">{service.short}</p>
+                        </>
+                      );
+
+                      return area.slug === "surrey" ? (
+                        <Link
+                          key={service.slug}
+                          to="/services/$slug"
+                          params={{ slug: service.slug }}
+                          className="interactive-panel block p-5"
+                        >
+                          {card}
+                        </Link>
+                      ) : (
+                        <Link
+                          key={service.slug}
+                          to="/services-in/$citySlug/$serviceSlug"
+                          params={{ citySlug: area.slug, serviceSlug: service.slug }}
+                          className="interactive-panel block p-5"
+                        >
+                          {card}
+                        </Link>
+                      );
+                    })}
+                  </div>
+                </div>
               ))}
             </div>
           </div>
@@ -188,18 +215,6 @@ function AreaPage() {
               </Link>
             ))}
           </div>
-        </section>
-
-        <section className="mx-auto max-w-6xl px-4 pb-14">
-          <h2 className="text-2xl font-extrabold">{locationName} service area map</h2>
-          <iframe
-            title={`Map of epoxy flooring service in ${locationName}, BC`}
-            src={mapSrc}
-            className="mt-6 h-[420px] w-full rounded-md border-0"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            allowFullScreen
-          />
         </section>
 
         <section className="mx-auto grid max-w-6xl gap-8 px-4 pb-20 md:grid-cols-2">
