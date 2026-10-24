@@ -24,6 +24,7 @@ export const site = {
     facebook: "https://www.facebook.com/profile.php?id=61575485291064&mibextid=wwXIfr&rdid=P2B1Wtz38cHWsfKf&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1CfLX4mCz7%2F%3Fmibextid%3DwwXIfr#",
     linkedin: "https://www.linkedin.com/in/pacificfloorsandcoatingsca/",
     youtube: "https://www.youtube.com/@PACIFICFLOORSANDCOATINGS",
+    google: "https://www.google.com/maps/search/?api=1&query=Pacific+Floors+and+Coatings&query_place_id=ChIJv0xWqnlg2KAR8iSja42tgRE",
   },
 };
 
@@ -33,6 +34,7 @@ export const sameAs = [
   "https://www.facebook.com/profile.php?id=61575485291064",
   "https://www.linkedin.com/in/pacificfloorsandcoatingsca/",
   "https://www.youtube.com/@PACIFICFLOORSANDCOATINGS",
+  "https://www.google.com/maps/search/?api=1&query=Pacific+Floors+and+Coatings&query_place_id=ChIJv0xWqnlg2KAR8iSja42tgRE",
 ];
 
 export { services, findService, serviceGroups, metaTitle } from "./services";

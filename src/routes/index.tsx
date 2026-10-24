@@ -320,7 +320,7 @@ function Home() {
               Epoxy Flooring in Surrey and Across Metro Vancouver, BC
             </h2>
             <p className="mt-5 max-w-3xl text-sm leading-7 text-muted-foreground">
-              Based at {site.address}, our crew installs epoxy floors throughout Surrey and the surrounding cities.
+              Based in British Columbia, Canada, our crew installs epoxy floors throughout Surrey and the surrounding cities.
               Choose your city to see local details.
             </p>
             <div className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-xs font-bold uppercase tracking-wider text-primary">

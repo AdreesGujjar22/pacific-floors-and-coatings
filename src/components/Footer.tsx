@@ -66,6 +66,7 @@ export function Footer() {
             <a href={site.socials.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn" className="text-muted-foreground transition hover:text-primary"><Linkedin size={18} /></a>
             <a href={site.socials.tiktok} target="_blank" rel="noreferrer" aria-label="TikTok" className="text-muted-foreground transition hover:text-primary"><Music2 size={18} /></a>
             <a href={site.socials.youtube} target="_blank" rel="noreferrer" aria-label="YouTube" className="text-muted-foreground transition hover:text-primary"><Youtube size={18} /></a>
+            <a href={site.socials.google} target="_blank" rel="noreferrer" aria-label="Google Business Profile" className="inline-flex h-[18px] w-[18px] items-center justify-center text-[18px] font-bold leading-none text-muted-foreground transition hover:text-primary">G</a>
           </div>
         </div>
         <div>
