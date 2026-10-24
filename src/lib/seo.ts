@@ -66,7 +66,7 @@ export function metaDescription(base: string): string {
 }
 
 export const BUSINESS_NAME = "Pacific Floors And Coatings";
-const TITLE_BRANDS = [BUSINESS_NAME, "Pacific Floors & Coatings", "Pacific Floors", "Pacific"];
+const TITLE_BRANDS = [BUSINESS_NAME, "Pacific Floors", "Pacific"];
 
 /** "Keyword | Business name" with a call-to-action for short titles. */
 export function pageTitle(keyword: string): string {
