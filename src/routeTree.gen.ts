@@ -15,6 +15,10 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as EpoxyFlooringChar123slugChar125RouteImport } from './routes/epoxy-flooring-{$slug}'
 import { Route as ReviewsRouteImport } from './routes/reviews'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
+import { Route as BlogsIndexRouteImport } from './routes/blogs.index'
+import { Route as BlogsSlugRouteImport } from './routes/blogs.$slug'
 import { Route as ServiceAreasIndexRouteImport } from './routes/service-areas.index'
 import { Route as ServiceAreasSlugRouteImport } from './routes/service-areas.$slug'
 import { Route as ServicesIndexRouteImport } from './routes/services.index'
@@ -52,6 +56,26 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/blog/$slug',
+  path: '/blog/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogsIndexRoute = BlogsIndexRouteImport.update({
+  id: '/blogs/',
+  path: '/blogs/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogsSlugRoute = BlogsSlugRouteImport.update({
+  id: '/blogs/$slug',
+  path: '/blogs/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ServiceAreasIndexRoute = ServiceAreasIndexRouteImport.update({
   id: '/service-areas/',
   path: '/service-areas/',
@@ -86,8 +110,12 @@ export interface FileRoutesByFullPath {
   '/epoxy-flooring-{$slug}': typeof EpoxyFlooringChar123slugChar125Route
   '/reviews': typeof ReviewsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/blogs/$slug': typeof BlogsSlugRoute
   '/service-areas/$slug': typeof ServiceAreasSlugRoute
   '/services/$slug': typeof ServicesSlugRoute
+  '/blog/': typeof BlogIndexRoute
+  '/blogs/': typeof BlogsIndexRoute
   '/service-areas/': typeof ServiceAreasIndexRoute
   '/services/': typeof ServicesIndexRoute
   '/services-in/$citySlug/$serviceSlug': typeof ServicesInCitySlugServiceSlugRoute
@@ -99,8 +127,12 @@ export interface FileRoutesByTo {
   '/epoxy-flooring-{$slug}': typeof EpoxyFlooringChar123slugChar125Route
   '/reviews': typeof ReviewsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/blogs/$slug': typeof BlogsSlugRoute
   '/service-areas/$slug': typeof ServiceAreasSlugRoute
   '/services/$slug': typeof ServicesSlugRoute
+  '/blog': typeof BlogIndexRoute
+  '/blogs': typeof BlogsIndexRoute
   '/service-areas': typeof ServiceAreasIndexRoute
   '/services': typeof ServicesIndexRoute
   '/services-in/$citySlug/$serviceSlug': typeof ServicesInCitySlugServiceSlugRoute
@@ -113,8 +145,12 @@ export interface FileRoutesById {
   '/epoxy-flooring-{$slug}': typeof EpoxyFlooringChar123slugChar125Route
   '/reviews': typeof ReviewsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/blogs/$slug': typeof BlogsSlugRoute
   '/service-areas/$slug': typeof ServiceAreasSlugRoute
   '/services/$slug': typeof ServicesSlugRoute
+  '/blog/': typeof BlogIndexRoute
+  '/blogs/': typeof BlogsIndexRoute
   '/service-areas/': typeof ServiceAreasIndexRoute
   '/services/': typeof ServicesIndexRoute
   '/services-in/$citySlug/$serviceSlug': typeof ServicesInCitySlugServiceSlugRoute
@@ -128,8 +164,12 @@ export interface FileRouteTypes {
     | '/epoxy-flooring-{$slug}'
     | '/reviews'
     | '/sitemap.xml'
+    | '/blog/$slug'
+    | '/blogs/$slug'
     | '/service-areas/$slug'
     | '/services/$slug'
+    | '/blog/'
+    | '/blogs/'
     | '/service-areas/'
     | '/services/'
     | '/services-in/$citySlug/$serviceSlug'
@@ -141,8 +181,12 @@ export interface FileRouteTypes {
     | '/epoxy-flooring-{$slug}'
     | '/reviews'
     | '/sitemap.xml'
+    | '/blog/$slug'
+    | '/blogs/$slug'
     | '/service-areas/$slug'
     | '/services/$slug'
+    | '/blog'
+    | '/blogs'
     | '/service-areas'
     | '/services'
     | '/services-in/$citySlug/$serviceSlug'
@@ -154,8 +198,12 @@ export interface FileRouteTypes {
     | '/epoxy-flooring-{$slug}'
     | '/reviews'
     | '/sitemap.xml'
+    | '/blog/$slug'
+    | '/blogs/$slug'
     | '/service-areas/$slug'
     | '/services/$slug'
+    | '/blog/'
+    | '/blogs/'
     | '/service-areas/'
     | '/services/'
     | '/services-in/$citySlug/$serviceSlug'
@@ -168,8 +216,12 @@ export interface RootRouteChildren {
   EpoxyFlooringChar123slugChar125Route: typeof EpoxyFlooringChar123slugChar125Route
   ReviewsRoute: typeof ReviewsRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  BlogSlugRoute: typeof BlogSlugRoute
+  BlogsSlugRoute: typeof BlogsSlugRoute
   ServiceAreasSlugRoute: typeof ServiceAreasSlugRoute
   ServicesSlugRoute: typeof ServicesSlugRoute
+  BlogIndexRoute: typeof BlogIndexRoute
+  BlogsIndexRoute: typeof BlogsIndexRoute
   ServiceAreasIndexRoute: typeof ServiceAreasIndexRoute
   ServicesIndexRoute: typeof ServicesIndexRoute
   ServicesInCitySlugServiceSlugRoute: typeof ServicesInCitySlugServiceSlugRoute
@@ -219,6 +271,34 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/blog/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blogs/': {
+      id: '/blogs/'
+      path: '/blogs'
+      fullPath: '/blogs/'
+      preLoaderRoute: typeof BlogsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blogs/$slug': {
+      id: '/blogs/$slug'
+      path: '/blogs/$slug'
+      fullPath: '/blogs/$slug'
+      preLoaderRoute: typeof BlogsSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/service-areas/': {
       id: '/service-areas/'
       path: '/service-areas'
@@ -264,8 +344,12 @@ const rootRouteChildren: RootRouteChildren = {
   EpoxyFlooringChar123slugChar125Route: EpoxyFlooringChar123slugChar125Route,
   ReviewsRoute: ReviewsRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  BlogSlugRoute: BlogSlugRoute,
+  BlogsSlugRoute: BlogsSlugRoute,
   ServiceAreasSlugRoute: ServiceAreasSlugRoute,
   ServicesSlugRoute: ServicesSlugRoute,
+  BlogIndexRoute: BlogIndexRoute,
+  BlogsIndexRoute: BlogsIndexRoute,
   ServiceAreasIndexRoute: ServiceAreasIndexRoute,
   ServicesIndexRoute: ServicesIndexRoute,
   ServicesInCitySlugServiceSlugRoute: ServicesInCitySlugServiceSlugRoute,

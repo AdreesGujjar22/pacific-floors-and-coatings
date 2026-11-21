@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { getRouterInstance } from "@tanstack/react-start";
 import { services, serviceAreas, serviceNeighbourhoods } from "@/lib/site";
+import { blogPosts } from "@/lib/blog";
 import {
   isSitemapRouteIncluded,
   sitemapPathForLocation,
@@ -20,6 +21,20 @@ export const Route = createFileRoute("/sitemap.xml")({
       GET: async () => {
         const router = await getRouterInstance();
         const entries: SitemapEntry[] = sitemapStaticPaths(router).map((path) => ({ path }));
+
+        const blogRouteId = "/blogs/$slug";
+        if (isSitemapRouteIncluded(router.routesById[blogRouteId])) {
+          for (const post of blogPosts) {
+            const location = router.buildLocation({
+              to: "/blogs/$slug",
+              params: { slug: post.slug },
+              search: () => ({}),
+              hash: "",
+            });
+            const path = sitemapPathForLocation(router, location, blogRouteId);
+            if (path) entries.push({ path });
+          }
+        }
 
         const slugRouteId = "/services/$slug";
         if (isSitemapRouteIncluded(router.routesById[slugRouteId])) {
